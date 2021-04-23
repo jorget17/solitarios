@@ -25,9 +25,14 @@ def show(cards):
         print(" ".join(l[i: i+8]))
 
 
+'''
 if __name__ == '__main__':
     from sys import argv
     seed = int(argv[1]) if len(argv) == 2 else 11982
     print("Hand {}".format(seed))
     deck = deal(seed)
     show(deck)
+
+'''
+
+show(deal(1))
