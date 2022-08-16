@@ -85,3 +85,81 @@ function deal_ms_fc_board(seed) {
  
     return columns.map(render_column).join("");
 }
+
+function deal_ms_fc_board_hf40(seed) {
+    var randomizer = new MSRand({ seed: seed });
+    var num_cols = 8;
+ 
+    var _perl_range = function(start, end) {
+        var ret = [];
+ 
+        for (var i = start; i <= end; i++) {
+            ret.push(i);
+        }
+ 
+        return ret;
+    };
+ 
+    var columns = _perl_range(0, num_cols-1).map(function () { return []; });
+    var deck = _perl_range(0, 4*10-1);
+ 
+    randomizer.shuffle(deck);
+ 
+    deck = deck.reverse()
+ 
+    for (var i = 0; i < 40; i++) {
+        columns[i % num_cols].push(deck[i]);
+    }
+ 
+    var render_card = function (card) {
+        var suit = (card % 4);
+        var rank = Math.floor(card / 4);
+ 
+        return "A234567SCR".charAt(rank) + "OCEB".charAt(suit);
+    }
+ 
+    var render_column = function(col) {
+        return ": " + col.map(render_card).join(" ") + "\n";
+    }
+ 
+    return columns.map(render_column).join("");
+}
+
+function deal_ms_fc_board_hf48(seed) {
+    var randomizer = new MSRand({ seed: seed });
+    var num_cols = 8;
+ 
+    var _perl_range = function(start, end) {
+        var ret = [];
+ 
+        for (var i = start; i <= end; i++) {
+            ret.push(i);
+        }
+ 
+        return ret;
+    };
+ 
+    var columns = _perl_range(0, num_cols-1).map(function () { return []; });
+    var deck = _perl_range(0, 4*12-1);
+ 
+    randomizer.shuffle(deck);
+ 
+    deck = deck.reverse()
+ 
+    for (var i = 0; i < 48; i++) {
+        columns[i % num_cols].push(deck[i]);
+    }
+ 
+    var render_card = function (card) {
+        var suit = (card % 4);
+        var rank = Math.floor(card / 4);
+ 
+        return "A23456789SCR".charAt(rank) + "OCEB".charAt(suit);
+    }
+ 
+    var render_column = function(col) {
+        return ": " + col.map(render_card).join(" ") + "\n";
+    }
+ 
+    return columns.map(render_column).join("");
+}
