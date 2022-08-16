@@ -80,7 +80,7 @@ function deal_ms_fc_board(seed) {
     }
  
     var render_column = function(col) {
-        return ": " + col.map(render_card).join(" ") + "\n";
+        return col.map(render_card).join(" ") + "\n";
     }
  
     return columns.map(render_column).join("");
@@ -119,7 +119,7 @@ function deal_ms_fc_board_hf40(seed) {
     }
  
     var render_column = function(col) {
-        return ": " + col.map(render_card).join(" ") + "\n";
+        return col.map(render_card).join(" ") + "\n";
     }
  
     return columns.map(render_column).join("");
@@ -158,7 +158,7 @@ function deal_ms_fc_board_hf48(seed) {
     }
  
     var render_column = function(col) {
-        return ": " + col.map(render_card).join(" ") + "\n";
+        return col.map(render_card).join(" ") + "\n";
     }
  
     return columns.map(render_column).join("");

@@ -47,7 +47,7 @@ Class('MSRand', {
  *
  * */
  
-function render_deck(seed) {
+function render_deck(ranks, suits, seed) {
     var randomizer = new MSRand({ seed: seed });
     var num_cols = 1;
  
@@ -60,29 +60,31 @@ function render_deck(seed) {
  
         return ret;
     };
- 
+
     var columns = _perl_range(0, num_cols-1).map(function () { return []; });
-    var deck = _perl_range(0, 4*13-1);
+    var deck = _perl_range(0, suits.length*ranks.length-1);
  
     randomizer.shuffle(deck);
  
     deck = deck.reverse()
  
-    for (var i = 0; i < 52; i++) {
+    for (var i = 0; i < (ranks.length * suits.length); i++) {
         columns[i % num_cols].push(deck[i]);
     }
  
     var render_card = function (card) {
-        var suit = (card % 4);
-        var rank = Math.floor(card / 4);
+        var suit = (card % suits.length);
+        var rank = Math.floor(card / suits.length);
  
-        return "A23456789TJQK".charAt(rank) + "CDHS".charAt(suit);
+        return ranks.charAt(rank) + suits.charAt(suit);
     }
  
     var render_column = function(col) {
-        return ": " + col.map(render_card).join(" ") + "\n";
+        return col.map(render_card).join(",");
     }
+
+    let game_string = columns.map(render_column).join("");
  
-    return columns.map(render_column).join("");
+    return game_string.split(',');
      
 }
