@@ -52,3 +52,18 @@ class MyCustomGame(CustomGame):
             }
 
 registerCustomGame(MyCustomGame)
+
+class MyCustomGame(CustomGame):
+    WIZARD_VERSION = 1
+    SETTINGS = {
+        'preset': 'FreeCell',
+        'name': 'Warm Bath',
+        'rows_num': 10,
+        'rows_max_move': 'Top card',
+        'rows_super_move': 1,
+        'reserves_num': 2,
+        'deal_type': 'Triangle',
+        'gameid': 200004,
+        }
+
+registerCustomGame(MyCustomGame)
