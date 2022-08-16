@@ -1,4 +1,4 @@
-const SUITS = ["♠", "♣", "♥", "♦"]
+const SUITS = ["C", "D", "H", "S"]
 const VALUES = [
   "A",
   "2",
@@ -9,7 +9,7 @@ const VALUES = [
   "7",
   "8",
   "9",
-  "10",
+  "T",
   "J",
   "Q",
   "K"
@@ -49,7 +49,7 @@ class Card {
   }
 
   get color() {
-    return this.suit === "♣" || this.suit === "♠" ? "black" : "red"
+    return this.suit === "C" || this.suit === "S" ? "black" : "red"
   }
 
   getHTML() {
