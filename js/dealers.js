@@ -15,26 +15,34 @@ function generateSeed() {
     return seed
 }
 
-const seed = generateSeed()
+// const seed = generateSeed()
 
-const game = deal_ms_fc_board(seed);
+const game = deal_ms_fc_board(11982);
 
-console.log(seed);
+// console.log(seed);
 
 console.log(game);
 
-const seed_hf40 = generateSeed()
+// const seed_hf40 = generateSeed()
 
-const game_hf40 = deal_ms_fc_board_hf40(seed_hf40);
+// const game_hf40 = deal_ms_fc_board_hf40(11982);
 
-console.log(seed_hf40);
+// console.log(seed_hf40);
 
-console.log(game_hf40);
+// console.log(game_hf40);
 
-const seed_hf48 = generateSeed()
+// const seed_hf48 = generateSeed();
 
-const game_hf48 = deal_ms_fc_board_hf48(seed_hf48);
+// const game_hf48 = deal_ms_fc_board_hf48(11982);
 
-console.log(seed_hf48);
+// console.log(seed_hf48);
 
-console.log(game_hf48);
+// console.log(game_hf48);
+
+// const seed_deck = generateSeed();
+
+const game_deck = render_deck(11982);
+
+// console.log(seed_deck);
+
+console.log(game_deck);
