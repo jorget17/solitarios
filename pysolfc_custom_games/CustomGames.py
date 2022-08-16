@@ -8,7 +8,7 @@ class MyCustomGame(CustomGame):
     WIZARD_VERSION = 1
     SETTINGS = {
         'preset': 'FreeCell',
-        'name': 'SixOff',
+        'name': 'Six Off',
         'skill_level': 'Mostly skill',
         'rows_type': 'Same suit',
         'rows_base_card': 'King',
@@ -25,7 +25,7 @@ class MyCustomGame(CustomGame):
     WIZARD_VERSION = 1
     SETTINGS = {
         'preset': 'FreeCell',
-        'name': 'FiveOff',
+        'name': 'Five Off',
         'skill_level': 'Mostly skill',
         'rows_type': 'Same suit',
         'rows_base_card': 'King',
