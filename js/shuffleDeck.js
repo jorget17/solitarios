@@ -2,7 +2,7 @@
 
 // declare card elements
 const suits = ["S", "D", "C", "H"];
-const values = [
+const ranks = [
   "A",
   "2",
   "3",
@@ -23,8 +23,8 @@ let deck = [];
 
 // create a deck of cards
 for (let i = 0; i < suits.length; i++) {
-    for (let x = 0; x < values.length; x++) {
-        let card = { Value: values[x], Suit: suits[i] };
+    for (let x = 0; x < ranks.length; x++) {
+        let card = { Rank: ranks[x], Suit: suits[i] };
         deck.push(card);
     }
 }
