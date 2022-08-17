@@ -27,14 +27,19 @@ La otra mitad, sería como resolver dos FreeCells a la vez con las cartas dividi
 Mismas reglas. A valorar el número de Tableaus (8, 10 o 12) y el de reserves en función de ello.
 
 
-+-----------+
-| Civil War |
-+-----------+
 
-FreeCell Type
+---------
+
+Dear Tom,
+
+I love Goodsol. I have been using it for more than 20 years... it is impossible to express the satisfaction it has given me.
+
+In gratitude I would like to tell you about a solitaire that I have invented myself and I usually do with real cards. I haven't seen it anywhere else (it may exist and you're the right person to know about it).
+It is a version of FreeCell divided by colors. I call it CivilWar, because the colors have to fight for the empty spaces (the depots).
 
 The cards are arranged in 8 columns, but color-separated. Tableaus 1-4 only contain black cards and Tableaus 5-8 only accept red cards.
-The four columns that have one more card will be located in the first two columns on the black side and in the last two on the red side in the layout.
+
+The four columns that have one more card will be located in the first two columns on the black side and in the last two on the red side of the layout.
 
 The Foundations are also laid out separately, the black ones on one side and the red ones on the other side of the layout.
 
@@ -42,10 +47,16 @@ The Tableaus are built down in color, the black ones in the black section and th
 
 There can be two different approaches for the depots:
 
- - 4, 5 or 6 and any card could be accepted. Hence the name of the game; the colours should fight for the empty spaces (or colaborate). This would make the game more compact.
+ - 4, 5 or 6 and any card could be accepted. Hence the name of the game; the colors should fight for the empty spaces (or collaborate). This would make the game more compact.
  - 4 or 6, half for each color. 2 or 3 in one side of the layout and the same amount in the other one. This is another game and it would be like 2 FreeCells in one layout.
  
 
-The empty Tableaus can accept any card, but colour separated.
+The empty Tableaus can accept any card, but color separated: black cards in black columns and red cards in red columns.
 
-It can be played with two decks and a variable amount of columns.
+It can be played with two decks and a variable amount of columns and depots.
+
+I hope you like it and it would be great to see it in the next version of Goodsol!!!
+
+Thank you very much.
+
+Jorge Teran
