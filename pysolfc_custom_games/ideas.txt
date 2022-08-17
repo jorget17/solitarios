@@ -1,0 +1,27 @@
++-----------+
+| Civil War |
++-----------+
+
+Tipo FreeCell.
+
+Las cartas se disponen en 8 columnas, pero las cuatro primeras solo aceptan cartas negras y las cuatro segundas solo aceptan cartas rojas. La cuatro columnas que tienen una carta más estarán situadas en las dos primeras columnas en el lado negro y en las dos últimas en el lado rojo.
+
+Las Foundations también se disponen separadas, las negras en un lado y las rojas en el otro de la disposición.
+
+Los Tableaus se pueden construir hacia abajo en color, en las cuatro columnas negras con las cartas negras y en las cuatro columnas rojas con las cartas rojas.
+
+Las Celdas Libres (Reserves) podrían tener varias variantes:
+
+    - La mitad podría ser para cada color. Estarían separadas una mitad en un lado y la otra en el otro. En esta versión yo probaría primero con 3 reserves para cada bando.
+    - 4, 5 o 6 y poder subir cualquier carta. Estarían en el centro de la disposición y podrían utilizarse por ambos colores. Sería el único momento en el que las cartas de distinto color podrían juntarse. Esto parece más acorde con el nombre del Solitario, porque ambos bandos pelearían por utilizar las reserves. Probaría en principio con 4, pero al limitar el uso de las columnas vacías podrían ser necesario aumentar a 5.
+
+Los Tableaus vacíos podrían utilizarse por cualquier carta, pero los del bando negro por las cartas negras y los del bando rojo por las cartas rojas.
+
+En definitiva, sería como resolver dos FreeCells a la vez con las cartas divididas en dos mitades.
+
+ --------------------
+|Variante Dos Barajas|
+ --------------------
+
+Mismas reglas. A valorar el número de Tableaus (8, 10 o 12) y el de reserves en función de ello.
+
