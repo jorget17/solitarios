@@ -12,12 +12,13 @@ Los Tableaus se pueden construir hacia abajo en color, en las cuatro columnas ne
 
 Las Celdas Libres (Reserves) podrían tener varias variantes:
 
-    - La mitad podría ser para cada color. Estarían separadas una mitad en un lado y la otra en el otro. En esta versión yo probaría primero con 3 reserves para cada bando.
     - 4, 5 o 6 y poder subir cualquier carta. Estarían en el centro de la disposición y podrían utilizarse por ambos colores. Sería el único momento en el que las cartas de distinto color podrían juntarse. Esto parece más acorde con el nombre del Solitario, porque ambos bandos pelearían por utilizar las reserves. Probaría en principio con 4, pero al limitar el uso de las columnas vacías podrían ser necesario aumentar a 5.
+    - La mitad podría ser para cada color. Estarían separadas una mitad en un lado y la otra en el otro. En esta versión yo probaría primero con 3 reserves para cada bando.
 
 Los Tableaus vacíos podrían utilizarse por cualquier carta, pero los del bando negro por las cartas negras y los del bando rojo por las cartas rojas.
 
-En definitiva, sería como resolver dos FreeCells a la vez con las cartas divididas en dos mitades.
+Prefiero la primera versión, es más un solo solitario en el que hay que combinar los dos colores para usar las mismas celdas libres.
+La otra mitad, sería como resolver dos FreeCells a la vez con las cartas divididas en dos mitades.
 
  --------------------
 |Variante Dos Barajas|
@@ -25,3 +26,26 @@ En definitiva, sería como resolver dos FreeCells a la vez con las cartas dividi
 
 Mismas reglas. A valorar el número de Tableaus (8, 10 o 12) y el de reserves en función de ello.
 
+
++-----------+
+| Civil War |
++-----------+
+
+FreeCell Type
+
+The cards are arranged in 8 columns, but color-separated. Tableaus 1-4 only contain black cards and Tableaus 5-8 only accept red cards.
+The four columns that have one more card will be located in the first two columns on the black side and in the last two on the red side in the layout.
+
+The Foundations are also laid out separately, the black ones on one side and the red ones on the other side of the layout.
+
+The Tableaus are built down in color, the black ones in the black section and the red ones in the red section.
+
+There can be two different approaches for the depots:
+
+ - 4, 5 or 6 and any card could be accepted. Hence the name of the game; the colours should fight for the empty spaces (or colaborate). This would make the game more compact.
+ - 4 or 6, half for each color. 2 or 3 in one side of the layout and the same amount in the other one. This is another game and it would be like 2 FreeCells in one layout.
+ 
+
+The empty Tableaus can accept any card, but colour separated.
+
+It can be played with two decks and a variable amount of columns.
