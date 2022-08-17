@@ -17,7 +17,7 @@ const FRENCH_VALUE_MAP = {
     "K": 13
   }
 
-const HF_SUITS = ["O", "C", "S", "B"]
+const HF_SUITS = ["O", "C", "E", "B"]
 const HF_SUITS_BLACK = ['O', 'C']
 const HF40_RANKS = ["A", "2", "3", "4", "5", "6", "7", "S", "C", "R"]
 const HF48_RANKS = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "S", "C", "R"]
