@@ -99,7 +99,7 @@ class Deck {
     }
   }
 
-  class Card {
+ class Card {
     constructor(suit, rank) {
       this.suit = suit
       this.rank = rank
@@ -113,9 +113,9 @@ class Deck {
       return `${this.rank}${this.suit}.pgn`
     }
   
-/*     get color() {
-      return this.suit === "C" || this.suit === "S" ? "black" : "red"
-    } */
+    get color() {
+      return this.suit === "C" || this.suit === "S" || this.suit === "O" ? "black" : "red"
+    }
   }
 
   function freshDeck(variant) {
@@ -143,7 +143,11 @@ console.log(french)
 console.log(hf48)
 console.log(hf40)
 
-console.log(hf40.cards[0].cardName, hf40.cards[0].img)
-console.log(hf48.cards[1].cardName, hf48.cards[1].img)
-console.log(french.cards[2].cardName, french.cards[2].img)
+console.log(hf40.cards[0].cardName, hf40.cards[0].img, hf40.cards[0].color)
+console.log(hf48.cards[1].cardName, hf48.cards[1].img, hf48.cards[1].color)
+console.log(french.cards[2].cardName, french.cards[2].img, french.cards[2].color)
+
+console.log(hf40.cards[21].cardName, hf40.cards[21].img, hf40.cards[21].color)
+console.log(hf48.cards[25].cardName, hf48.cards[25].img, hf48.cards[25].color)
+console.log(french.cards[22].cardName, french.cards[22].img, french.cards[22].color)
 
