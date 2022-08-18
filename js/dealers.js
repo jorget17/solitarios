@@ -7,21 +7,67 @@ Los primeros 31999 devuelven el mismo tablero que el FreeCell de MS
 
 function generateSeed() {
 
-    // const randomizerArray = [1000, 10000, 100000, 1000000, 1000000, 100000000, 1000000000, 10000000000, 10000000000];
-    // const randomizer = randomizerArray[Math.floor(Math.random() * randomizerArray.length)];
     const seed = Math.floor((Math.random() * 8999999999999999));
     const deal = Math.floor(seed);
-    
+
     return seed
 }
 
 const french_ranks = 'A23456789TJQK';
 const french_suits = 'CDHS';
+const french_values = {
+    'A': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+    '8': 8,
+    '9': 9,
+    'T': 10,
+    'J': 11,
+    'Q': 12,
+    'K': 13
+}
+
+const french_colors = { 'C': 'black', 'D': 'red', 'H': 'red', 'S': 'black' };
 
 const hf40_ranks = 'A234567SCR';
+
+const hf40_values = {
+    'A': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+    'S': 8,
+    'C': 9,
+    'R': 10
+};
+
 const hf48_ranks = 'A23456789SCR';
 
+const hf48_values = {
+    'A': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+    '8': 8,
+    '9': 9,
+    'S': 10,
+    'C': 11,
+    'R': 12
+};
+
 const hf_suits = 'OCEB';
+
+const hf_colors = { 'O': 'black', 'C': 'black', 'E': 'red', 'B': 'red' };
 
 // const seed = generateSeed()
 
@@ -29,7 +75,7 @@ const hf_suits = 'OCEB';
 
 // const seed = 11982
 
-const seed = 4609202062120333
+const seed = 11982
 
 const game = deal_ms_fc_board(seed);
 
@@ -61,6 +107,7 @@ const game_hf48 = deal_ms_fc_board_hf48(seed);
 console.log(game_hf48);
 
 const game_deck_48 = render_deck(hf48_ranks, hf_suits, seed);
+
 console.log(game_deck_48);
 
 // const seed_deck = generateSeed();
