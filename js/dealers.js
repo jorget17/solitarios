@@ -8,7 +8,6 @@ Los primeros 31999 devuelven el mismo tablero que el FreeCell de MS
 function generateSeed() {
 
     const seed = Math.floor((Math.random() * 8999999999999999));
-    const deal = Math.floor(seed);
 
     return seed
 }
