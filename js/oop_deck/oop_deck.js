@@ -50,7 +50,7 @@ const HF40_VALUE_MAP = {
     "R": 12
   }
 
-class Variant {
+  class Variant {
 
     constructor(suits, ranks, same_color, value_map) {
         this.suits = suits
