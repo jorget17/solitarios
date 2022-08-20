@@ -80,7 +80,7 @@ const game = deal_ms_fc_board(seed);
 
 console.log(seed);
 
-console.log(game);
+// console.log(game);
 
 const game_deck = render_deck(french_ranks, french_suits, seed);
 
@@ -92,9 +92,10 @@ const game_hf40 = deal_ms_fc_board_hf40(seed);
 
 // console.log(seed_hf40);
 
-console.log(game_hf40);
+// console.log(game_hf40);
 
 const game_deck_40 = render_deck(hf40_ranks, hf_suits, seed);
+
 console.log(game_deck_40);
 
 // const seed_hf48 = generateSeed();
@@ -103,7 +104,7 @@ const game_hf48 = deal_ms_fc_board_hf48(seed);
 
 // console.log(seed_hf48);
 
-console.log(game_hf48);
+// console.log(game_hf48);
 
 const game_deck_48 = render_deck(hf48_ranks, hf_suits, seed);
 
