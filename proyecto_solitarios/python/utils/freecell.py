@@ -1,7 +1,7 @@
-from shuffle import shuffleDeck, shuffleDeckFromNumber, createGameDeck, decks
+from shuffle import shuffleDeck, shuffleDeckFromNumber, decks
 
 gameDeck = decks['frenchDeck']
 
-game1 = shuffleDeck(gameDeck)
-print(game1['game'])
-print(game1['seed'])
+game = shuffleDeck(gameDeck)
+
+print(game)

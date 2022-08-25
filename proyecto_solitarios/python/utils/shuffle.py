@@ -12,41 +12,39 @@ class Deck:
         self.matrix = matrix
 
     def getCards(self):
-        return [r+s for s in self.suits for r in self.ranks]
+        cardList = [r+s for s in self.suits for r in self.ranks]
+        cards = []
+        for c in cardList:
+            rank = c[0]
+            suit = c[1]
+            value = self.matrix['ranksValues'][c[0]]
+            color = self.matrix['suitsColors'][c[1]]
+            cards.append({'rank': rank, 'suit': suit, 'value': value,
+                         'color': color, 'cardName': f'{rank}{suit}',
+                          'cardImg': f'{rank}{suit}.png'})
+        return cards
 
     def getLenght(self):
         return len(self.getCards())
 
 
 def shuffleDeck(deck):
-    game = []
+    deal = []
     seed = randint(0, factorial(deck.getLenght()))
     sortedDeck = deck.getCards()
     Random(seed).shuffle(sortedDeck)
-    game = sortedDeck
-    return {'game': game,
+    deal = sortedDeck
+    return {'deal': deal,
             'seed': seed}
 
 
 def shuffleDeckFromNumber(deck, seed):
-    game = []
+    deal = []
     sortedDeck = deck.getCards()
     Random(seed).shuffle(sortedDeck)
-    game = sortedDeck
-    return {'game': game,
+    deal = sortedDeck
+    return {'deal': deal,
             'seed': seed}
-
-
-def generateCards(deck, game):
-    # De la variable game creada en shuffleDeck() sale una lista de forma
-    # ['6C', '7H', '8C', ----] Esta función debe devolver una lista de objetos (cartas)
-    # que contengan cada uno de ellos los parámetros necesarios para cada carta:
-    # el rank, el suit, el color, el valor, el nombre de la carta y el fichero img
-    pass
-
-
-def createGameDeck(deck, game):
-    pass
 
 
 decks = {
