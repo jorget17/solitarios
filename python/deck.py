@@ -35,7 +35,7 @@ baraja40 = ['A', '2', '3', '4', '5', '6', '7', 'S', 'C', 'R']
 hf40 = [p+b for p in palos for b in baraja40]
 hf48 = [p+b for p in palos for b in baraja48]
 
-part1 = shuffle_deck(hf48, 1675685)
+part1 = shuffle_deck(deck, 11982)
 
 print(part1['seed'])
 print(part1['deal'])
