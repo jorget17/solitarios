@@ -37,11 +37,15 @@ def shuffleDeckFromNumber(deck, seed):
             'seed': seed}
 
 
-def generateCards(deck):
+def generateCards(game):
+    # De la variable game creada en shuffleDeck() sale una lista de forma
+    # ['6C', '7H', '8C', ----] Esta función debe devolver una lista de objetos
+    # que contengan cada uno de ellos los parámetros necesarios para cada carta:
+    # el rank, el suit, el color, el valor, el nombre de la carta y el fichero img
     pass
 
 
-def createGameDeck(deck):
+def createGameDeck(game):
     pass
 
 
