@@ -1,5 +1,3 @@
-
-
 def randomGenerator(seed=1):
     max_int32 = (1 << 31) - 1
     seed = seed & max_int32
@@ -35,4 +33,4 @@ if __name__ == '__main__':
 
 '''
 
-show(deal(1))
+show(deal(11982))
