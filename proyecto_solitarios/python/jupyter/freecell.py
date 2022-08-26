@@ -1,4 +1,4 @@
-from deck import shuffleDeck, shuffleDeckFromNumber, decks
+from shuffle import shuffleDeck, shuffleDeckFromNumber, decks
 
 gameDeck = decks['frenchDeck']
 
