@@ -67,3 +67,19 @@ class MyCustomGame(CustomGame):
         }
 
 registerCustomGame(MyCustomGame)
+
+class MyCustomGame(CustomGame):
+    WIZARD_VERSION = 1
+    SETTINGS = {
+        'preset': 'FreeCell',
+        'name': 'Base FreeCell',
+        'skill_level': 'Mostly skill',
+        'found_base_card': 'Any',
+        'rows_max_move': 'Top card',
+        'rows_super_move': 1,
+        'deal_face_up': 6,
+        'deal_found': 1,
+        'gameid': 200005,
+        }
+
+registerCustomGame(MyCustomGame)
