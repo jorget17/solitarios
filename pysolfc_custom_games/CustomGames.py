@@ -58,12 +58,27 @@ class MyCustomGame(CustomGame):
     SETTINGS = {
         'preset': 'FreeCell',
         'name': 'Warm Bath',
-        'rows_num': 10,
+        'rows_num': 9,
         'rows_max_move': 'Top card',
         'rows_super_move': 1,
         'reserves_num': 2,
         'deal_type': 'Triangle',
         'gameid': 200004,
+        }
+
+registerCustomGame(MyCustomGame)
+
+class MyCustomGame(CustomGame):
+    WIZARD_VERSION = 1
+    SETTINGS = {
+        'preset': 'FreeCell',
+        'name': 'Hot Bath',
+        'rows_num': 10,
+        'rows_max_move': 'Top card',
+        'rows_super_move': 1,
+        'reserves_num': 2,
+        'deal_type': 'Triangle',
+        'gameid': 200005,
         }
 
 registerCustomGame(MyCustomGame)
@@ -79,7 +94,21 @@ class MyCustomGame(CustomGame):
         'rows_super_move': 1,
         'deal_face_up': 6,
         'deal_found': 1,
-        'gameid': 200005,
+        'gameid': 200006,
+        }
+
+registerCustomGame(MyCustomGame)
+
+class MyCustomGame(CustomGame):
+    WIZARD_VERSION = 1
+    SETTINGS = {
+        'name': 'Blind FreeCell',
+        'rows_max_move': 'Top card',
+        'rows_super_move': 1,
+        'reserves_num': 4,
+        'deal_face_down': 1,
+        'deal_face_up': 5,
+        'gameid': 200007,
         }
 
 registerCustomGame(MyCustomGame)
