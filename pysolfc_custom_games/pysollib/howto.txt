@@ -1,0 +1,9 @@
+Edit the __init__.py file in games folder and add
+
+from . import <module name>
+
+Create a <module name>.py in that folder with the games
+Register the games with a 300000 and up id number
+
+You will need root permissions to edit / copy / create the files in
+the pysollib/games folder.
