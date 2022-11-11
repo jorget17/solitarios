@@ -1,0 +1,105 @@
+Command line options
+HoDoKu can be used as command line utility. It can solve single sudokus, can batch solve sudokus read from a file and it can generate sudokus containing specific steps. Since the exe version of HoDoKu under Windows does not have a console window, a custom console window opens when run in batch mode. To quit HoDoKu simply press "Quit".
+
+Please note that piping (I/O chaining) does not work with the exe version. Use the jar version instead.
+
+General options
+/h, /?
+Prints a help screen.
+/f <file>
+Read options from file <file>. Can be combined with any number of options at the command line or from stdin
+/c <hcfg file>
+Use configuration file <hcfg file> for this run. The configuration file should be created with the GUI version of HoDoKu. Using /c does not affect the configuration of the GUI version.
+/lt
+List symbolic names for the various solution techniques supported by HoDoKu. The symbolic names can be used with options like /sc or /vg (see below).
+Solve single sudokus
+The sudoku has to be given as character string in any format HoDoKu understands. '.' or '0' can be used for cells that are not givens. Pencilmark Grids are supported but if the input string contains blanks it has to be enclosed in " or '. HoDoKu solves the sudoku and writes it to the console, followed by a '#', a consecutive number, and the rating.
+
+For Example the input:
+
+000000010400000000020000000000050407008000300001090000300400200050100000000806000
+produces the output:
+
+000000010400000000020000000000050407008000300001090000300400200050100000000806000 #1 Easy (466)
+If the sudoku requires guessing, "bf" ("Brute Force") is appended to the output, if it requires Templates, "ts" or "td" is added, if it cannot be solved with the current configuration (only possible when "Brute Force" is disabled), "gu" ("Give up") is added to the output.
+
+Various options control the output format:
+
+/vs
+Print the solution in the output (instead of the givens).
+/vp
+print the complete solution path for every sudoku (one line per step).
+/vg [l|c|s:]<step>[,<step>...]
+Print the state of the grid for every step <step>. The optional parameter controls the way the grid is printed:
+l: Print library format
+c: Print pencilmark grid (default)
+s: Print pencilmark grid with step highlighted
+If /vp is not given /vg is ignored.
+/vst
+Print statistics (used steps, number of cells set or candidates eliminated). If /vp is set the statistic is printed for every sudoku.
+/vf <0|1|2>
+Set fish output format (default, numbers, cells)
+Solve multiple sudokus (batch solve)
+When multiple sudokus should be solved they have to be put into a text file (one line per sudoku). The line can be any format that HoDoKu can understand (for example 81 character strings, HoDoKu library format, or q2-taxonomy format). Each sudoku can be followed by a '#' plus arbitrary strings.
+
+All options available for solving single sudokus can be used in batch solving too.
+
+/bs <file>
+Solve all sudokus in file <file>. The output is written to the console and to a file <file>.out.txt or a file given by /o.
+Find all steps
+/bsa
+Execute "find all steps" for [sudoku]. The output is written to the console and to a file <file>.out.txt or a file given by /o.
+/bsaf <file>
+Execute "find all steps" for all sudokus in file <file>. The output is written to the console and to a file <file>.out.txt or a file given by /o.
+Search for sudokus with specific steps or specific difficulty levels
+HoDoKu can search for sudokus that contain specific steps (several steps can be specified in one run, but only one step is considered in each sudoku) or sudokus with specofoc difficulty levels. The options control how the steps should appear in the sudoku.
+
+/s
+Search for sudokus that contain step(s) according to /sc. The sudokus are written to the console and to a file <step>[_<step>...].txt or a file given by /o, followed by a '#' and the sudoku type.
+/so <file>
+Take file <file> created by /s and sort it according to sudoku type. Output is written to <file>.out.txt or to a file given by /o. If /sc is given only sudokus that fit the options of /sc are written.
+/sc <step>[:0|1|2|3][+[e|g|l]n][,[-]<step>[:0|1|2|3][+[e|g|l]n]...]
+Define sudoku properties for /s or /so. <step> is an internal name according to /lt or "all" (all steps except singles), "nssts" (all steps except singles, h2, h3, h4, n2, n3, n4, l2, l3, lc1, lc2, bf2, bf3, bf4, xy, sc, mc), or "nssts1" (nssts minus 2sk, sk, bug1, w, u1, xyz, rp). "-" means that <step> may not be part of the solution (not allowed with first step).
+The first optional parameter determines where the step can be located within the sudoku:
+0: Arbitrary steps allowed before and after the step (x <step> x - default).
+1: Only SSTS allowed before and after the step (ssts <step> ssts).
+2: Only SSTS allowed before the step, only singles after the step (ssts <step> s).
+3: Only singles allowed before and after the step (s <step> s).
+The second optional parameter determines how many candidates should be eliminated by <step>:
+e: number of eliminated candidates equals n
+l: number of eliminated candidates is less than n
+g: number of eliminated candidates is greater than n
+/sl <level>
+Create only sudokus with difficulty level <level>. Valid values for <level> are:
+0: Easy
+1: Medium
+2: Hard
+3: Unfair
+4: Extreme
+Miscellaneous options
+/o <file>
+Write output to <file>. If <file> is "stdout" all output is written to the console.
+/stdin
+Read additional options from stdin. Can be combined with /f and any number of options given directly at the command line.
+Brute force testing
+/bt <file>
+Read sudokus from <file> and perform a brute force test: After any non single step in all sudokus "Find all steps" for the steps specified by /bts is executed. All steps found are checked against the correct solution, errors are displayed and written to a file.
+/bts <step>[,<step>...]
+A list of steps for which the brute force test should be executed.
+Regression testing
+/test <file>
+Run all test cases contained in <file>
+/testf <file>
+Run all test cases contained in <file> except those that take a really long time to check
+SSTS are the techniques supported by the "Simple Sudoku" program:
+
+Singles
+Locked Candidates
+Hidden/Naked Subsets (including Locked Subset)
+X-Wing
+Swordfish
+Jellyfish
+XY-Wing
+Simple/Multi Colors
+Files used by HoDoKu
+HoDoKu creates two files in your temp directory by default (the location of the temp directory is platform dependent - under Windows it is usually something like "%USERPROFILE%\AppData\Local\Temp", under Linux it is normally just "/tmp"). The first file is named "hodoku.hcfg". It holds your current configuration. The second file is called "hodoku.log" which holds information about critical errors. Both files can be deleted, although deleting "hodoku.hcfg" will cause HoDoKu to use the default configuration when it starts the next time.
