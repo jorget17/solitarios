@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: Hidden Quadruple example</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="HoDoKu - Sudoku for addicts: Show Example">
+    <meta name="keywords" content="sudoku,java,hodoku,solving techniques,example">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>HoDoKu Solving Technique Index: Example for "Hidden Quadruple"</h1>
+    <p><img src="../examples/h402.png" alt="Solving Technique Example"></p>
+    <h2>Original sudoku:</h2>
+    <p><code>.3.....1...8.9....4..6.8.......7694.......52....124...2.6...19....7......95...47.
+</code></p>
+
+    <h2>Use the following line if you want to load the sudoku in HoDoKu:</h2>
+    <p><code>:0212:3678:.3.....1...8.9....4..6.8......+57694....+9+8+352....124...2+76..+519....7.+9....95...47.:121 151 361 861 485 299:329 339 389 619 629 689 719 729 739 819 889:
+</code></p>
+
+    <h2>The following representation can be pasted in most Sudoku programs:</h2>
+    <pre>.------------------.---------------.---------------------.
+
+| 5679  3     279  | 24   45   27  | 2678  1     2456789 |
+
+| 567   1256  8    | 234  9    127 | 2367  356   234567  |
+
+| 4     125   1279 | 6    135  8   | 237   35    23579   |
+
+:------------------+---------------+---------------------:
+
+| 138   128   123  | 5    7    6   | 9     4     138     |
+
+| 67    146   147  | 9    8    3   | 5     2     167     |
+
+| 5679  568   379  | 1    2    4   | 3678  368   3678    |
+
+:------------------+---------------+---------------------:
+
+| 2     7     6    | 348  34   5   | 1     9     38      |
+
+| 138   148   134  | 7    136  9   | 2368  3568  23568   |
+
+| 138   9     5    | 238  136  12  | 4     7     368     |
+
+'------------------'---------------'---------------------'
+</pre>
+
+    <h2>Representation of the step:</h2>
+    <pre>.------------------.---------------.-------------------------.
+
+| 5679  3     279  | 24   45   27  | 2678  1     *245-6-7-89 |
+
+| 567   1256  8    | 234  9    127 | 2367  356   *2-345-6-7  |
+
+| 4     125   1279 | 6    135  8   | 237   35    *2-35-79    |
+
+:------------------+---------------+-------------------------:
+
+| 138   128   123  | 5    7    6   | 9     4      138        |
+
+| 67    146   147  | 9    8    3   | 5     2      167        |
+
+| 5679  568   379  | 1    2    4   | 3678  368    3678       |
+
+:------------------+---------------+-------------------------:
+
+| 2     7     6    | 348  34   5   | 1     9      38         |
+
+| 138   148   134  | 7    136  9   | 2368  3568  *2-35-6-8   |
+
+| 138   9     5    | 238  136  12  | 4     7      368        |
+
+'------------------'---------------'-------------------------'
+
+
+
+Hidden Quadruple: 2,4,5,9 in r1238c9 =&gt; r238c9&lt;&gt;3, r128c9&lt;&gt;6, r123c9&lt;&gt;7, r18c9&lt;&gt;8
+
+
+
+
+
+
+</pre>
+  <div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

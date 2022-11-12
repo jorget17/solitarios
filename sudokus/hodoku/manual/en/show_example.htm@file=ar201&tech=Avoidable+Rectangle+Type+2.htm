@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: Avoidable Rectangle Type 2 example</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="HoDoKu - Sudoku for addicts: Show Example">
+    <meta name="keywords" content="sudoku,java,hodoku,solving techniques,example">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>HoDoKu Solving Technique Index: Example for "Avoidable Rectangle Type 2"</h1>
+    <p><img src="../examples/ar201.png" alt="Solving Technique Example"></p>
+    <h2>Original sudoku:</h2>
+    <p><code>9.....6....1..6.387.6.8...........76..41......5.947.2.2.......5...25........9...1
+</code></p>
+
+    <h2>Use the following line if you want to load the sudoku in HoDoKu:</h2>
+    <p><code>:0608:9:9+8....6+4+7..1..6+9387.6.8+9+5+1+2+1...+3.+476+3+741+6+2+8+5+9+65+8947+12+32.....+3.5+8..25.+7.+4....9.+2.1:474 494:943 972 982:
+</code></p>
+
+    <h2>The following representation can be pasted in most Sudoku programs:</h2>
+    <pre>.---------------.---------------.-----------.
+
+| 9   8     235 | 35    12  135 | 6  4    7 |
+
+| 45  24    1   | 457   27  6   | 9  3    8 |
+
+| 7   34    6   | 34    8   9   | 5  1    2 |
+
+:---------------+---------------+-----------:
+
+| 1   29    29  | 58    3   58  | 4  7    6 |
+
+| 3   7     4   | 1     6   2   | 8  5    9 |
+
+| 6   5     8   | 9     4   7   | 1  2    3 |
+
+:---------------+---------------+-----------:
+
+| 2   1469  79  | 678   17  148 | 3  689  5 |
+
+| 8   1369  39  | 2     5   13  | 7  69   4 |
+
+| 45  346   357 | 3678  9   348 | 2  68   1 |
+
+'---------------'---------------'-----------'
+</pre>
+
+    <h2>Representation of the step:</h2>
+    <pre>.-----------------.---------------.------------.
+
+| 9   8       235 | 35    12  135 |  6  4    7 |
+
+| 45  24      1   | 457   27  6   |  9  3    8 |
+
+| 7   34      6   | 34    8   9   |  5  1    2 |
+
+:-----------------+---------------+------------:
+
+| 1   29      2-9 | 58    3   58  |  4  7    6 |
+
+| 3   7       4   | 1     6   2   |  8  5    9 |
+
+| 6   5       8   | 9     4   7   |  1  2    3 |
+
+:-----------------+---------------+------------:
+
+| 2   146-9  *79  | 678   17  148 | *3  689  5 |
+
+| 8   136-9  *39  | 2     5   13  | *7  69   4 |
+
+| 45  346     357 | 3678  9   348 |  2  68   1 |
+
+'-----------------'---------------'------------'
+
+
+
+Avoidable Rectangle Type 2: 3/7 in r7c37,r8c37 =&gt; r4c3,r78c2&lt;&gt;9
+
+
+
+
+
+
+</pre>
+  <div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

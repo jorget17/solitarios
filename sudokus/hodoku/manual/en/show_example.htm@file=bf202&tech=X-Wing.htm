@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: X-Wing example</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="HoDoKu - Sudoku for addicts: Show Example">
+    <meta name="keywords" content="sudoku,java,hodoku,solving techniques,example">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>HoDoKu Solving Technique Index: Example for "X-Wing"</h1>
+    <p><img src="../examples/bf202.png" alt="Solving Technique Example"></p>
+    <h2>Original sudoku:</h2>
+    <p><code>9...627....5..3...........67...3.........9...8.2.45..9..35.1.28.4......5.1.......
+</code></p>
+
+    <h2>Use the following line if you want to load the sudoku in HoDoKu:</h2>
+    <p><code>:0300:1:9+8..627+5+3.+65..3...+3+2+7.+5...67+9..3.+5...+5...9...8+32.45..9+6+735+91+428+24+9.+8+7..5+51+8.+2...+7::124 127 128 129 153 154 157 158 159:c15 r25
+</code></p>
+
+    <h2>The following representation can be pasted in most Sudoku programs:</h2>
+    <pre>.------------.---------------.--------------------.
+
+| 9   8  14  | 14     6   2  | 7      5       3   |
+
+| 14  6  5   | 14789  17  3  | 1289   1489    124 |
+
+| 3   2  7   | 1489   5   48 | 189    1489    6   |
+
+:------------+---------------+--------------------:
+
+| 7   9  146 | 1268   3   68 | 5      1468    124 |
+
+| 14  5  146 | 12678  17  9  | 12368  134678  124 |
+
+| 8   3  2   | 167    4   5  | 16     167     9   |
+
+:------------+---------------+--------------------:
+
+| 6   7  3   | 5      9   1  | 4      2       8   |
+
+| 2   4  9   | 36     8   7  | 136    136     5   |
+
+| 5   1  8   | 346    2   46 | 369    369     7   |
+
+'------------'---------------'--------------------'
+</pre>
+
+    <h2>Representation of the step:</h2>
+    <pre>.--------------.-----------------.-----------------------.
+
+|  9   8   14  |  14      6   2  |  7       5        3   |
+
+| *14  6   5   | -14789  *17  3  | -1289   -1489    -124 |
+
+|  3   2   7   |  1489    5   48 |  189     1489     6   |
+
+:--------------+-----------------+-----------------------:
+
+|  7   9   146 |  1268    3   68 |  5       1468     124 |
+
+| *14  5  -146 | -12678  *17  9  | -12368  -134678  -124 |
+
+|  8   3   2   |  167     4   5  |  16      167      9   |
+
+:--------------+-----------------+-----------------------:
+
+|  6   7   3   |  5       9   1  |  4       2        8   |
+
+|  2   4   9   |  36      8   7  |  136     136      5   |
+
+|  5   1   8   |  346     2   46 |  369     369      7   |
+
+'--------------'-----------------'-----------------------'
+
+
+
+X-Wing: 1 c15 r25 =&gt; r2c4789,r5c34789&lt;&gt;1
+
+
+
+
+
+
+</pre>
+  <div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: Sue de Coq (basic variant) example</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="HoDoKu - Sudoku for addicts: Show Example">
+    <meta name="keywords" content="sudoku,java,hodoku,solving techniques,example">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>HoDoKu Solving Technique Index: Example for "Sue de Coq (basic variant)"</h1>
+    <p><img src="../examples/sdc01.png" alt="Solving Technique Example"></p>
+    <h2>Original sudoku:</h2>
+    <p><code>..83.7..926....3.........4.3...521.87.4..8..5.5........8...6..7.....52....1......
+</code></p>
+
+    <h2>Use the following line if you want to load the sudoku in HoDoKu:</h2>
+    <p><code>:1101:459:+1+483+27..926+7+5+9+43+8+1.+3.+8+6+1+74+23+9+6+4521+787+14+6+38+9+25+85+2..+9....8.+2.6..7.+7..+852...+21..+3+8..::475 578 981 991:
+</code></p>
+
+    <h2>The following representation can be pasted in most Sudoku programs:</h2>
+    <pre>.--------------.-----------.---------------.
+
+| 1     4  8   | 3   2   7 | 56  56    9   |
+
+| 2     6  7   | 5   9   4 | 3   8     1   |
+
+| 59    3  59  | 8   6   1 | 7   4     2   |
+
+:--------------+-----------+---------------:
+
+| 3     9  6   | 4   5   2 | 1   7     8   |
+
+| 7     1  4   | 6   3   8 | 9   2     5   |
+
+| 8     5  2   | 17  17  9 | 46  36    346 |
+
+:--------------+-----------+---------------:
+
+| 459   8  359 | 2   14  6 | 45  1359  7   |
+
+| 469   7  39  | 19  8   5 | 2   1369  346 |
+
+| 4569  2  1   | 79  47  3 | 8   569   46  |
+
+'--------------'-----------'---------------'
+</pre>
+
+    <h2>Representation of the step:</h2>
+    <pre>.-----------------.------------.-----------------.
+
+|  1      4   8   | 3   2    7 |  56  56     9   |
+
+|  2      6   7   | 5   9    4 |  3   8      1   |
+
+|  59     3   59  | 8   6    1 |  7   4      2   |
+
+:-----------------+------------+-----------------:
+
+|  3      9   6   | 4   5    2 |  1   7      8   |
+
+|  7      1   4   | 6   3    8 |  9   2      5   |
+
+|  8      5   2   | 17  17   9 |  46  36     346 |
+
+:-----------------+------------+-----------------:
+
+| A459    8  A359 | 2   1-4  6 | C45  13-59  7   |
+
+|  46-9   7  B39  | 19  8    5 |  2   1369   346 |
+
+|  456-9  2   1   | 79  47   3 |  8   569    46  |
+
+'-----------------'------------'-----------------'
+
+
+
+Sue de Coq: r7c13 - {3459} (r7c7 - {45}, r8c3 - {39}) =&gt; r7c5&lt;&gt;4, r7c8&lt;&gt;5, r89c1&lt;&gt;9
+
+
+
+
+
+
+</pre>
+  <div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

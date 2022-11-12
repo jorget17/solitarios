@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: Libraries</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="Libraries of HoDoKu - a sudoku generator/solver/analyzer written in Java">
+    <meta name="keywords" content="sudoku,java,hodoku,german,human style solving techniques,hint,fish,uniqueness,colorin,chains,als,wings,subsets,regression test,library">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+<style type="text/css" media="all">
+<!--
+#menu li.mLibs a, #menu li.mLibs a:hover {
+    font-style: italic;
+    background-color:#fceabe;
+}
+-->
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>Libraries</h1>
+    <h2>Table of Contents</h2>
+    <ul class="toc">
+        <li><a href="#libreg">Regression Test Library</a></li>
+        <li><a href="#libex">Exemplar Library</a></li>
+    </ul>
+    <hr>
+
+    <h1><a name="libreg"></a>Regression Test Library</h1>
+    <p>Regression testing is always a difficult and demanding task if it cannot be fully automated.
+    One problem when testing for a great number of techniques is to find a great variation of
+    test cases that can be handled automatically.</p>
+    <p>Some effort has been made in the past to collect libraries of test cases (or libraries that
+    can be used as test cases), e.g. Ruud's <a href="http://forum.enjoysudoku.com/viewtopic.htm?t=3834">Benchmark
+    Sudoku List</a>, Mike Barker's <a href="http://forum.enjoysudoku.com/viewtopic.htm?p=32822#32822">zoo</a>,
+    RW's <a href="http://forum.enjoysudoku.com/viewtopic.htm?t=3740">The Effortless Extremes thread</a>
+    or tarek's <a href="http://forum.enjoysudoku.com/viewtopic.htm?t=5776">A Pure Jellyfish Collection</a>
+    (and this list is of course incomplete).</p>
+    <p>Most of them cannot be used for autmated testing however, because they depend on solver strategy
+    or because they are in different formats. I have therefore collected my own set of test cases and
+    developed a simple format, that allows easy testing. Most test cases have been found using HoDoKu,
+    but many have been taken from forums and libraries all over the internet. Since there are so many
+    (over 1000 in version 1.0 of the regression test library) references are not supplied for every sudoku.</p>
+    <p>The purpose of this library is to collect as many test cases for different human style solving
+    techniques as possible. Every test case uses exactly one line and tests one technique for a
+    given set of candidates. The only restriction for a valid test case is, that no other instance
+    of the tested technique for that set of candidates exists, that leads to a different placement
+    or to different eliminations.</p>
+    <p>The library format has the additional advantage that it contains a PM that preserves the
+    difference between givens and set cells (and all in one line).</p>
+    <p>Special thanks to MaNik-e Team for their help in coding the actual test routine.</p>
+
+    <h2>HoDoKu Library Format</h2>
+    <p>A test case consists of one line with seven fields enclosed and seperated by ":". Format:</p>
+    <p>:&lt;technique&gt;:&lt;candidate(s)&gt;:&lt;givens&gt;:&lt;deleted candidates&gt;:&lt;eliminations&gt;:&lt;placements&gt;:&lt;extra&gt;</p>
+    <dl>
+        <dt>&lt;technique&gt;</dt>
+        <dd>An alphanumeric string denoting the technique (values see the library file itself).
+            For some techniques variants are defined. A variant starts with
+	    a dash after the code for the base technique followed by a number.
+	    Variants can of course be ignored.
+     	    If the variant consist of a single 'x', the test case is a fail case:
+	    No instance of that technique must be found.</dd>
+
+        <dt>&lt;candidate(s)&gt;</dt>
+        <dd>The candidate (or candidates), for which the technique is applied (see below)</dd>
+
+        <dt>&lt;givens&gt;</dt>
+        <dd>The givens of the sudoku; a '+' sign before a digit means, that that value
+            is not a given, but has already been placed (optional)</dd>
+
+        <dt>&lt;deleted candidates&gt;</dt>
+        <dd>Candidates, that have to be deleted after placing the givens; &lt;givens&gt;
+            and &lt;deleted candidates&gt; together are equivalent to a PM, but with the
+            advantage, that the difference between givens and placed cells can be
+            preserved (format see below)</dd>
+
+        <dt>&lt;eliminations&gt;</dt>
+        <dd>Candidates, that are eliminated by &lt;technique&gt; in the test PM, if any (format see below)</dd>
+
+        <dt>&lt;placements&gt;</dt>
+        <dd>Cells that can be placed by &lt;technique&gt; in the test PM, if any (format see below)</dd>
+
+        <dt>&lt;extra&gt;</dt>
+        <dd>Can contain additional information specific to a step. The following extra values are defined:
+            <ul>
+                <li>Chains/Loops: The length of the chain/loop in number of inferences</li>
+            </ul>
+        </dd>
+
+    </dl>
+
+
+    <h3>Format for candidates/eliminations/placements</h3>
+    <p>&lt;candidate&gt;&lt;line&gt;&lt;col&gt;</p>
+    <p>&lt;line&gt; and &lt;col&gt; are in the range of 1 to 9; if an entry contains more that one instance,
+     they are separated by blanks.</p>
+    <p>Example: ":436 257:" means "r3c6&lt;&gt;4, r5c7&lt;&gt;2"</p>
+    <p>&lt;eliminations&gt; and &lt;placements&gt; can't be set in the same test case.</p>
+    <p>The contents of &lt;candidates&gt; depends on the technique:</p>
+    <ul>
+        <li>For Singles, Forcing Chain/Net Verities: The candidate, that can be placed</li>
+        <li>Nice Loops/AIC, Forcing Chain/Net Contradictions, ALS, SDC: The candidates
+          that can be eliminated</li>
+        <li>All other moves: the candidates used in the move</li>
+    </ul>
+    <h3>Example 1:</h3>
+    <p>:0003:8:6...+53+4.7....4+2+56.+254867+3+9+1.+4..+9+6.1.162+38+5749.3..+1+4.+5....42193..1.+57...+44+2.6+3.+1+75:::829:</p>
+
+    <p><i>Meaning:</i></p>
+        <p>Create a grid from the string</p>
+
+          <p>"6....3..7....4..6..54867..........1.162.8.749.3..........42193..1..7....4..6....5"</p>
+
+          <p>(everything from &lt;givens&gt;, that has no '+' sign - the real givens)
+          Now place the cells, that are given by the following string:</p>
+
+          <p>"....5.4.......25..2.....391.4..96......3.5.......14.5.............5....4.2..3.17."</p>
+
+          <p>(everything from &lt;givens&gt; with a '+' sign);
+          optionally you can just ignore the signs and place:</p>
+
+          <p>"6...534.7....4256.254867391.4..96.1.162385749.3..14.5....42193..1.57...442.63.175"</p>
+
+          <p>there are no additional candidates to delete;</p>
+
+          <p>now look for a Naked Single for candidate 8 in the PM given by &lt;givens&gt; and &lt;deleted candidates&gt;;
+          you should be able to find one that places 8 in r2c9.</p>
+
+    <h3>Example 2 (the string below must go on one line only)</h3>
+    <p>:0603:3:14+8..+9+72+5.+3...89.697+6....38.+61......3+2.8.56...9......2.5+9+186....+8+3....61+6+1...35+89:224 524 225 525 135 455 755 458 758 165 168 771 284 484 784 285 485 785:364 365::</p>
+
+    <p><i>Meaning:</i></p>
+    <p>Place all digits from &lt;givens&gt; as described above; after that eliminate:<br>
+        r2c4&lt;&gt;25, r2c5 &lt;&gt;25,
+        r3c5&lt;&gt;1, r5c5&lt;&gt;47, r5c8&lt;&gt;47, r6c5&lt;&gt;1, r6c8&lt;&gt;1, r7c1&lt;&gt;7, r4c8&lt;&gt;247, r5c8&lt;&gt;247;</p>
+
+    <p>now look for a Uniqueness Test Type 4 in the given PM, that eliminates candidates for
+       digit 3; you should find one, that eliminates 3 from r6c4 and r6c5.</p>
+
+    <h2>The complete library:</h2>
+    <p><a href="../libraries/reglib-1.3.txt">reglib-1.3.txt</a></p>
+    <hr>
+
+
+    <h1><a name="libex"></a>Exemplar Library</h1>
+    <p>The HoDoKu exemplar library is a loose collection of sudokus, that exemplify specific
+    techniques. Most of these puzzls have been calculated using HoDoKu's batch creation mode
+    (see <a href="docs_cre.htm#batch">Batch creation of sudokus</a> in the User Manual).</p>
+    <p>Some examples only work if the solver options or the step hierarchy is changed, very few
+    examples are broken and dont work at all.</p>
+
+    <h2>The library:</h2>
+    <p><a href="../libraries/exemplars-1.0.txt">exemplars-1.0.txt</a></p>
+
+  <div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

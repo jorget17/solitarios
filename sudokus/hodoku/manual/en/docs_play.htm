@@ -1,0 +1,766 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: User Manual (Chapter 2: Playing the Game)</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="User Manual for HoDoKu - Chapter 2: Playing the Game">
+    <meta name="keywords" content="sudoku,java,hodoku,german,command line,options,human style solving techniques,hint,fish,uniqueness,coloring,chains,als,wings,subsets">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+<style type="text/css" media="all">
+<!--
+#menu ul li ul li.mDocsPlay a, #menu ul li ul li.mDocsPlay a:hover {
+    font-style: italic;
+    background-color:#fceabe;
+}
+-->
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li><ul class="sub1">
+                <li class="mDocsIntro"><a href="docs_intro.htm">Introduction</a></li>
+                <li class="mDocsPlay"><a href="docs_play.htm">Playing the game</a></li>
+                <li class="mDocsSolv"><a href="docs_solv.htm">Solver</a></li>
+                <li class="mDocsCre"><a href="docs_cre.htm">Creator</a></li>
+                <li class="mDocsFAS"><a href="docs_fas.htm">Finding all Steps</a></li>
+                <li class="mDocsSol"><a href="docs_sol.htm">Solution paths</a></li>
+                <li class="mDocsRef"><a href="docs_ref.htm">Reference</a></li>
+    </ul></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>Chapter 2: Playing the Game</h1>
+    <h2>Table of Contents</h2>
+    <ul class="toc">
+        <li><a href="#create_enter">Creating a sudoku or entering givens</a></li>
+        <li class="ni"><ul>
+            <li><a href="#create_enter_1">Create a new sudoku</a></li>
+            <li><a href="#create_enter_2">Enter givens</a></li>
+            <li><a href="#create_enter_3">Use the system clipboard</a></li>
+            <li><a href="#create_enter_4">Load a sudoku from a file</a></li>
+            <li><a href="#create_enter_5">Use the history</a></li>
+        </ul></li>
+        <li><a href="#keyboard">Using the keyboard</a></li>
+        <li class="ni"><ul>
+            <li><a href="#keyboard_1">Normal operation</a></li>
+            <li><a href="#keyboard_2">Coloring</a></li>
+            <li><a href="#keyboard_3">Miscellaneous</a></li>
+        </ul></li>
+        <li><a href="#mouse">Using the mouse</a></li>
+        <li class="ni"><ul>
+            <li><a href="#mouse_1">Normal mouse mode</a></li>
+            <li><a href="#mouse_1a">Alternate mouse mode</a></li>
+            <li><a href="#mouse_2">Coloring</a></li>
+            <li><a href="#mouse_3">Active Cell view</a></li>
+        </ul></li>
+        <li><a href="#modes">Game modes</a></li>
+        <li class="ni"><ul>
+            <li><a href="#modes_1">Playing</a></li>
+            <li><a href="#modes_2">Learning</a></li>
+            <li><a href="#modes_3">Practising</a></li>
+        </ul></li>
+        <li><a href="#hint_system">Using the hint system</a></li>
+        <li class="ni"><ul>
+            <li><a href="#hint_system_1">Getting help</a></li>
+            <li><a href="#hint_system_2">Using the hint area</a></li>
+        </ul></li>
+        <li><a href="#filters">Using filters</a></li>
+        <li><a href="#progress">Progress indicator</a></li>
+        <li><a href="#undo_redo">Undo/Redo</a></li>
+        <li><a href="#clipboard">Using the clipboard</a></li>
+        <li><a href="#restart">Restarting a game</a></li>
+        <li class="ni"><ul>
+            <li><a href="#restart_1">Restart</a></li>
+            <li><a href="#restart_2">Reset</a></li>
+            <li><a href="#restart_3">Solve from here</a></li>
+        </ul></li>
+        <li><a href="#savep">Savepoints</a></li>
+        <li class="ni"><ul>
+            <li><a href="#savep_1">Creating savepoints</a></li>
+            <li><a href="#savep_2">Restoring savepoints</a></li>
+        </ul></li>
+        <li><a href="#save_load">Saving/Loading configurations and sudokus</a></li>
+        <li><a href="#print">Printing sudokus</a></li>
+        <li class="ni"><ul>
+            <li><a href="#print_1">Normal operation</a></li>
+            <li><a href="#print_2">Extended print</a></li>
+        </ul></li>
+        <li><a href="#images">Creating images of sudokus</a></li>
+    </ul>
+    <hr>
+
+    <h1><a name="create_enter"></a>Creating a sudoku or entering givens</h1>
+    <p>Before you can play you have to have a sudoku. There are five ways to do this:</p>
+    <ul>
+        <li>Let HoDoKu randomly create a new sudoku for you</li>
+        <li>Create a sudoku manually by entering the givens</li>
+        <li>Paste a sudoku into HoDoKu using the system clipboard</li>
+        <li>Load a sudoku from a file ( a *.hsol file created by HoDoKu or a text file - various formats are supported)</li>
+        <li>Use the History</li>
+    </ul>
+
+    <h2><a name="create_enter_1"></a>Create a new sudoku</h2>
+    <img class="scr_l" src="../img/scrpce1.png" alt="Screenshot: create new sudoku">
+    <p>Sudoku creation is explained in detail in <a href="docs_cre.htm">Chapter 4</a>.
+    For now the standard preferences are good enough so here is only the simple version:</p>
+    <ul>
+        <li>Choose the difficulty level of the new sudoku from the combo box in the tool bar (or use
+        "Options|Difficulty")</li>
+        <li>Press the button left of the combo box (or use "File|New Random Sudoku" or press [Ctrl]+[n])</li>
+    </ul>
+    <p>HoDoKu creates new Sudokus randomly and checks whether they have the correct
+    difficulty level. Sudokus with various difficulty levels are created automatically
+    in the background, so normally the new sudoku will load immediately. If
+    no pregenerated sudoku is available, a progress window is displayed, which shows how many sudokus were already tried.
+    Creation of easy sudokus works almost instantly, harder sudokus can take some
+    time. The process can be stopped any time by pressing "Cancel" in
+    the progress window.</p>
+    
+    <h2><a name="create_enter_2"></a>Enter givens</h2>
+    <p>If your sudoku is printed in a newspaper or a book you have to manually enter the
+    givens.</p>
+    <img class="scr_l" src="../img/scrpce2.png" alt="Screenshot: enter sudoku - warning">
+    <img class="scr_l" src="../img/scrpce3.png" alt="Screenshot: enter sudoku - warning">
+    <p>Choose "File|New Givens" from the menu. If at least one cell already
+    contains a value a warning is displayed (see left).</p>
+    <p>If all givens are entered in their correct cells choose "File|Play game". HoDoKu first
+    checks whether your sudoku has a unique solution. If that is not the case a warning is
+    displayed but the sudoku is accepted anyway.</p>
+    <p><b>Note:</b> If the sudoku doesn't have a unique solution you can play anyway, you
+    can even use the hint system, but some of the steps computed by HoDoKu will just be wrong!</p>
+    <p>If the source of your sudoku is at least halfway reliable the warning probably means that
+    you entered something wrong (e.g. missed a given or put it in the wrong cell). If
+    that is the case simply choose "File|Modify Givens". All cells containing a value will be
+    shown in blue to indicate that they can be changed.
+    Correct your error and choose "File|Play game" again.</p>
+    <p>If the sudoku has a unique solution HoDoKu will solve it and display the rating
+    in the status bar. If one of the additional views is visible it's contents will by
+    updated.</p>
+
+    <h2><a name="create_enter_3"></a>Use the system clipboard</h2>
+    <p>Many websites or forums publish sudokus in text format (e.g. a string
+    containing 81 characters, one for every cell). Just try pasting the string into HoDoKu.
+    If the format can be recognised the sudoku is checked for uniqueness and solved.
+    Using the clipboard is explained fully <a href="#clipboard">below</a>.</p>
+
+    <h2><a name="create_enter_4"></a>Load a sudoku from a file</h2>
+    <p>You can load a previously saved sudoku from a file (see <a href="#save_load">Saving/Loading
+    configurations and sudokus</a>). sudokus are restored in exact the same state as they were in
+    when they were saved.</p>
+
+    <h2><a name="create_enter_5"></a>Use the history</h2>
+    <img class="scr_l" src="../img/scrpce4.png" alt="Screenshot: creation history">
+    <p>When a new sudoku is created using "File|New Random Sudoku" it is stored in the default
+    configuration. The last 20 created sudokus are accessible via the history ("Puzzle|History").
+    The history dialog shows date and time, when the sudoku was created, plus its rating and
+    difficulty level.</p>
+    <p>If "Preview" is selected in the dialog clicking a line in the table displays
+    the sudoku and its standard solution. To keep the configuration file small only the givens are
+    stored. That means, that the sudoku has to be solved in order to be previewed. Especially for
+    Unfair or Extreme sudokus this may take a while. To avoid unneccessary waiting uncheck "Preview"
+    in the dialog.</p>
+    <p>Pressing "Ok" loads the selected sudoku, pressing "Cancel" restores a previously loaded
+    sudoku.</p>
+
+    <hr class="clear">
+
+    <h1><a name="keyboard"></a>Using the keyboard</h1>
+    <h2><a name="keyboard_1"></a>Normal operation</h2>
+    <p>Solving sudokus using the keyboard is really straightforward. Use the arrow keys
+    to change the cell that has the focus (yellow background) and enter a digit to set the cell
+    to a specific value.</p>
+    <p>[Ctrl]-cursor moves to the next unsolved cell, [Home] goes to the leftmost column,
+    [End] to the rightmost column, [Ctrl][Home] to the topmost row and [Ctrl][End] to
+    the bottommost row.</p>
+    <p>Pressing [0] (or [Del] or [Backspace]) deletes a cell, although this is not recommended if you
+    play with "Options|Show all candidates" and already have candidates removed (deleting a value
+    in a cell restores the corresponding candidate in all possible cells regardless whether
+    those candidates had already been eliminated or not - use "Undo" instead).</p>
+    <p>Pressing [Ctrl] and a digit toggles that candidate in the cell with the focus.</p>
+    <p>[Shift][Ctrl][Cursor] jumps to the next unsolved cell. If filters are applied it jumps
+    to the next cell, that contains the filtered candidate. For more keys specific to filters see
+    <a href="#filters">below</a>.</p>
+
+    <h2><a name="keyboard_2"></a>Coloring</h2>
+    <p>HoDoKu supports coloring. You can use five different color pairs to mark cells
+    (the background of the cells is changed). To set a color use [A] to [E], to mark
+    a cell with the opposite color use [Shift]+[A] to [Shift]+[E]. Pressing the same key
+    or combination of keys on the same cell twice reverts it to it's normal background.
+    Using colored backgrounds
+    has no influence on the hint system, it is merely a help for you. If you are finished
+    checking for a move press [R] to remove all colors.</p>
+    <p>Coloring candidates is only possible using the mouse (see below).</p>
+
+    <h2><a name="keyboard_3"></a>Miscellaneous</h2>
+    <p>If "Options|Show all candidates" is not selected you can temporarily show
+    all remaining candidates in the cell with the focus or in the whole sudoku. Pressing [Shift]+[Ctrl]
+    shows all candidates for the cell with the focus, [Shift]+[Alt] shows the candidates
+    for the whole grid.</p>
+    <hr>
+
+    <h1><a name="mouse"></a>Using the mouse</h1>
+    <p>HoDoKu supports two different mouse modes: "Normal mode" and "alternate mode". "Normal mode"
+    works as the mouse does in most programs: Clicking changes the selection, if you want to change the
+    data you have to use double clicks or the context menu.</p>
+    <p>"Alternate mode" was designed to play using as few mouse clicks as possible. It allows for a far more
+    fluid playing experience.</p>
+    <h2><a name="mouse_1"></a>Normal mouse mode</h2>
+    <img class="scr_l" src="../img/scrmou1.png" alt="Screenshot: context menu">
+    <p>Clicking a cell with the mouse sets the focus to that cell. It is possible to select more than
+    one cell by pressing [Ctrl] or [Shift] while clicking on a cell. Setting a value or toggeling candidates
+    affects all selected cells.</p>
+    <p>Pressing the right mouse button on a cell brings up the context menu for that cell (see left). Values can be
+    set ("Make n"), candidates excluded ("Exclude n") or colors set/cleared. It is not possible to
+    color candidates using the context menu. Choosing "Exclude several..." brings up
+    an input dialog. A list of candidates (seperated by blank) can be entered and all those
+    candidates are removed from the cell.</p>
+    <p>Other things you can do with the mouse:</p>
+    <ul class="nfloat">
+        <li>Double clicking a candidate sets it in a cell</li>
+        <li>Double clicking a cell, that has only one candidate left
+            (<a href="tech_singles.htm#n1">Naked Single</a>) sets that candidate in the cell</li>
+        <li>If filters are applied, double clicking a cell sets the filtered candidate in the cell,
+            if it is a <a href="tech_singles.htm#h1">Hidden Single</a> in one of its houses</li>
+        <li>Double clicking a candidate while pressing [Ctrl] removes it from the cell</li>
+        <li>Double clicking the place where a candidate would be displayed (but isn't) while pressing [Ctrl]
+            adds it to the other candidates in the cell</li>
+    </ul>
+    <p class="clear">If you don't like double clicking, try <a href="#mouse_1a">alternate mouse mode</a> or the <a href="#mouse_3">Active Cell view</a>.</p>
+    <p>If "Use [Shift] for region select" is unchecked under "Edit|Preferences|General", clicking while pressing
+    [Shift] does not select a rectangular region of cells. It toggles candidates instead.</p>
+
+    <h2><a name="mouse_1a"></a>Alternate mouse mode</h2>
+    <p>As already said above this mode was designed to let you play using as few mouse clicks as possible:</p>
+    <ul>
+        <li>Simply left clicking a candidate sets it in a cell</li>
+        <li>Left clicking a cell, that has only one candidate left
+            (<a href="tech_singles.htm#n1">Naked Single</a>) sets that candidate in the cell</li>
+        <li>If filters are applied, left clicking empty space in a filtered cell sets the filtered candidate in the cell,
+            if it is a <a href="tech_singles.htm#h1">Hidden Single</a> in one of its houses</li>
+        <li>Right clicking a candidate removes it from the cell</li>
+        <li>If filters are active, right clicking empty space in a filtered cell removes the filtered candidate from that cell.</li>
+        <li>Right clicking the place where a candidate would be displayed (but isn't) 
+            adds it to the other candidates in the cell</li>
+    </ul>
+    <p><b>Please note:</b> Using alternate mouse mode with filters applied lets you play very fast.
+    You have to be careful when using filters though: Even if a cell is filtered, clicking a candidate
+    directly sets/eliminates that candidate, filtered or not. If you want to affect the filtered
+    candidate, either click the candidate itself, or click empty space in the cell (the cell is divided
+    in 9 parts of equal size, each corresponding to the candidate, that would be displayed in that area;
+    that means, that "empty space" must be an area, that does not belong to a candidate, that is still valid).</p>
+    <p>Clicking a cell with the mouse sets the focus to that cell as well. Selecting an area by pressing [Ctrl] or [Shift] 
+    while clicking is still possible in alternate mouse mode.</p>
+
+    <h2><a name="mouse_2"></a>Coloring</h2>
+    <p>Sometimes rather complicated steps can be found easily by applying colors to cells or
+    candidates (see <a href="tech_col.htm">Coloring</a>). To switch between coloring cells
+    and coloring candidates use the menu ("Options|Color cells" or
+    "Options|Color candidates") or click the label "Coloring: Cell" ("Coloring: Candidate") in
+    the status bar.</p>
+    <p>To color a cell/candidate click one of the colors in the palette which is displayed in the status bar.
+        The mouse
+    cursor changes to indicate coloring mode. Clicking a cell/candidate colors it, clicking a cell/candidate
+    while pressing [Shift] colors it using an alternate color.</p>
+    <p>Clicking the field with the background color (usually white) or pressing [Esc] ends coloring mode,
+    clicking the field with the "R" ends coloring mode and clears all colors.</p>
+    <p>While in coloring mode the normal mouse functions are disabled (only the context menu still works).</p>
+
+    <h2><a name="mouse_3"></a>Active Cell view</h2>
+    <img class="scr_l" src="../img/scrmou2.jpg" alt="Screenshot: Active Cell view">
+    <p>The "Active Cell" view is like a magnifying glass for the selected cell or region of cells. It allows
+    setting of values in cells, toggeling candidates, choosing colors for coloring mode and
+    coloring candidates.</p>
+    <p>To set a value in a cell click the corresponding number under "Set Value".</p>
+    <p>To exclude a candidate, click the candidate's number under "Toggle Candidates". To add a candidate
+    in a cell click the corresponding empty button under "Toggle Candidates".</p>
+    <p>If a region of cells is selected adding candidates is no longer possible. The label changes from
+    "Toggle Candidates" to "Exclude Candidates" to mirror that change.</p>
+    <p>The palette fields can be used to enter coloring mode, just like the palette in the status bar.
+    If a color is selected from "Choose Color for Cell" the coloring mode is set to "Color Cells",
+    if it is chosen from "Choose Color for Candidate", the mode is set to "Color Candidates".</p>
+    <p>When coloring candidates clicking a button in "Toggle Candidates" applies the color to that button.</p>
+    <hr class="clear">
+
+    <h1><a name="modes"></a>Game modes</h1>
+    <p>HoDoKu supports three different game modes (each available in Sudoku and ColorKu): Playing, learning and practising. These modes are specifically
+    designed to allow you to practise your moves or to learn new techniques.</p>
+    <h2><a name="modes_1"></a>Playing</h2>
+    <p>"Playing" is the normal game mode. It is activated by default every time you start HoDoKu.</p>
+    <h2><a name="modes_2"></a>Learning</h2>
+    <img class="scr_l" src="../img/scrpmo1.png" alt="Screenshot: learning mode configuration">
+    <p>"Learning" can be activated by choosing "Mode|Learning..." from the menu. A dialog pops up that lets
+    you choose one or more techniques (one is recommended). The mode and the name of the technique(s) are
+    displayed in the status bar. If learning mode is active any newly created sudoku will contain at least
+    one instance of one of the selected techniques. The sudoku is automatically solved up to the point
+    where that technique is applicable.</p>
+    <p>There are some caveats though: Firstly you can only select techniques, that have been enabled
+    in the solver (see <a href="docs_solv.htm#en_disable">Enable/Disable Techniques</a>). Secondly
+    since some techniques are very rare it might take a long time to actually find a sudoku that fits
+    the requirements. It might be a good idea to move the selected technique(s) up in the solver hierarchy
+    (see <a href="docs_solv.htm#change_order">Changing order of Techniques</a>).</p>
+    <h2 class="clear"><a name="modes_3"></a>Practising</h2>
+    <p>"Practising" can be activated by choosing "Mode|Practising..." from the menu. As with "Learning" a
+    dialog is displayed that lets you choose one or more techniques. Any newly created
+    sudoku will contain at least one instance of one of the selected techniques (again as in "Learning").
+    The only difference to "Learning" is, that the newly created sudoku is displayed in its initial state.</p>
+    <hr class="clear">
+    
+    <h1><a name="hint_system"></a>Using the hint system</h1>
+    <h2><a name="hint_system_1"></a>Getting help</h2>
+    <p>Nothing is more frustrating than being stuck in a sudoku. To avoid such situations
+    HoDoKu can give you hints about a possible next step (which step is hinted at depends
+    on the current solver configuration, see <a href="docs_solv.htm#strategy">Solver strategy</a>).</p>
+    <img class="scr_l" src="../img/scrphi1.png" alt="Screenshot: vague hint">
+    <img class="scr_l" src="../img/scrphi2.png" alt="Screenshot: concrete hint">
+    <p>Hints come in tree flavors (all in the Puzzle menu): "Vague hint" ([Alt]+[F12]),
+    "Concrete hint" ([Ctrl]+[F12]) and "Show next step" ([F12] or "Next hint" in the hint area).</p>
+    <p>"Vague hint" only displays the name of the step, "Concrete hint" gives more details
+    (e.g. affected candidates) and "Show next step" highlights the step in the
+    sudoku area and writes a textual representation into the hint area text box.</p>
+    <p>It is also possible to let HoDoKu solve all available Singles ("Puzzle|Set all singles"
+    or [F11]).</p>
+    
+    <h2><a name="hint_system_2"></a>Using the hint area</h2>
+    <p>Every time a step is highlighted on the grid a textual representation of that
+    step is written to the hint area text box. The example below shows a "Kraken Fish":</p>
+    <img class="scr_l" src="../img/scrphi3.png" alt="Screenshot: hint area">
+    <p class="clear">The "Next hint" button in the hint area can be used to search for the next available
+    step (equivalent to [F12]). If a step is hightlighted, the buttons
+    "Execute" (executes the step and ends the hightlighting) and "Cancel" (ends highlighting
+    without executing the step) are available.</p>
+    <p>"Solve up to" automatically executes the next steps, as long they are selected under "Preferences|Progress"
+        (see <a href="docs_solv.htm#progress_2">Progress</a>).
+    This feature allows the player to concentrate on certain steps: Just select every step you dont want
+    to search for yourself under "Preferences Progress" and press "Solve up to".</p>
+    <p>Most steps need only one line in the hint area. Only very complicated techniques like
+    Forcing Chains, Forcing Nets or Kraken Fish consist of various substeps that are
+    displayed each on it's own line. Since complicated steps can affect many cells and candidates,
+    which can make the hightlighting confusing at times, HoDoKu can display only one substep
+    at a time. To do this, just click the line of the substep you want to see. Clicking the first
+    line reverts the display back to showing all substeps at once. For Kraken Fish only the fish
+    itself and the elimination(s) are shown. The chains of the Kraken Fish have to be activated by clicking
+    the appropriate line.</p>
+    <img class="scr_l" src="../img/scrphi4.png" alt="Screenshot: Kraken Fish - fish only">
+    <img class="scr_l" src="../img/scrphi5.png" alt="Screenshot: Kraken Fish - second chain">
+    <p class="clear">The images above show the highlighting of the Kraken Fish from the hint area
+    screenshot. The left picture shows only the fish and the elimination (first line clicked in text area),
+    the right image shows the fish plus the second chain (last line in text area clicked).</p>
+    <hr>
+
+    <h1><a name="filters"></a>Using filters</h1>
+    <p>Filters can be a great tool in identifying simple steps (Singles, Locked Candidates).
+    A filter simply changes the background color to indicate whether a certain digit
+    may be placed in a certain cell.</p>
+    <img class="scr_l" src="../img/scrpfi1.png" alt="Screenshot: Filters - show forbidden cells for candidate 6">
+    <img class="scr_l" src="../img/scrpfi2.png" alt="Screenshot: Filters - show allowed cells for candidate 6">
+    <p>HoDoKu can use one of two filter modes: show all excluded cells for the filtered candidate in red or
+    show all allowed cells in green. The images above show both kinds applied for digit 6. It can
+    easily be seen that in block 5 candidate 6 can only go in column 6. 6 can therefore be
+    eliminated from r9c6 (Locked Candidates Type 1 - Pointing).</p>
+    <p>To toggle a filter for a candidate press the appropriately numbered button
+    in the tool bar or press [F1] to [F9] (please note that [F1] does not activate
+    a help system).</p>
+    <p>To toggle the filter modes press the button with the red and green rectangles
+    in the tool bar or hold down [Shift] while pressing one of the [Fx] keys.</p>
+    <p>When a filter is applied, [&lt;] ([.]) and [&gt;] ([,]) change the filter digit. [Blank]
+    toggles the filtered candidate in the cell with the focus, [Enter] sets it in the cell,
+    if it is a Naked Single or a Hidden Single for the filtered candidate.</p>
+    <p>It is possible to filter for more than one candidate: Pressing [Ctrl] while
+    using the [Fx] keys adds/deletes candidates to/from the filter set. If more than
+    one candidate is selected for filtering, HoDoKu filters only cells, where all candidates
+    are excluded/possible. You can change this behaviour under "Preferences|General|Use OR instead of AND for filters":
+    If that option is selected, all cells that (don't) contain at least one candidate are filtered.</p>
+    <hr>
+
+    <h1><a name="progress"></a>Progress indicator</h1>
+    
+    <img src="../img/scrppro1.png" alt="Screenshot: Progress indicator">
+    <p>The progress indicator is located in the status bar just right of the sudoku rating. In the screenshot
+    above, we have an unfair sudoku with a score of 1736. The progress indicator shows a yellow bullet and the text
+    "53%". The yellow bullet means, that the sudoku still needs at least one hard step (yellow is the default color
+    for hard), the text means, that the total score of the remaining steps is 53% of the score of the sudoku.</p>
+    <p>The progress indicator is updated after every change to the sudoku (toggling candidates or setting values 
+    in cells/deleting values from cells). HoDoKu automatically solves the sudoku in its new state and sets the
+    indicator accordingly.</p>
+    <p>In HoDoKu's default configuration the only steps thought of as easy are singles. That means, that once the 
+    indicator's bullet becomes white (default color for "Easy"), the sudoku can be solved with Singles only.
+    In that state, pressing [F11] solves the sudoku completely. This is of course only true, as long as the step 
+    configuration has not been changed.</p>
+    <p><b>Please note:</b> The rest of the section is only meant for advanced users and is not necessary for using
+    HoDoKu. You can skip to the next section, <a href="#undo_redo">Undo/Redo</a>.</p>
+    <p>The behaviour of the progress indicator can be confusing at times. In some sudokus the percentage
+    can suddenly drop to a very small value, in other cases it can even increase after an elimination.
+    The first case (eliminating a candidate makes the sudoku easier) is simple enough to understand: Every sudoku has 
+    one or more cells, that, when set, reduce the sudoku to singles (the <a href="docs_solv.htm#backdoor">"backdoors"</a>). 
+    The solver searches for steps in a predefined order. A human solver solves more intuitive. If an
+    elimination, that is not part of the computer solution, triggers a backdoor, the sudoku becomes very easy indeed.</p>
+    <p>The second case (eliminating a candidate makes the sudoku <b>harder</b>), is not so easy to understand, 
+    but it does happen. Lets take a look at the following example (provided by CCV - thanks a lot). The original
+    sudoku is:</p>
+    <pre>8......23.6.1..7.......816597..325......9..37..85.....2846.......7..1...6.......2</pre>
+    <p>The sudoku is rated "Extreme" because of its high score of 2492. The hardest step in the 
+    standard solution is a Finned Swordfish (unfair). The sudoku has already been reduced to</p>
+    <pre>:0000:x:8..+7+6..23.6.1..7+8.+7....816597+6.325+1.+1...9+6.37..85+1+7.+9.2846....+1..7+2.1.+4.6.......2:926 932 434 467 576 494 894 396 996::</pre>
+    <p>The remaining rating is 1396, only hard steps are used to solve the sudoku, so the indicator bullet
+    is yellow ("Hard").</p>
+    <img class="scr_l" src="../img/scrppro2.png" alt="Screenshot: UR 1">
+    <p>Now take a look at the screenshot: A Uniqueness Test 1 is available: 5/7 in r7c58,r9c58 => r9c5<>5, r9c5<>7.</p>
+    <p>If that step is executed, the indicator bullet remains yellow and the percentage drops a bit - that is
+    the expected behaviour.</p>
+    <p>Now try to eliminate only candidate 7 from r9c5 (candidate 5 stays where it is): The indicator changes to "Unfair", the sudoku
+    has suddenly become harder than it was before. How is this possible?</p>
+    <p class="clear">Let's take a look at the "normal" solution (the solution path after eliminating both candidates
+    from r9c5):</p>
+    <img class="scr_l" src="../img/scrppro3.png" alt="Screenshot: X-Wing">
+    <img class="scr_l" src="../img/scrppro4.png" alt="Screenshot: W-Wing">
+    <p class="clear">The UR 1 is followed by some Singles, after which an X-Wing becomes available: 5 c15 r28 => r2c36,r8c2<>5
+    (see left screenshot above). The X-Wing eliminates candidate 5 from r2c6 (amongst others).</p>
+    <p>A few steps later a W-Wing is possible (right screenshot above): 4/5 in r2c1,r9c6 connected by 5 in r8c15 => r2c6<>4.
+    The W-Wing turns r2c6 into a Naked Single, the sudoku can now be solved with Singles and one additional W-Wing.</p>
+    <p>Now let's take a look at what happens, when only 7 is eliminated from r9c5:</p>
+    <img class="scr_l" src="../img/scrppro5.png" alt="Screenshot: No X-Wing available">
+    <img class="scr_l" src="../img/scrppro6.png" alt="Screenshot: W-Wing">
+    <p>The Singles are the same as above, but where the X-Wing should be, we have the situation as shown in the left screenshot
+    above: The remaining candidate 5 in r9c5 prevents the X-Wing, which means, that 5 is not eliminated from r2c6. The
+    W-Wing a bit later is the same as before (see right screenshot above), but since 5 was not eliminated from r2c6
+    the cell does not turn into a Naked Single and the easiest step available is now an XY-Chain, which is an
+    "Unfair" technique - the sudoku has indeed become harder.</p>
+    <p>In most cases however, the progress indicator behaves as expected and gives you a good estimate of how
+    much work you still have to do to solve the sudoku.</p>
+    <hr class="clear">
+
+    <h1><a name="undo_redo"></a>Undo/Redo</h1>
+    <p>HoDoKu offers an unlimited Undo/Redo function. Undo/Redo is available via the
+    tool bar, the Edit menu or the shortcuts [Ctrl]+[Z] (Undo) and [Ctrl]+[Y] (Redo).</p>
+    <p>Undo/Redo works only for the current sudoku. If a new sudoku is created,
+    loaded, or pasted from the clipboard the Undo function is reset. The aformentioned
+    actions can therefore not be undone.</p>
+    <p>The Undo function is the recommended way to delete values from cells. If you play
+    with "Options|Show invalid values" and/or "Options|Show deviations" you usually
+    recognize an error at once. If you delete the wrong value using [0], [Del], or [Backspace],
+    the candidates for the deleted digit are restored in all possible cells even if you
+    have already eliminated them. The Undo function correctly only reinserts candidates
+    that were there before the digit was entered into the cell.</p>
+    <hr>
+
+    <h1><a name="clipboard"></a>Using the clipboard</h1>
+    <p>The system clipboard is a convenient way to exchange sudokus between various
+    solver programs or to input sudokus from web sites or sudoku collections.
+    All copy operations use text representations of the sudoku.</p>
+    <p>HoDoKu supports the following copy operations:</p>
+    <ul>
+        <li><b>Copy givens ([Ctrl]+[G]):</b> Copies only the givens (regardless of the
+        state of the sudoku) as 81 character string. Most solver programs recognize that
+        format. Example:<br>
+        <code>6....23..1256.......47...2.73....84...........46....15.5...81.......3472..72....8</code></li>
+        <li><b>Copy values:</b> Copies the contents of all already solved cells
+        as 81 character string. Most solver programs recognize that
+        format. Example see above.</li>
+        <li><b>Copy candidates ([Ctrl]+[C]):</b> Copies the current state of the
+        sudoku as Pencil Mark grid (PM). For every cell all possible candidates
+        are copied. This format is used by most sudoku forums to exchange
+        sudokus with other forum members. Example:<br>
+        <pre>.--------------.----------------.------------.
+
+| 6   7    89  | 189  19   2    | 3   5   4  |
+
+| 1   2    5   | 6    3    4    | 9   8   7  |
+
+| 3   89   4   | 7    58   59   | 6   2   1  |
+
+:--------------+----------------+------------:
+
+| 7   3    29  | 19   25   1569 | 8   4   69 |
+
+| 5   1    289 | 89   4    679  | 27  69  3  |
+
+| 89  4    6   | 3    28   79   | 27  1   5  |
+
+:--------------+----------------+------------:
+
+| 2   5    3   | 4    7    8    | 1   69  69 |
+
+| 89  689  1   | 5    69   3    | 4   7   2  |
+
+| 4   69   7   | 2    169  169  | 5   3   8  |
+
+'--------------'----------------'------------'</pre></li>
+        <li><b>Copy step:</b> Similar to <b>Copy candidates</b>, but if a step is
+        highlighted the affected cells are marked with special characters and the
+        textual representation of the step is included. Example:<br>
+        <pre>.---------------.--------------------.------------.
+
+|  6   7    89  |  189   19     2    | 3   5   4  |
+
+|  1   2    5   |  6     3      4    | 9   8   7  |
+
+|  3   89   4   |  7     589    59   | 6   2   1  |
+
+:---------------+--------------------+------------:
+
+|  7   3    29  |  159   12569  1569 | 8   4   69 |
+
+|  5   1    289 | #89    4      679  | 27  69  3  |
+
+| #89  4    6   |  3    #289    79   | 27  1   5  |
+
+:---------------+--------------------+------------:
+
+|  2   5    3   |  4     7      8    | 1   69  69 |
+
+| #89  689  1   |  5-9   569    3    | 4   7   2  |
+
+|  4   69   7   |  2     169    169  | 5   3   8  |
+
+'---------------'--------------------'------------'
+
+W-Wing: 9/8 in r5c4,r8c1 connected by 8 in r6c15 => r8c4&lt;&gt;9</pre></li>
+        <li><b>Copy library format:</b> The HoDoKu library format is a proprietary
+        format that contains information about givens, solved cells, candidates,
+        and solving steps in a single line. It is used by the internal regression
+        test library (see <a href="libs.htm#libreg">Regression Test Library</a>).</li>
+        <li><b>Copy for SimpleSudoku:</b> Copies the grid in a format used by the SimpleSudoku program.
+        This format uses more than one section in the output to differentiate between
+        givens, user set cells and Naked Singles. If you are not using SimpleSudoku you should
+        use library format instead for that purpose. Example (givens, set cells, PM grid):<br>
+        <pre> *-----------*
+
+ |6..|..2|3..|
+
+ |125|6..|...|
+
+ |..4|7..|.2.|
+
+ |---+---+---|
+
+ |73.|...|84.|
+
+ |...|...|...|
+
+ |.46|...|.15|
+
+ |---+---+---|
+
+ |.5.|..8|1..|
+
+ |...|..3|472|
+
+ |..7|2..|..8|
+
+ *-----------*
+
+
+
+ *-----------*
+
+ |67.|..2|354|
+
+ |125|634|987|
+
+ |3.4|7..|621|
+
+ |---+---+---|
+
+ |73.|...|84.|
+
+ |51.|.4.|..3|
+
+ |.46|3..|.15|
+
+ |---+---+---|
+
+ |253|478|1..|
+
+ |..1|..3|472|
+
+ |4.7|2..|538|
+
+ *-----------*
+
+
+
+ *--------------------------------------------------------------------*
+
+ | 6      7      89     | 189    189    2      | 3      5      4      |
+
+ | 1      2      5      | 6      3      4      | 9      8      7      |
+
+ | 3      89     4      | 7      589    59     | 6      2      1      |
+
+ *----------------------+----------------------+----------------------|
+
+ | 7      3      29     | 159    12569  1569   | 8      4      69     |
+
+ | 5      1      289    | 89     4      679    | 27     69     3      |
+
+ | 89     4      6      | 3      289    79     | 27     1      5      |
+
+ *----------------------+----------------------+----------------------|
+
+ | 2      5      3      | 4      7      8      | 1      69     69     |
+
+ | 89     689    1      | 59     569    3      | 4      7      2      |
+
+ | 4      69     7      | 2      169    169    | 5      3      8      |
+
+ *--------------------------------------------------------------------*
+</pre>
+        </li>
+    </ul>
+    <p><b>Paste ([Ctrl]+[V])</b> understands any of the above formats plus a few
+    others. Normally if the format is not decoded correctly an
+    "Invalid sudoku: Multiple solutions!" message will be displayed.</p>
+    <p>If "Use '0' in Clipboard" is checked under "Edit|Preferences|Steps" '0' is
+    used instead of '.' when copying sudokus to the clipboard.</p>
+    <hr>
+
+    <h1><a name="restart"></a>Restarting a game</h1>
+    <h2><a name="restart_1"></a>Restart</h2>
+    <p>"Edit|Restart Game" ([Ctrl]+[R]) restarts the current sudoku from scratch. All
+    solved cells are deleted, all solution paths in the Solution path view
+    are deleted, a new standard solution is calculated, Undo/Redo is reset.</p>
+
+    <h2><a name="restart_2"></a>Reset</h2>
+    <p>"Edit|Reset Game" resets the current sudoku to its initial state (all already
+    solved cells are deleted).
+    The solution path in the Solution path view is not changed, Undo/Redo is reset.</p>
+
+    <h2><a name="restart_3"></a>Solve from here</h2>
+    <p>HoDoKu does not support a "Solve from here" feature because of the difficulties
+    synchronizing the various Solution path views. Due to HoDoKu's clipboard support
+    however a "Solve from here" function can easily be simulated:</p>
+    <ul>
+        <li>To solve from the current sudoku state: Use Copy library format and then Paste</li>
+        <li>To go back to the beginning: Use Copy givens and then Paste</li>
+    </ul>
+    <hr>
+
+    <h1><a name="savep"></a>Savepoints</h1>
+    <p>While it is probably true, that any Sudoku can be solved using logic alone,
+    somtimes guessing is just want you want (or have) to do. If "Options|Show Deviations" is
+    checked, errors can be recognized at once. If not, at some point the Sudoku will reach a
+    contradiction. This is the moment where the Undo function comes in handy. But undoing a lot
+    of steps can be cumbersome and this is where savepoints step in: A savepoint is a 
+    snapshot of a sudoku in a specific state, including solution paths, filters, coloring etc.</p>
+    <p>HoDoKu allows you to create as many savepoints as you want and to revert to any of those
+    savepoints at any time. Savepoints are stored together with the sudoku if the Sudoku is
+    written to a file.</p>
+    <p>Other Sudoku programs have similar features known as "second pens". The difference to savepoints is
+    that not only the sudoku is saved (see above) and that you can set as many savepoints as
+    you want and restore any of them at any time.</p>
+    <h2><a name="savep_1"></a>Creating savepoints</h2>
+    <img class="scr_l" src="../img/scrpsp1.png" alt="Screenshot: Creating savepoints">
+    <p>To create a savepoint choose "Puzzle|Create Savepoint" from the menu. A popup dialog asks
+    you to enter a name, which can be used to more easily identify the savepoint if more
+    than one savepoint is created for a sudoku. Enter a name or accept the default value
+    and click "Ok".</p>
+    <p>The newly created savepoint contains the complete state of the sudoku: Givens, cell values,
+    candidates, highlited steps, filters, colored cells or candidates and solution paths.</p>
+
+    <h2 class="clear"><a name="savep_2"></a>Restoring savepoints</h2>
+    <img class="scr_l" src="../img/scrpsp2.png" alt="Screenshot: Restoring savepoints">
+    <p>To revert a sudoku to a previously stored savepoint choose "Puzzle|Restore Savepoint"
+    from the menu. A list with all available savepoints is displayed.</p>
+    <p>Clicking a line displays the state of that savepoint in the sudoku. If the correct
+    line has been identified click "Ok" to load that state or click "Cancel" to continue
+    with your current state.</p>
+    <p>Solution paths are part of a savepoint. If you have changed or added solution paths to your
+    sudoku, those changes will be lost if you revert to another savepoint. To prevent this
+    create a new savepoint before restoring an older one.</p>
+    <hr class="clear">
+
+    <h1><a name="save_load"></a>Saving/Loading configurations and sudokus</h1>
+    <img class="scr_l" src="../img/scrsl1.png" alt="Screenshot: File formats">
+    <p>HoDoKu can save sudokus and configurations to files. Configurations are stored as XML files
+    using the file extension "*.hcfg". Sudokus can be stored as text files (various formats supported, 
+    see screenshot on the left) or as proprietary "*.hsol" files. The various text file formats are 
+    understood by many other sudoku programs, hsol files can only be read by HoDoKu itself.</p>
+    <p>The advantage of using hsol files is, that they store not only the sudoku itself but the complete 
+    program state including solution paths and savepoints. The hsol format is therefore
+    recommended.</p>
+    <p>Sudokus are saved via "File|Save Puzzle As..." ([Shift]+[S]) and loaded via
+    "File|Open Puzzle File..." ([Ctrl]+[O]). If a sudoku has been loaded, the file name is
+    shown in the window title bar. "File|Save puzzle" ([Ctrl]+[S]) saves the current state.
+    Configurations are saved via
+    "File|Save Configuration As..." (or loaded by "File|Open Configuration File...").</p>
+    <p>hsol and hcfg files written by HoDoKu are XML files although the ".hsol" files are zipped
+    to reduce the file size. The XML format makes it possible for you to make changes
+    directly in the file using a text editor. This is however strongly discouraged.</p>
+    <hr>
+
+    <h1><a name="print"></a>Printing sudokus</h1>
+    <h2><a name="print_1"></a>Normal operation</h2>
+    <p>Sudokus can be printed exactly as they are shown on screen, one sudoku per page.
+    Page setup and printer setup can be done using the standard dialogs of the
+    underlying operating system.</p>
+    <p>To print the current sudoku choose "File|Print" ([Ctrl]+[P]).</p>
+    <h2><a name="print_2"></a>Extended print</h2>
+    <p>Normal printing prints one sudoku per page. If you need a more flexible
+    tool, you can use HoDoKu's booklet printer, which is available under "File|Extended Print...".</p>
+    <img class="scr_l" src="../img/scrprn1.png" alt="Screenshot: Booklet printer">
+    <p>The extended print dialog offers various layouts, both in landscape and portrait orientation.
+    Up to four sudokus can be printed per page. Various options control the printing process:</p>
+    <ul class="nfloat">
+        <li><b>Print rating:</b> Prints the rating underneath each sudoku</li>
+        <li><b>Print black only:</b> Ignores the color settings and prints everything in black
+        (increases the quality on black and white printers, which use dithering to emulate colors)</li>
+        <li><b>Print booklet:</b> The sudokus are placed on the pages in a way, that the
+        printed pages can be folded like a booklet</li>
+        <li><b>Flip pages manually:</b> Only available when "Print booklet" is
+        selected. Prints the front side of all pages first and lets you flip the pages 
+        manually, before printing the backs.</li>
+    </ul>
+    <p>The contents of the booklet consists of up to five sections. Each section can
+    consist of an arbitrary number of susokus, but all sudokus in one section have the same defining 
+    parameters (level, mode and candidates). If "Number of sudokus" is left empty in a section, 
+    the section is completely ignored. "Print..." starts the print run. Normally the sudokus
+    have to be created first, which can last some time, depending on the section definitions.
+    Sudokus created for extended print are added to the sudoku history 
+    (see <a href="#create_enter_5">Using the history</a>).</p>
+    <p>The printing process can be interrupted at any time.</p>
+    <p><b>Please note:</b> When printing booklets without "Flip pages manually" set, the
+    printer has to be configured for duplex print in landscape orientation.</p>
+    <hr class="clear">
+
+    <h1><a name="images"></a>Creating images of sudokus</h1>
+    <p>HoDoKu can produce high resolution images of the sudoku area and write them 
+    to disk in PNG format. Size and resolution for the images can be chosen arbitrarily.</p>
+    <img class="scr_l" src="../img/scrpsai1.png" alt="Screenshot: Save Sudoku as image">
+    <p>To create an image, select an appropriate unit (millimeter, inch, or pixel), a size
+    and a resolution and press "Save image as". A file chooser dialog opens where you can specify the destination file and directory.</p>
+    <p>The resolution is written to the PNG file as image meta data.
+    Most word processors process that information when importing images and adjust
+    their size accordingly. Browsers normally ignore the resolution.</p>
+    <p>To create images for the web choose "pixel" as unit and "72dpi" for the resolution
+    (the sudoku images above were created that way, "Size" was set to 400px).</p>
+    <p>If you want to use the image in a word processor choose "milimeter" or "inch" as
+    unit and set the resolution to a higher value (e.g. "300dpi"). When importing
+    the image at 100% the resulting size should match your choice.</p>
+    <hr class="clear">
+
+<div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

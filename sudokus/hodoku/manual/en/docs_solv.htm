@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: User Manual (Chapter 3: Configuring the Solver)</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="User Manual for HoDoKu - Chapter 3: Configuring the Solver">
+    <meta name="keywords" content="sudoku,java,hodoku,german,command line,options,human style solving techniques,hint,fish,uniqueness,coloring,chains,als,wings,subsets">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+<style type="text/css" media="all">
+<!--
+#menu ul li ul li.mDocsSolv a, #menu ul li ul li.mDocsSolv a:hover {
+    font-style: italic;
+    background-color:#fceabe;
+}
+-->
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li><ul class="sub1">
+                <li class="mDocsIntro"><a href="docs_intro.htm">Introduction</a></li>
+                <li class="mDocsPlay"><a href="docs_play.htm">Playing the game</a></li>
+                <li class="mDocsSolv"><a href="docs_solv.htm">Solver</a></li>
+                <li class="mDocsCre"><a href="docs_cre.htm">Creator</a></li>
+                <li class="mDocsFAS"><a href="docs_fas.htm">Finding all Steps</a></li>
+                <li class="mDocsSol"><a href="docs_sol.htm">Solution paths</a></li>
+                <li class="mDocsRef"><a href="docs_ref.htm">Reference</a></li>
+    </ul></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>Chapter 3: Configuring the Solver</h1>
+    <h2>Table of Contents</h2>
+    <ul class="toc">
+        <li><a href="#strategy">Solver strategy</a></li>
+                <li><a href="#en_disable">Enabling/Disabling techniques</a></li>
+        <li><a href="#change_order">Changing order of techniques</a></li>
+        <li><a href="#examples">Duplicities and examples</a></li>
+        <li><a href="#progress">Progress measurement</a></li>
+        <li class="ni"><ul>
+            <li><a href="#progress_1">Terms and definitions</a></li>
+            <li><a href="#progress_2">Solve up to</a></li>
+        </ul></li>
+        <li><a href="#backdoor">Backdoor searcher</a></li>
+        <li><a href="#options">Options for solver steps</a></li>
+    </ul>
+    <hr>
+
+    <h1><a name="strategy"></a>Solver strategy</h1>
+    <p>HoDoKu uses the same solver strategy as most other computer solvers. All available techniques
+    are ordered. The solver tries one technique after the other until it finds a possible step.
+    That step is applied to the sudoku and the search starts again with the first technique.</p>
+    <p>The order of the techniques is based on their difficulty (easier steps before more
+    difficult ones). "Difficulty" very often is of course a matter of taste, which is why you
+    can change the order of techniques to your liking (see <a href="#change_order">below</a>).</p>
+    <p>This strategy means that the solver never uses a complicated step if an easy one
+    is possible. It also means that the solver very seldom finds the shortest possible
+    solution, it finds the one with the easiest steps regardless of their number.</p>
+    <p>The standard solver order can be seen under "Edit|Preferences|Solver" after pressing
+    "Reset to Defaults". As of version 2.0 the dialog lists 91 different steps, some of which
+    belong to the same family (e.g. 42 different kinds of fish). Other steps take only
+    one entry in the list but can produce slightly different techniques (e.g. "Nice Loops/AIC"
+    can result in "Discontinuous Nice Loops", "Continuous Nice Loops", and "AICs").</p>
+    <hr>
+
+    <h1><a name="en_disable"></a>Enabling/Disabling techniques</h1>
+    <img class="scr_l" src="../img/scrs1.png" alt="Screenshot: Standard order of solver steps">
+    <p>Steps can be enabled or disabled. A disabled step is not searched for by the solver.</p>
+    <p>Some techniques take a long time to compute and are therefore disabled by default
+    (e.g. all the larger or more complicated fish types). Enabling them can have a serious
+    impact on the time the solver needs to process a sudoku.</p>
+    <p>If you don't like specific steps you can disable them as well. Enabling or
+    disabling techniques is a two step process: First click on the technique to highlight it. HoDoKu
+    fills the "Step properties" panel with the step's attributes. If the step is
+    highlighted clicking the step toggles the check box.</p>
+    <p>All changes made in the dialog are automatically saved at program exit. Alternatively
+    they can be stored in a configuration file (see <a href="docs_play.htm#save_load">Saving/Loading
+    configurations and sudokus</a>).</p>
+    <p>Pressing the tree button above the step list switches the list into category display mode.
+    Steps are shown in a tree organized by solution categories. This makes it easy to
+    disable a whole group of techniques with one click (e.g. all Chains, or all Mutant Fish).
+    Step reordering (see below) is not possible while in tree mode.</p>
+    <hr class="clear">
+
+    <h1><a name="change_order"></a>Changing order of techniques</h1>
+    <p>To change the order, in which the techniques are processed by the solver, click a
+    step to highlight it and use the "Up" and "Down" buttons to change the technique's
+    location in the list or use drag and drop.</p>
+    <p>Please note that changing the order of techniques can result in completely
+    different solutions for one and the same sudoku and can lead to a different
+    rating (see <a href="docs_cre.htm#rating">Rating and difficulty levels</a>).</p>
+    <p>The order of techniques not only affects the solver but
+    the hint system as well. If you prefer certain techniques, put them further up
+    in the list. If you don't like techniques at all, disable them. If you want
+    them only as a last resort, put them further down the list.</p>
+    <hr>
+
+    <h1><a name="examples"></a>Duplicities and examples</h1>
+    <p>Many techniques exist under different names. A Skyscraper for example is also
+    a Turbot Fish and an X-Chain. It can also be seen as a combination of two Sashimi X-Wings.
+    2-String-Kites and Empty Rectangles can also be Turbot Fishes or Finned Mutant X-Wings.</p>
+    <p>Step ordering and enabling/disabling can therefore be used to list certain steps only
+    under a specific name. Take for example the following steps in their default
+    search order:</p>
+    <ul>
+        <li>2-String-Kite</li>
+        <li>Skyscraper</li>
+        <li>Turbot Fish</li>
+        <li>Empty Rectangle</li>
+    </ul>
+    <p>Empty Rectangles are only shown if the box with the ER holds at least three
+    candidates. Finding Empty Rectangles with two candidates can be enabled via an option, but
+    since Turbot Fish comes before Empty Rectangle these steps will always be listed
+    as Turbot Fish and the option seamingly has no effect at all. If you really
+    want to see 2 candidate Empty Rectangles listed as Empty Rectangles, you have to either
+    disable Turbot Fish or move Empty Rectangle before Turbot Fish.
+    Likewise if you move Turbot Fish before 2-String-Kite or Skyscraper you will
+    never see any of those anymore (they will be caught by the Turbot Fish code).</p>
+    <hr>
+
+    <h1><a name="progress"></a>Progress measurement</h1>
+    <h2><a name="progress_1"></a>Terms and definitions</h2>
+    <img class="scr_l" src="../img/scrs3.png" alt="Screenshot: Progress measure">
+    <p>Steps can be classified by how far they advance a sudoku. This is called the "progress
+    measure" of a step. To compute the progress measure the sudoku is solved using a configurable
+    set of techniques, the "progress steps". The screenshot shows the configuration panel for
+    progress steps in category view. Steps can only be chosen if their difficulty level is at
+    most "Hard". If you absolutely have to include an step that is "Unfair" or greater you have
+    to change its difficulty level first.</p>
+    <p>If the list view is chosen, a step order can be defined for progress steps as well.
+    This step order is completely independent from the normal solver step order.</p>
+    <p>To make configuring the progress steps easier various default configurations are available:</p>
+    <ul class="clear">
+        <li>Default: Singles, Intersections and Subsets</li>
+        <li>Medium + Hard: All steps classified as "Medium" or "Hard"</li>
+        <li>Medium: All steps classified as "Medium"</li>
+        <li>SSTS (Simple Sudoku Technique Set): Full House, Naked Single, Hidden Single,
+        Locked Pair, Naked Pair, Locked Candidates, Locked Triple, Naked Triple,
+        Naked Quadruple, Hidden Pair, X-Wing, Swordfish, Simple Colors,
+        Multi Colors, Hidden Triple, XY-Wing, Hidden Quadruple (in the order given above).
+        This technique set is often used by forum members to advance a sudoku to a more
+        "interesting" state</li>
+    </ul>
+    <p>The progress measure for a step consists of three independent scores:</p>
+    <ul>
+        <li>Number of direct singles: Number of singles that are available immediately after the step
+            is applied</li>
+        <li>Number of singles: The total number of singles available after the step is applied and using
+        the complete progress step set</li>
+        <li>Score: The score of all progress steps after the step is applied. If the sudoku cannot be solved,
+        the score of the "Give Up" step is not added.</li>
+    </ul>
+    <h2><a name="progress_2"></a>Solve up to</h2>
+    <p>The progress definitions are also used by the "Solve up to" button in the hint area. If that button is
+    pressed, the normal solver strategy is applied. If the next step found is defined as a progress step,
+    it is executed and the search is repeated. The automatic solving stops at the first non progress step.</p>
+    <hr class="clear">
+
+    <h1><a name="backdoor"></a>Backdoor searcher</h1>
+    <img class="scr_l" src="../img/scrs4.png" alt="Screenshot: Backdoor search dialog">
+    <p>Most sudokus, even very hard ones, have one or more backdoors: A backdoor is a cell or
+    a combination of cells, that when set, reduces the sudoku to Singles only. Most sudokus
+    have backdoors consisting of one cell only. Extremly hard ones need a pair of cells to
+    become easy. The famous <a href="show_example.htm@file=eastermonster&amp;tech=Backdoors.htm">Easter
+    Monster</a> (posted by JPF one the <a href="http://forum.enjoysudoku.com">Sudoku Player's
+    Forum</a> in April 2007) even needs three specific cells set before it yields to Singles.</p>
+    <p>HoDoKu can calculate various types of backdoors: Backdoors for cells only (using Singles
+    as well as progress steps as measure) and backdoors for candidates or combinations of candidates.</p>
+    <p>When searching for backdoors in cells single cells are tried (for Singles and for progress steps).
+    If no backdoors could be found the search continues for pairs of cells and if necessary for
+    cell triples. Please note that these computations can take a long time to be completed.</p>
+    <p>When searching for candidate backdoors the maximum search depth can be chosen with a combo box
+    ("Number of candidates").
+    As with cells the search stops as soon as backdoors have been found. Since a sudoku has a lot more
+    candidates than cells a search depth of 3 means that HoDoKu has to try an enormous amount of
+    candidate combinations which of course needs a long time to complete.</p>
+    <hr class="clear">
+
+    <h1><a name="options"></a>Options for solver steps</h1>
+    <p>Every solver step has a level and a score besides his order in the solver hierarchie.
+    These attributes are discussed in detail in Chapter 4: <a href="docs_cre.htm#rating">Rating
+    and difficulty levels</a>. The behaviour of some of the other techniques can be changed
+    with the options available in "Edit|Preferences|Steps":</p>
+    <img class="scr_l" src="../img/scrs2.png" alt="Screenshot: Solver step options">
+    <p class="clear">Fish general (options affect all types of fishes except Kraken Fish):</p>
+    <ul>
+        <li><b>Maximum fin count:</b> Maximum number of fins allowed in searching for fishes.
+        Although a grater number of fins is theoretically possible it is highly unlikely
+        that a fish with so many fins can yield
+        an elimination (in a finned fish an eliminated candidate has to see all the fins).
+        Increasing this number has a huge negative impact on performance.</li>
+        <li><b>Maximum endo fin count:</b> Maximum number of endo fins allowed in searching
+        for fishes. Especially when searching for large Mutant Fishes a large number of
+        endo fins slows down the search significantly and is unlikely to produce better results.</li>
+        <li><b>Display type:</b> "Normal" displays fishes as in versions prior to v2.0. "Numbers" and
+        "Cells" gives additional information about the architecture of the fish.</li>
+        <li><b>Check templates:</b> Templates are a possible way to test whether a
+        single digit pattern (such as fish) can give an elimination. When this box is
+        checked a fish search for a candidate is only done when the template check
+        shows possible eliminations. Please note: While a negative template check
+        ensures that none of the fish types implemented in HoDoKu can give a result,
+        the opposite is not true.</li>
+        <li><b>Only one fish per elimination:</b> For every possible combination
+        of eliminations only the smallest available fish is displayed.</li>
+    </ul>
+    <p>Kraken Fish:</p>
+    <ul>
+        <li><b>Type:</b> The possible types for the fish within the Kraken (only Basic,
+        Basic and Franken or all fish).</li>
+        <li><b>Maximum fin count: </b> Maximum number of fins for the Kraken Fish.</li>
+        <li><b>Max. endo fin count:</b> Maximum number of endo fins for the Kraken Fish.</li>
+        <li><b>Maximum size:</b> Maximum number of base/cover sets for the Kraken Fish.</li>
+    </ul>
+    <p>Chains (options affect X-Chains, XY-Chains and Remote Pairs):</p>
+    <ul>
+        <li><b>Maximum chain length:</b> Maximum number of links in chains (please note: an XY-Chain
+        with 5 cells contains 9 links).</li>
+        <li><b>Restrict chain lengths:</b> If set, "Maximum chain length" is applied to the
+        chain searcher (only chain types mentioned above).</li>
+    </ul>
+    <p>Tabling general (options affect Nice Loops, AICs, Forcing Chains/Nets and Kraken Fish):</p>
+    <ul>
+        <li><b>Entry size:</b> Maximum number of implications for each premise. Setting a low number
+        will reduce the number of chains found by the tabling solver. Setting a larger number
+        will increase HoDoKu's memory requirements and slow down execution of the solver.</li>
+        <li><b>Net depth:</b> Maximum number of look aheads in a Forcing Net search. Increasing
+        this number will produce more complicated nets and increase the computation time
+        (but not necessarily lead to more different eliminations).</li>
+        <li><b>Only one chain per elimination:</b> If checked, chains leading to eliminations
+        for which a chain already exists will only be recorded if the new chain is shorter
+        than the old one.</li>
+        <li><b>Allow ALS in chains: </b> Including ALS as nodes in chains increases the number of
+        possible chains and therefore the search time. The option is disabled by default.</li>
+    </ul>
+    <p>Miscellaneous:</p>
+    <ul>
+        <li><b>Allow ERs with two candidates:</b> If not checked, steps will only be
+        considered valid ERs if more than two candidates are set in the block containing
+        the ER (ERs with only two candidates will be found as Turbot Fish and/or as X-Chain).</li>
+        <li><b>Use '0' in Clipboard:</b> Uses '0' instead of '.' when exporting sudokus
+        to the clipboard.</li>
+        <li><b>Allow Duals/Siamese:</b> If checked, Dual Empty Rectangles and Dual 2-String-Kites
+        are found. When searching for fish Siamese Fish are identified. Checking this option
+        does not increase the strength of the solver: All dual/siamese steps are found as
+        two seperate steps anyway.</li>
+        <li><b>Allow missing candidates in URs:</b> If set, the UR itself does not have to be complete
+        (not all candidates forming the UR have to be present, see <a href="tech_ur.htm#umc">Unique Rectangles with missing candidates</a>).</li>
+    </ul>
+    <p>ALS general:</p>
+    <ul>
+        <li><b>Allow overlap: </b> Since release 1.2 overlaps between non adjacent ALS in
+        ALS chains are generally permitted. Overlaps between adjacent ALS have to be enabled using this
+        option. Enabling overlaps generally increases the search time drastically without really
+        enhancing the solver's capabilities, but it allows for very interesting variations of steps.</li>
+        <li><b>Only one step per elimination:</b> If checked only one step is displayed for every
+        possible combination of eliminations.</li>
+    </ul>
+    <hr class="clear">
+
+<div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

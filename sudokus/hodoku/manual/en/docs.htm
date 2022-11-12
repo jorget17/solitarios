@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: User Manual (Table of Contents)</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="User Manual for HoDoKu - a sudoku generator/solver/analyzer written in Java (Table of Contents)">
+    <meta name="keywords" content="sudoku,java,hodoku,german,command line,options,human style solving techniques,hint,fish,uniqueness,coloring,chains,als,wings,subsets">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+<style type="text/css" media="all">
+<!--
+#menu li.mDocs a, #menu li.mDocs a:hover {
+    font-style: italic;
+    background-color:#fceabe;
+}
+-->
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li><ul class="sub1">
+                <li class="mDocsIntro"><a href="docs_intro.htm">Introduction</a></li>
+                <li class="mDocsPlay"><a href="docs_play.htm">Playing the game</a></li>
+                <li class="mDocsSolv"><a href="docs_solv.htm">Solver</a></li>
+                <li class="mDocsCre"><a href="docs_cre.htm">Creator</a></li>
+                <li class="mDocsFAS"><a href="docs_fas.htm">Finding all Steps</a></li>
+                <li class="mDocsSol"><a href="docs_sol.htm">Solution paths</a></li>
+                <li class="mDocsRef"><a href="docs_ref.htm">Reference</a></li>
+    </ul></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>User manual</h1>
+    <p>HoDoKu was designed to be as intuitive as possible. As with any program intuition alone would
+    probably make you miss a few of the advanced features. This manual should help you with that.
+    The manual is broken up in several pages. Every page contains a table of contents at the start
+    of the page for easier navigation. If you find errors/omissions or simply have additional
+    <p>Happy solving!</p>
+    <h2>Table of contents</h2>
+    
+    <ul class="toc">
+        <li><a href="docs_intro.htm">Introduction</a></li>
+        <li class="ni"><ul>
+            <li><a href="docs_intro.htm#features">Features</a></li>
+            <li><a href="docs_intro.htm#display_modes">Display modes</a></li>
+            <li><a href="docs_intro.htm#running_hodoku">Running HoDoKu</a></li>
+        </ul></li>
+        <li><a href="docs_play.htm">Playing the game</a></li>
+        <li class="ni"><ul>
+            <li><a href="docs_play.htm#create_enter">Creating a sudoku or entering givens</a></li>
+            <li><a href="docs_play.htm#keyboard">Using the keyboard</a></li>
+            <li><a href="docs_play.htm#mouse">Using the mouse</a></li>
+            <li><a href="docs_play.htm#modes">Game modes</a></li>
+            <li><a href="docs_play.htm#hint_system">Using the hint system</a></li>
+            <li><a href="docs_play.htm#filters">Using filters</a></li>
+            <li><a href="docs_play.htm#progress">Progress indicator</a></li>
+            <li><a href="docs_play.htm#undo_redo">Undo/redo</a></li>
+            <li><a href="docs_play.htm#clipboard">Using the clipboard</a></li>
+            <li><a href="docs_play.htm#restart">Restarting a game</a></li>
+            <li><a href="docs_play.htm#savep">Savepoints</a></li>
+            <li><a href="docs_play.htm#save_load">Saving/Loading configurations and sudokus</a></li>
+            <li><a href="docs_play.htm#print">Printing sudokus</a></li>
+            <li><a href="docs_play.htm#images">Creating images of sudokus</a></li>
+        </ul></li>
+        <li><a href="docs_solv.htm">Configuring the solver</a></li>
+        <li class="ni"><ul>
+            <li><a href="docs_solv.htm#strategy">Solver strategy</a></li>
+            <li><a href="docs_solv.htm#en_disable">Enabling/Disabling techniques</a></li>
+            <li><a href="docs_solv.htm#change_order">Changing order of techniques</a></li>
+            <li><a href="docs_solv.htm#examples">Duplicities and examples</a></li>
+            <li><a href="docs_solv.htm#progress">Progress measurement</a></li>
+            <li><a href="docs_solv.htm#backdoor">Backdoor searcher</a></li>
+            <li><a href="docs_solv.htm#options">Options for solver steps</a></li>
+        </ul></li>
+        <li><a href="docs_cre.htm">Creating sudokus</a></li>
+        <li class="ni"><ul>
+            <li><a href="docs_cre.htm#rating">Rating and difficulty levels</a></li>
+            <li><a href="docs_cre.htm#training">Create sudokus in learning/practising mode</a></li>
+            <li><a href="docs_cre.htm#create">Create sudokus containing specific techniques</a></li>
+            <li><a href="docs_cre.htm#batch">Batch creation of sudokus</a></li>
+            <li><a href="docs_cre.htm#sources">Sources for sudokus</a></li>
+        </ul></li>
+        <li><a href="docs_fas.htm">Finding all possible steps</a></li>
+        <li class="ni"><ul>
+            <li><a href="docs_fas.htm#intro">Introduction</a></li>
+            <li><a href="docs_fas.htm#config">Configuration</a></li>
+            <li><a href="docs_fas.htm#ordering">Sorting options</a></li>
+        </ul></li>
+        <li><a href="docs_sol.htm">Working with solutions</a></li>
+        <li class="ni"><ul>
+            <li><a href="docs_sol.htm#intro">Introduction</a></li>
+            <li><a href="docs_sol.htm#jump">Jumping to steps</a></li>
+            <li><a href="docs_sol.htm#change">Changing solutions</a></li>
+            <li><a href="docs_sol.htm#add_delete">Adding/deleting/renaming solutions</a></li>
+            <li><a href="docs_sol.htm#print">Printing solutions</a></li>
+        </ul></li>
+        <li><a href="docs_ref.htm">Reference</a></li>
+        <li class="ni"><ul>
+            <li><a href="docs_ref.htm#options">Options</a></li>
+            <li><a href="docs_ref.htm#command_line">Command line arguments</a></li>
+            <li><a href="docs_ref.htm#files">Files used by HoDoKu</a></li>
+        </ul></li>
+    </ul>
+
+<div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

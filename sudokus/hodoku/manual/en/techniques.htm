@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: Human Style Solving Techniques for Sudoku</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="Human Style Solving Techniques for Sudoku implemented in HoDoKu - a sudoku generator/solver/analyzer written in Java">
+    <meta name="keywords" content="sudoku,java,hodoku,german,human style solving techniques,hint,fish,uniqueness,coloring,chains,als,wings,subsets">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+<style type="text/css" media="all">
+<!--
+#menu li.mTech a, #menu li.mTech a:hover {
+    font-style: italic;
+    background-color:#fceabe;
+}
+-->
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+        <li><ul class="sub1">
+                <li class="mTechIntro"><a href="tech_intro.htm">Introduction</a></li>
+                <li class="mTechSi"><a href="tech_singles.htm">Singles</a></li>
+                <li class="mTechIn"><a href="tech_intersections.htm">Intersections</a></li>
+                <li class="mTechHi"><a href="tech_hidden.htm">Hidden Subsets</a></li>
+                <li class="mTechNa"><a href="tech_naked.htm">Naked Subsets</a></li>
+                <li class="mTechFi"><a href="tech_fishg.htm">Fish (general)</a></li>
+                <li class="mTechBa"><a href="tech_fishb.htm">Basic Fish</a></li>
+                <li class="mTechFS"><a href="tech_fishfs.htm">Finned/Sashimi Fish</a></li>
+                <li class="mTechCF"><a href="tech_fishc.htm">Complex Fish</a></li>
+                <li class="mTechSD"><a href="tech_sdp.htm">Single Digit Patterns</a></li>
+                <li class="mTechUn"><a href="tech_ur.htm">Uniqueness</a></li>
+                <li class="mTechWi"><a href="tech_wings.htm">Wings</a></li>
+                <li class="mTechMi"><a href="tech_misc.htm">Miscellaneous</a></li>
+                <li class="mTechCo"><a href="tech_col.htm">Coloring</a></li>
+                <li class="mTechCh"><a href="tech_chains.htm">Chains/Loops</a></li>
+                <li class="mTechAl"><a href="tech_als.htm">ALS</a></li>
+                <li class="mTechLa"><a href="tech_last.htm">Last Resort</a></li>
+    </ul></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>Implemented Techniques</h1>
+    <ul>
+        <li><a href="tech_intro.htm">Introduction</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_intro.htm#ss">Preface</a></li>
+            <li><a href="tech_intro.htm#te">Terminology</a></li>
+        </ul></li>
+        <li><a href="tech_singles.htm">Singles</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_singles.htm#fh">FullHouse/Last Digit</a></li>
+            <li><a href="tech_singles.htm#h1">Hidden Single</a></li>
+            <li><a href="tech_singles.htm#n1">Naked Single</a></li>
+            <li><a href="tech_singles.htm#fnh1">How to find them</a></li>
+        </ul></li>
+        <li><a href="tech_intersections.htm">Intersections</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_intersections.htm#lc1">Locked Candidates Type 1 (Pointing)</a></li>
+            <li><a href="tech_intersections.htm#lc2">Locked Candidates Type 2 (Claiming)</a></li>
+            <li><a href="tech_intersections.htm#lc12">How to find them</a></li>
+        </ul></li>
+        <li><a href="tech_hidden.htm">Hidden Subsets</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_hidden.htm#h2">Hidden Pair</a></li>
+            <li><a href="tech_hidden.htm#h3">Hidden Triple</a></li>
+            <li><a href="tech_hidden.htm#h4">Hidden Quadruple</a></li>
+            <li><a href="tech_hidden.htm#h234">How to find them</a></li>
+        </ul></li>
+        <li><a href="tech_naked.htm">Naked Subsets</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_naked.htm#n2">Naked Pair/Locked Pair</a></li>
+            <li><a href="tech_naked.htm#n3">Naked Triple/Locked Triple</a></li>
+            <li><a href="tech_naked.htm#n4">Naked Quadruple</a></li>
+            <li><a href="tech_naked.htm#n234">How to find them</a></li>
+        </ul></li>
+        <li><a href="tech_fishg.htm">Fish (general explanation)</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_fishg.htm#fi">Introduction</a></li>
+            <li><a href="tech_fishg.htm#fs">Shapes and Sizes</a></li>
+            <li><a href="tech_fishg.htm#ff">Fins and Sashiminess</a></li>
+            <li><a href="tech_fishg.htm#fc">Endo Fins and Cannibalism</a></li>
+        </ul></li>
+        <li><a href="tech_fishb.htm">Basic Fish</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_fishb.htm#bf2">X-Wing</a></li>
+            <li><a href="tech_fishb.htm#bf3">Swordfish</a></li>
+            <li><a href="tech_fishb.htm#bf4">Jellyfish</a></li>
+            <li><a href="tech_fishb.htm#bf5">Larger Basic Fish</a></li>
+        </ul></li>
+        <li><a href="tech_fishfs.htm">Finned/Sashimi Fish</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_fishfs.htm#fbf2">Finned/Sashimi X-Wing</a></li>
+            <li><a href="tech_fishfs.htm#fbf3">Finned/Sashimi Swordfish</a></li>
+            <li><a href="tech_fishfs.htm#fbf4">Finned/Sashimi Jellyfish</a></li>
+            <li><a href="tech_fishfs.htm#fbf567">Larger Finned Fish</a></li>
+        </ul></li>
+        <li><a href="tech_fishc.htm">Complex Fish</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_fishc.htm#ff">(Finned) Franken Fish</a></li>
+            <li><a href="tech_fishc.htm#mf">(Finned) Mutant Fish</a></li>
+            <li><a href="tech_fishc.htm#sf">Siamese Fish</a></li>
+        </ul></li>
+        <li><a href="tech_sdp.htm">Single Digit Patterns</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_sdp.htm#sk">Skyscraper</a></li>
+            <li><a href="tech_sdp.htm#t2sk">2-String Kite</a></li>
+            <li><a href="tech_sdp.htm#tf">Turbot Fish</a></li>
+            <li><a href="tech_sdp.htm#er">Empty Rectangle</a></li>
+        </ul></li>
+        <li><a href="tech_ur.htm">Uniqueness</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_ur.htm#in">Introduction</a></li>
+            <li><a href="tech_ur.htm#u1">Unique Rectangle Type 1</a></li>
+            <li><a href="tech_ur.htm#u2">Unique Rectangle Type 2</a></li>
+            <li><a href="tech_ur.htm#u3">Unique Rectangle Type 3</a></li>
+            <li><a href="tech_ur.htm#u4">Unique Rectangle Type 4</a></li>
+            <li><a href="tech_ur.htm#u5">Unique Rectangle Type 5</a></li>
+            <li><a href="tech_ur.htm#u6">Unique Rectangle Type 6</a></li>
+            <li><a href="tech_ur.htm#hr">Hidden Rectangle</a></li>
+            <li><a href="tech_ur.htm#ar">Avoidable Rectangle</a></li>
+            <li><a href="tech_ur.htm#bug1">BUG+1 - Binary Universal Grave + 1</a></li>
+            <li><a href="tech_ur.htm#umc">Unique Rectangles with missing candidates</a></li>
+        </ul></li>
+        <li><a href="tech_wings.htm">Wings</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_wings.htm#xy">XY-Wing</a></li>
+            <li><a href="tech_wings.htm#xyz">XYZ-Wing</a></li>
+            <li><a href="tech_wings.htm#w">W-Wing</a></li>
+        </ul></li>
+        <li><a href="tech_misc.htm">Miscellaneous</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_misc.htm#sdc">Sue de Coq</a></li>
+        </ul></li>
+        <li><a href="tech_col.htm">Coloring</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_col.htm#sc">Simple Colors (Color Wrap/Color Trap)</a></li>
+            <li><a href="tech_col.htm#mc">Multi Colors</a></li>
+        </ul></li>
+        <li><a href="tech_chains.htm">Chains and Loops</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_chains.htm#in">Introduction</a></li>
+            <li><a href="tech_chains.htm#rp">Remote Pair</a></li>
+            <li><a href="tech_chains.htm#x">X-Chain</a></li>
+            <li><a href="tech_chains.htm#xyc">XY-Chain</a></li>
+            <li><a href="tech_chains.htm#nl">Nice Loop/AIC</a></li>
+            <li><a href="tech_chains.htm#gnl">Grouped Nice Loop</a></li>
+        </ul></li>
+        <li><a href="tech_als.htm">ALS - Almost Locked Sets</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_als.htm#in">Introduction</a></li>
+            <li><a href="tech_als.htm#axz">ALS-XZ</a></li>
+            <li><a href="tech_als.htm#axy">ALS-XY-Wing</a></li>
+            <li><a href="tech_als.htm#ach">ALS Chain</a></li>
+            <li><a href="tech_als.htm#db">Death Blossom</a></li>
+        </ul></li>
+        <li><a href="tech_last.htm">Methods of Last Resort</a></li>
+        <li class="ni"><ul>
+            <li><a href="tech_last.htm#ts">Templates</a></li>
+            <li><a href="tech_last.htm#fc">Forcing Chain</a></li>
+            <li><a href="tech_last.htm#fn">Forcing Net</a></li>
+            <li><a href="tech_last.htm#kf">Kraken Fish</a></li>
+            <li><a href="tech_last.htm#bf">Brute Force</a></li>
+        </ul></li>
+    </ul>
+  <div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

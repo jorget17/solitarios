@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: Finned Mutant Whale example</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="HoDoKu - Sudoku for addicts: Show Example">
+    <meta name="keywords" content="sudoku,java,hodoku,solving techniques,example">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>HoDoKu Solving Technique Index: Example for "Finned Mutant Whale"</h1>
+    <p><img src="../examples/fmf601.png" alt="Solving Technique Example"></p>
+    <h2>Original sudoku:</h2>
+    <p><code>9.7..5...1..7..9..86..9.57..8...61.9316.59..72.91..65.....2..96.9...4..8...9..3.5
+</code></p>
+
+    <h2>Use the following line if you want to load the sudoku in HoDoKu:</h2>
+    <p><code>:0364:4:9.7..5...1..7..9..86..9.57..8...61.9316.59..72.91..65.....2..96.9...4..8...9..3.5:214 314 414 315 615 815 217 118 218 222 325 228 328 428 234 339 439 448 854 458 772 473 374 384 185 493 795:491:r35c89b49 r69c347b3 fr4c1 efr9c8
+</code></p>
+
+    <h2>The following representation can be pasted in most Sudoku programs:</h2>
+    <pre>.----------------.-----------------.-----------------.
+
+| 9    234  7    | 68   14    5    | 48   3468  1234 |
+
+| 1    345  2345 | 7    468   238  | 9    68    234  |
+
+| 8    6    234  | 34   9     123  | 5    7     12   |
+
+:----------------+-----------------+-----------------:
+
+| 457  8    45   | 234  347   6    | 1    23    9    |
+
+| 3    1    6    | 24   5     9    | 248  28    7    |
+
+| 2    47   9    | 1    3478  378  | 6    5     34   |
+
+:----------------+-----------------+-----------------:
+
+| 457  345  1358 | 58   2     1378 | 47   9     6    |
+
+| 567  9    1235 | 56   367   4    | 27   12    8    |
+
+| 467  247  128  | 9    168   178  | 3    124   5    |
+
+'----------------'-----------------'-----------------'
+</pre>
+
+    <h2>Representation of the step:</h2>
+    <pre>.-------------------.------------------.--------------------.
+
+|  9     234   7    |  68   14    5    |  48   *3468  *1234 |
+
+|  1     345   2345 |  7    468   238  |  9     68    *234  |
+
+|  8     6    *234  | *34   9     123  |  5     7      12   |
+
+:-------------------+------------------+--------------------:
+
+| #457   8    *45   |  234  347   6    |  1     23     9    |
+
+|  3     1     6    | *24   5     9    | *248   28     7    |
+
+|  2    *47    9    |  1    3478  378  |  6     5     *34   |
+
+:-------------------+------------------+--------------------:
+
+|  457   345   1358 |  58   2     1378 | *47    9      6    |
+
+|  567   9     1235 |  56   367   4    |  27    12     8    |
+
+| -467   247   128  |  9    168   178  |  3    @124    5    |
+
+'-------------------'------------------'--------------------'
+
+
+
+Finned Mutant Whale: 4 r35c89b49 r69c347b3 fr4c1 efr9c8 =&gt; r9c1&lt;&gt;4
+
+
+
+
+
+
+</pre>
+  <div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

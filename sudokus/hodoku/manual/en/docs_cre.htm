@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: User Manual (Chapter 4: Creating Sudokus)</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="User Manual for HoDoKu - Chapter 4: Creating Sudokus">
+    <meta name="keywords" content="sudoku,java,hodoku,german,command line,options,human style solving techniques,hint,fish,uniqueness,coloring,chains,als,wings,subsets">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+<style type="text/css" media="all">
+<!--
+#menu ul li ul li.mDocsCre a, #menu ul li ul li.mDocsCre a:hover {
+    font-style: italic;
+    background-color:#fceabe;
+}
+-->
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li><ul class="sub1">
+                <li class="mDocsIntro"><a href="docs_intro.htm">Introduction</a></li>
+                <li class="mDocsPlay"><a href="docs_play.htm">Playing the game</a></li>
+                <li class="mDocsSolv"><a href="docs_solv.htm">Solver</a></li>
+                <li class="mDocsCre"><a href="docs_cre.htm">Creator</a></li>
+                <li class="mDocsFAS"><a href="docs_fas.htm">Finding all Steps</a></li>
+                <li class="mDocsSol"><a href="docs_sol.htm">Solution paths</a></li>
+                <li class="mDocsRef"><a href="docs_ref.htm">Reference</a></li>
+    </ul></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>Chapter 4: Creating Sudokus</h1>
+    <h2>Table of Contents</h2>
+    <ul class="toc">
+        <li><a href="#rating">Rating and difficulty levels</a></li>
+        <li><a href="#training">Create sudokus in learning/practising mode</a></li>
+        <li><a href="#create">Create sudokus containing specific techniques</a></li>
+        <li><a href="#batch">Batch creation of sudokus</a></li>
+        <li><a href="#sources">Sources for sudokus</a></li>
+    </ul>
+    <hr>
+
+    <h1><a name="rating"></a>Rating and difficulty levels</h1>
+    <p>HoDoKu's rating system is meant primarily as a tool for filtering out certain types of sudokus.
+    Unlike the rating mechanisms in many other solvers it is fully configurable
+    and can't therefore provide an absolute measure of difficulty for a sudoku
+    (if such a thing is even possible...). For obtaining a stable difficulty
+    rating many other programs are freely available (e.g.
+    <del><a href="http://diuf.unifr.ch/people/juillera/Sudoku/Sudoku.html">Sudoku Explainer</a></del> [dead link]).</p>
+    <img class="scr_l" src="../img/scrcre1.png" alt="Screenshot: Solver step attributes">
+    <p>Every technique has two attributes in HoDoKu:</p>
+    <ul class="nfloat">
+        <li>Level</li>
+        <li>Score</li>
+    </ul>
+    <p>The "level" assignes the technique to one of HoDoKu's five difficulty levels
+    (Easy, Medium, Hard, Unfair, Extreme). The level of a sudoku
+    cannot be smaller than the level of the hardest step contained in it's solution
+    (but it can be greater, see below).
+    The "score" of all steps in the solution is simply summed up, the sum
+    becomes the score of the sudoku.</p>
+    <p>To change the attributes of a step click on a step. The attributes panel
+    is filled with the step's attributes which can now be changed. Changing
+    attributes on one or more steps may of course change the rating of any
+    sudoku that contains those steps.</p>
+    <img class="scr_l" src="../img/scrcre2.png" alt="Screenshot: Level step attributes">
+    <p>Difficulty levels have assigned a minimum and a maximum score (the minimum
+    score for "Medium" is one greater than the maxmimum score for "Easy"). The input dialog
+    under "Edit|Preferences|Level/Font" let's you set the maximum scores only (the
+    maximum score of "Extreme" is infinity, incomplete doesn't have a score). These level scores
+    are taken into account when rating a sudoku. How this is done differs
+    for rating existing sudokus and for rating sudokus when creating them:</p>
+    <ul class="nfloat">
+        <li>In both cases, if the score of a sudoku is greater than the maximum
+        score of the level of the hardest step, the difficulty level of the sudoku
+        is determined only by it's score (sudokus containing many hard steps
+        are more difficult than sudokus with only a few hard steps).</li>
+        <li>If the score of the sudoku belongs to a difficulty level that's
+        smaller than the level of the hardest step the step level determines
+        the level of the sudoku. If however HoDoKu tries to create a sudoku with
+        a specific difficulty level and the score of the sudoku indicates that
+        the sudoku is too easy the newly created sudoku is discarded.</li>
+    </ul>
+    <p>The colors of the difficulty levels (as shown in the screenshot) are used
+    to color code the corresponding steps in the "Solution path" and "Summary" views.
+    They can of course be freely adjusted.</p>
+    <hr class="clear">
+
+    <h1><a name="training"></a>Create sudokus in learning/practising mode</h1>
+    <p>Learning and practising mode (see <a href="docs_play.htm#modes">Game modes</a>)
+    are the ideal instruments to create sudokus that contain specific steps. Choose
+    "Mode|Learning" or "Mode|Practising" from the menu, specify a technique and create
+    a new sudoku. In both modes the new sudoku will contain at least one instance of the
+    specified technique. In training mode the sudoku will automatically be solved
+    up to the point where the technique can be found.</p>
+    <hr>
+
+    <h1><a name="create"></a>Create sudokus containing specific techniques</h1>
+    <p>If you can't use learning/practising mode (see above), for example because you want to find
+    a very advanced step, a second method is available.</p>
+    <p>By using the configurable rating system it is easy to create sudokus
+    that contain specific techniques (this feature is meant mostly for
+    steps of level "Unfair" or greater). Let us assume that you try to create
+    a sudoku that has an AIC in it's solution path. You can of
+    course simply create sudokus with level "Unfair" (the default level of AIC")
+    but you will have to check every created sudoku for AICs (e.g. using the
+    Summary view).</p>
+    <p>An easier way would be the following:</p>
+    <ul>
+        <li>Assign AIC a difficult level of "Medium" and an
+        unrealistically high score (say 5000).</li>
+        <li>Set the maximum score of level "Easy" to 5000.</li>
+        <li>Set the maximum score of Level "Medium" to 20000 and
+        adjust the scores of the higher levels accordingly.</li>
+        <li>Create a new sudoku for level "Medium".</li>
+    </ul>
+    <p>Why does this work? There is no chance that a sudoku could be found that get's
+    a score of greater 5000 using the "normal" medium techniques only ("Medium" contains
+    Singles, Locked Candidates, Pairs, and Triples and normally scores between
+    600 and 1200 approximately). But if the sudoku contains a hard step other
+    than AIC (which now counts as "Medium"), the sudoku's level will be
+    "Hard" or greater and it will be discarded. The only sudokus that can be "Medium" and have a
+    rating greater than 5000 are sudokus with at least one AIC in them.</p>
+    <p>It is of course possible to assign new attributes to more than one step.
+    Every newly created sudoku will contain at least one of the changed steps.</p>
+    <p>Please note, that the solver strategy is not influenced by assigning
+    different attributes to solution techniques. If the technique you are looking
+    for is rather low down in the solver hierarchy it is likely that possible
+    suitable sudokus are never found because they will contain some other non trivial
+    step as well and will thus be discarded. It is therefore recommended to push
+    changed techniques higher up in the solver hierarchy.</p>
+    <hr>
+
+    <h1><a name="batch"></a>Batch creation of sudokus</h1>
+    <p>HoDoKu can be run in batch mode (see <a href="docs_ref.htm#command_line">Command
+    line options</a>). Batch mode can be used to create sudokus with
+    specific steps  or with a specific level too. The options used for that purpose are /s /sc for
+    steps and /s /sl for levels.</p>
+    <p>/s instructs HoDoKu to search for sudokus, /sc tells HoDoKu which steps it
+    should look for in sudokus and /sl specifies a difficulty level.</p>
+    <p>The argument for /sc is a series of step designators.
+    Every step designator contains a step name (abbreviated step names can be listed with /lt),
+    a sudoku type, and the desired number of eliminations (the last two are optional).</p>
+    <p>The sudoku type describes how the step should be located within the solution:</p>
+    <ul>
+        <li>:3 - only singles allowed before and after the step</li>
+        <li>:2 - SSTS before and singles after the step allowed</li>
+        <li>:1 - SSTS before and after the step possible</li>
+        <li>:0 - no restrictions</li>
+    </ul>
+    <p>SSTS stands for "Simple Sudoku Technique Set" and contains Singles, Locked Candidates,
+    Hidden/Naked/Locked Subsets, X-Wing, Swordfish, Jellyfish, XY-Wing, Simple Colors,
+    and Multi Colors (this set of techniques is often used in forums to reduce
+    sudokus to the point where the fun begins).</p>
+    <p>The desired number of eliminations has to start with a '+' followed by
+    an operator and the number of eliminations. Valid operators are 'e' for 'equals',
+    'l' for 'less than', and 'g' for 'greater than'.</p>
+    <p>Although an arbitrary number of step definitions can be used on a single batch
+    run of HoDoKu, every sudoku will contain only one of the techniques (techniques that are
+    contained in SSTS can of course appear without restriction in the SSTS parts of the solution).</p>
+    <p>The command line for a batch run that should produce sudokus containing Sworfishes
+    would be:</p>
+    <p><code>java -Xmx512m -jar hodoku.jar /s /sc bf3</code></p>
+    <p>or</p>
+    <p><code>hodoku.exe /s /sc bf3</code></p>
+    <p>The command line for a batch run that should produce only hard sudokus
+    would be:</p>
+    <p><code>java -Xmx512m -jar hodoku.jar /s /sl 2</code></p>
+    <p>or</p>
+    <p><code>hodoku.exe /s /sl 2</code></p>
+    <p>/o can be used to specify an output file, /f to read options from a file, /c to supply
+    a specific hcfg file (see <a href="docs_play.htm#save_load">Saving/Loading
+    configurations and sudokus</a>). For more options please consult the reference.</p>
+    <hr>
+
+    <h1><a name="sources"></a>Sources for sudokus</h1>
+    <p>If you want to skip the sudoku creation there are several good sudoku collections
+    available online (most of them concentrate on hard sudokus). Some examples:</p>
+    <dl>
+        <dt><del><a href="http://mapleta.maths.uwa.edu.au/~gordon/sudokumin.htm">http://mapleta.maths.uwa.edu.au/~gordon/sudokumin.htm</a></del> [dead link]</dt>
+        <dd>Gordon Royle's sudokus with only 17 clues (see the link section). Most sudokus are not very hard.</dd>
+        <dt><del><a href="http://www.setbb.com/sudoku/viewtopic.htm?t=1432&amp;mforum=sudoku">http://www.setbb.com/sudoku/viewtopic.htm?t=1432&amp;mforum=sudoku</a></del> [dead link]</dt>
+        <dd>Wapati's hard sudokus (no chains needed).</dd>
+        <dt><a href="http://forum.enjoysudoku.com/viewtopic.htm?t=6291">http://forum.enjoysudoku.com/viewtopic.htm?t=6291</a></dt>
+        <dd>The Patterns Game Results: Contain sudokus with various degrees of difficuly that all have the same
+        initial shape. The last figure on each sudoku line is the rating according to Sudoku Explainer.</dd>
+        <dt><del><a href="http://www.setbb.com/sudoku/viewtopic.htm?t=1480&amp;mforum=sudoku">http://www.setbb.com/sudoku/viewtopic.htm?t=1480&amp;mforum=sudoku</a></del> [dead link]</dt>
+        <dd>Tarek's "Pearly6000" (very hard).</dd>
+        <dt><del><a href="http://www.sudocue.net/top10000.sdm">http://www.sudocue.net/top10000.sdm</a></del> [dead link]</dt>
+        <dd>Ruud's top10000 (most are really hard).</dd>
+        <dt><a href="http://magictour.free.fr/top1465">http://magictour.free.fr/top1465</a></dt>
+        <dd>The top1465, another great list with really hard sudokus.</dd>
+    </dl>
+    <hr>
+
+<div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

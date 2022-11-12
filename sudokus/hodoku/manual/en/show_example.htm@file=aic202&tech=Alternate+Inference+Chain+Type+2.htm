@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: Alternate Inference Chain Type 2 example</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="HoDoKu - Sudoku for addicts: Show Example">
+    <meta name="keywords" content="sudoku,java,hodoku,solving techniques,example">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>HoDoKu Solving Technique Index: Example for "Alternate Inference Chain Type 2"</h1>
+    <p><img src="../examples/aic202.png" alt="Solving Technique Example"></p>
+    <h2>Original sudoku:</h2>
+    <p><code>963.1.....7.3..........27..7.9.6..........5...3.....9.....3...25...86..3....71846
+</code></p>
+
+    <h2>Use the following line if you want to load the sudoku in HoDoKu:</h2>
+    <p><code>:0708:28:963.1....+27.3........+6.27+3.7.9.6.+3.......+35...3.....9.+6+8+7.3.+1+525..+286+9+73+3+9+2+571846::218 848:
+</code></p>
+
+    <h2>The following representation can be pasted in most Sudoku programs:</h2>
+    <pre>.------------------.------------------.------------------.
+
+| 9    6     3     | 478    1    4578 | 24   28    458   |
+
+| 2    7     1458  | 3      459  4589 | 46   168   14589 |
+
+| 148  145   1458  | 6      459  2    | 7    3     14589 |
+
+:------------------+------------------+------------------:
+
+| 7    1245  9     | 148    6    458  | 3    128   148   |
+
+| 148  124   1468  | 14789  249  3    | 5    1268  1478  |
+
+| 148  3     14568 | 1478   245  4578 | 246  9     1478  |
+
+:------------------+------------------+------------------:
+
+| 6    8     7     | 49     3    49   | 1    5     2     |
+
+| 5    14    14    | 2      8    6    | 9    7     3     |
+
+| 3    9     2     | 5      7    1    | 8    4     6     |
+
+'------------------'------------------'------------------'
+</pre>
+
+    <h2>Representation of the step:</h2>
+    <pre>.--------------------.------------------.--------------------.
+
+| 9     6      3     | 478    1    4578 | *24   *-28   458   |
+
+| 2     7      1458  | 3      459  4589 |  46    168   14589 |
+
+| 148   145    1458  | 6      459  2    |  7     3     14589 |
+
+:--------------------+------------------+--------------------:
+
+| 7    *1245   9     | 148    6    458  |  3    *12-8  148   |
+
+| 148   124    1468  | 14789  249  3    |  5     1268  1478  |
+
+| 148   3     *14568 | 1478   245  4578 | *246   9     1478  |
+
+:--------------------+------------------+--------------------:
+
+| 6     8      7     | 49     3    49   |  1     5     2     |
+
+| 5     14     14    | 2      8    6    |  9     7     3     |
+
+| 3     9      2     | 5      7    1    |  8     4     6     |
+
+'--------------------'------------------'--------------------'
+
+
+
+AIC 8- r1c8 -2- r1c7 =2= r6c7 =6= r6c3 =5= r4c2 =2= r4c8 -2 =&gt; r1c8&lt;&gt;2, r4c8&lt;&gt;8
+
+
+
+
+
+
+</pre>
+  <div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

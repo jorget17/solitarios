@@ -1,0 +1,344 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: User Manual (Chapter 7: Reference)</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="User Manual for HoDoKu - Chapter 7: Reference">
+    <meta name="keywords" content="sudoku,java,hodoku,german,command line,options,human style solving techniques,hint,fish,uniqueness,coloring,chains,als,wings,subsets">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+<style type="text/css" media="all">
+<!--
+#menu ul li ul li.mDocsRef a, #menu ul li ul li.mDocsRef a:hover {
+    font-style: italic;
+    background-color:#fceabe;
+}
+-->
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li><ul class="sub1">
+                <li class="mDocsIntro"><a href="docs_intro.htm">Introduction</a></li>
+                <li class="mDocsPlay"><a href="docs_play.htm">Playing the game</a></li>
+                <li class="mDocsSolv"><a href="docs_solv.htm">Solver</a></li>
+                <li class="mDocsCre"><a href="docs_cre.htm">Creator</a></li>
+                <li class="mDocsFAS"><a href="docs_fas.htm">Finding all Steps</a></li>
+                <li class="mDocsSol"><a href="docs_sol.htm">Solution paths</a></li>
+                <li class="mDocsRef"><a href="docs_ref.htm">Reference</a></li>
+    </ul></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>Chapter 7: Reference</h1>
+    <h2>Table of Contents</h2>
+    <ul class="toc">
+        <li><a href="#options">Options</a></li>
+        <li class="ni"><ul>
+            <li><a href="#options_1">General options</a></li>
+            <li><a href="#options_1a">Level/Font options</a></li>
+            <li><a href="#options_2">Solver options</a></li>
+            <li><a href="#options_3">All possible steps options</a></li>
+            <li><a href="#options_6">Progress options</a></li>
+            <li><a href="#options_4">Step options</a></li>
+            <li><a href="#options_7">Training options</a></li>
+            <li><a href="#options_5">Color options</a></li>
+            <li><a href="#options_6">ColorKu options</a></li>
+        </ul></li>
+        <li><a href="#command_line">Command line arguments</a></li>
+        <li><a href="#files">Files used by HoDoKu</a></li>
+    </ul>
+    <hr>
+
+    <h1><a name="options"></a>Options</h1>
+    <p>All options are accessible via the Edit|Preferences dialog. Every panel
+    has a "Reset to defaults" button that resets all options visible on that
+    panel. HoDoKu stores all options at shutdown (see <a href="#files">Files used by HoDoKu</a>)
+    and loads them again at the next run. In addition to that standard behaviour
+    options can be written to a file (see <a href="docs_play.htm#save_load">Saving/Loading
+    configurations and sudokus</a>). These configuration files can also be used with the
+    /c option in batch runs.</p>
+    <p>Although HoDoKu's configuration files are standard XML files and can be
+    edited using any text editor program this is generally not recommended.</p>
+    <h2><a name="options_1"></a>General options</h2>
+    <img class="scr_l" src="../img/scrref1.png" alt="Screenshot: General options">
+    <p><em>Startup panel:</em></p>
+    <p>The startup panel is used to set options, that are only used at program start
+    (an exception is the "Look and Feel" option, which has an immediate effect; a program
+    restart after changing it is however recommended). Some of the options reflect
+        the initial values of the items in the "Options" menu.
+    If one of these items is changed during a game, that change 
+    is not written to disk. Every checkbox corresponds
+    to the item with the same name.</p>
+    <ul class="nfloat">
+        <li><b>Language:</b> The language of the GUI.</li>
+        <li><b>Look and Feel:</b> Java programs can change their appearance. HoDoKu
+        normally uses the standard Look and feel of the operating system ("System default"),
+        but another Look and Feel can be chosen here</li>
+        <li><b>Use default font size:</b> Menus and dialogs use the operating systems
+        default settings for fonts and font size.</li>
+    </ul>
+    <ul class="clear">
+        <li><b>Custom font size:</b> If "Use default font size" is not selected,
+        a custom font size can be chosen here (please note, that this feature doesn't work
+        under GTK Look and Feel). This feature is especially useful for visually challenged users</li>
+        <li><b>Show all candidates:</b> State of "Options|Show all candidates" at program start</li>
+        <li><b>Show invalid cells:</b> State of "Options|Show invalid cells" at program start</li>
+        <li><b>Show deviations:</b> State of "Options|Show deviations" at program start</li>
+        <li><b>Save window layout:</b> Saves the current window layout when the program is
+        closed and restores it at the next start</li>
+        <li><b>ColorKu:</b> State of "Options|ColorKu" at program start</li>
+    </ul>
+    <p><em>Appearance/Behaviour panel:</em></p>
+    <p>Various options that control, how HoDoKu looks like and reacts to user input:</p>
+    <ul class="nfloat">
+        <li><b>Draw extra box lines:</b> If set, all boxes are drawn with their own border and some empty space between them</li>
+        <li><b>Use [Shift] for region select:</b> Influences the behaviour of the mouse: If checked [Shift][Left Mouse Button]
+        is used to select a rectangular region of cells. If not checked, [Shift][Left Mouse Button] can
+        be used to toggle candidates</li>
+        <li><b>Select display: Border only:</b> When set, selected cells are drawn with a light yellow border; if not set, selected cells are drawn solid yellow</li>
+        <li><b>Color non empty cells:</b> Specifies, if cells, that have a value set, are colored or not</li>
+        <li><b>Show "Sudoku solved" message:</b> When set, a message box is displayed, when a sudoku has been completely solved</li>
+        <li><b>Use OR instead of AND for filters:</b> Influences filter behaviour (see <a href="docs_play.htm#filters">Using filters</a> for an explanation)</li>
+        <li><b>Delete Focus display after xx ms:</b> If set, the focus (yellow background/border) is removed after the specified time period; please note,
+        that this option is not used, when more than one cell is selected</li>
+        <li><b>Alternative mouse mode:</b> When set, <a href="docs_play.htm#mouse_1a">alternative mouse mode</a> is used</li>
+        <li><b>Show filter on candidate:</b> If set, filter backgrounds are only drawn around candidates, not around the entire cells</li>
+        <li><b>Enter givens: Auto advance:</b> If set, the cursor automatically moves to the next cell, when a digit is entered (only affects <a href="docs_play.htm#create_enter_2">Enter givens</a> mode)</li>
+    </ul>
+
+    <h2><a name="options_1a"></a>Level/Font options</h2>
+    <img class="scr_l" src="../img/scrref1a.png" alt="Screenshot: Level/Font options">
+    <p>The options for difficulty levels are described in detail in <a href="docs_cre.htm#rating">Rating
+    and difficulty levels</a>.</p>
+    <p><em>Fonts panel:</em></p>
+    <ul class="nfloat">
+        <li>"Values" and "candidates" are the fonts used in the sudoku area. The size
+        of the fonts is ignored.</li>
+        <li>"Print (large font)" is used for captions when printing sudokus.</li>
+        <li>"Print (small font)" is used for ratings when printing..</li>
+        <li>"Value factor" sets the size of the values relative to the current
+        size of the cell.</li>
+    </ul>
+    <ul>
+        <li>"Candidate factor" sets the size of the candidates relative to the current
+        size of the cell.</li>
+        <li>"Hint factor" sets the size of the hint backgrounds (filled circles) relative to the current
+        size of the cell.</li>
+        <li>"Box line factor" sets the size of the lines around boxes relative to the size of the lines around cells.</li>
+    </ul>
+
+    <h2 class="clear"><a name="options_2"></a>Solver options</h2>
+    <p>The solver options are discussed in <a href="docs_solv.htm">Configuring the solver</a>.</p>
+
+    <h2><a name="options_3"></a>All possible steps options</h2>
+    <p>The all possible steps options are discussed in <a href="docs_fas.htm">Finding all possible steps</a>.</p>
+
+    <h2><a name="options_6"></a>Progress options</h2>
+    <p>The all progress options are discussed in <a href="docs_solv.htm#progress">Progress measurement</a>.</p>
+
+    <h2><a name="options_4"></a>Step options</h2>
+    <p>The step options are discussed in <a href="docs_solv.htm#options">Options for solver steps</a>.</p>
+    
+    <h2><a name="options_7"></a>Training options</h2>
+    <p>The training options are discussed in <a href="docs_play.htm#modes">Game modes</a>.</p>
+
+    <h2><a name="options_5"></a>Color options</h2>
+    <img class="scr_l" src="../img/scrref2.png" alt="Screenshot: Color options">
+    <p>All colors used by HoDoKu can be changed arbitrarily. Colors for difficulty levels
+    can be changed in the Level/Font options panel.</p>
+
+    <h2 class="clear"><a name="options_6"></a>ColorKu options</h2>
+    <img class="scr_l" src="../img/scrref3.png" alt="Screenshot: Color options">
+    <p>All colors used by HoDoKu in ColorKu mode can be changed arbitrarily as well.</p>
+    <hr class="clear">
+
+    <h1><a name="command_line"></a>Command line options</h1>
+    <p>HoDoKu can be used as command line utility. It can solve single sudokus, can
+    batch solve sudokus read from a file and it can generate sudokus containing specific steps. Since the exe version
+    of HoDoKu under Windows does not have a console window, a custom console window opens when run in batch mode. To
+    quit HoDoKu simply press "Quit".</p>
+    <p>Please note that piping (I/O chaining)
+    does not work with the exe version. Use the jar version instead.</p>
+    <h2>General options</h2>
+    <dl>
+        <dt>/h, /?</dt>
+        <dd>Prints a help screen.</dd>
+        <dt>/f &lt;file&gt;</dt>
+        <dd>Read options from file <b>&lt;file&gt;</b>. Can be combined with any number of options at the command line
+        or from stdin</dd>
+        <dt>/c &lt;hcfg file&gt;</dt>
+        <dd>Use configuration file <b>&lt;hcfg file&gt;</b> for this run. The configuration file should be
+        created with the GUI version of HoDoKu. Using <b>/c</b> does not affect the configuration of
+        the GUI version.</dd>
+        <dt>/lt</dt>
+        <dd>List symbolic names for the various solution techniques supported by HoDoKu. The symbolic
+        names can be used with options like <b>/sc</b> or <b>/vg</b> (see below).</dd>
+    </dl>
+    <h2>Solve single sudokus</h2>
+    <p>The sudoku has to be given as character string in any format HoDoKu understands. '.' or '0' can be used for cells that are
+    not givens. Pencilmark Grids are supported but if the input string contains blanks it has to be enclosed in " or '.
+    HoDoKu solves the sudoku and writes it to the console, followed by a '#', a consecutive number, and the rating.</p>
+    <p>For Example the input:</p>
+    <pre>000000010400000000020000000000050407008000300001090000300400200050100000000806000</pre>
+    <p>produces the output:</p>
+    <pre>000000010400000000020000000000050407008000300001090000300400200050100000000806000 #1 Easy (466)</pre>
+    <p> If the sudoku requires guessing, "bf" ("Brute Force") is appended to the output, if it requires Templates, "ts" or
+    "td" is added, if it cannot be solved with the current configuration (only possible when "Brute Force" is disabled),
+    "gu" ("Give up") is added to the output.</p>
+    <p>Various options control the output format:</p>
+    <dl>
+        <dt>/vs</dt>
+        <dd>Print the solution in the output (instead of the givens).</dd>
+        <dt>/vp</dt>
+        <dd>print the complete solution path for every sudoku (one line per step).</dd>
+        <dt>/vg [l|c|s:]&lt;step&gt;[,&lt;step&gt;...]</dt>
+        <dd>Print the state of the grid for every step <b>&lt;step&gt;</b>. The optional parameter controls the way the
+        grid is printed:
+        <ul>
+            <li><b>l</b>: Print library format</li>
+            <li><b>c</b>: Print pencilmark grid (default)</li>
+            <li><b>s</b>: Print pencilmark grid with step highlighted</li>
+        </ul>
+        If <b>/vp</b> is not given <b>/vg</b> is ignored.</dd>
+        <dt>/vst</dt>
+        <dd>Print statistics (used steps, number of cells set or candidates eliminated). If
+        <b>/vp</b> is set the statistic is printed for every sudoku.</dd>
+        <dt>/vf <0|1|2></dt>
+        <dd>Set fish output format (default, numbers, cells)</dd>
+
+    </dl>
+    <h2>Solve multiple sudokus (batch solve)</h2>
+    <p>When multiple sudokus should be solved they have to be put into a text file (one line per sudoku).
+    The line can be any format that HoDoKu can understand (for example 81 character strings,
+    HoDoKu library format, or q2-taxonomy format). Each sudoku can be followed by a '#' plus arbitrary strings.</p>
+    <p>All options available for solving single sudokus can be used in batch solving too.</p>
+    <dl>
+        <dt>/bs &lt;file&gt;</dt>
+        <dd>Solve all sudokus in file <b>&lt;file&gt;</b>. The output is written to the console and to a file
+        <b>&lt;file&gt;.out.txt</b> or a file given by <b>/o</b>.</dd>
+    </dl>
+    <h2>Find all steps</h2>
+    <dl>
+        <dt>/bsa</dt>
+        <dd>Execute "find all steps" for <b>[sudoku]</b>. The output is written to the console and to a file
+        <b>&lt;file&gt;.out.txt</b> or a file given by <b>/o</b>.</dd>
+        <dt>/bsaf &lt;file&gt;</dt>
+        <dd>Execute "find all steps" for all sudokus in file <b>&lt;file&gt;</b>. The output is written to the console and to a file
+        <b>&lt;file&gt;.out.txt</b> or a file given by /o.</dd>
+    </dl>
+    <h2>Search for sudokus with specific steps or specific difficulty levels</h2>
+    <p>HoDoKu can search for sudokus that contain specific steps (several steps can be specified in one run,
+    but only one step is considered in each sudoku) or sudokus with specofoc difficulty levels. 
+    The options control how the steps should appear in the sudoku.</p>
+    <dl>
+        <dt>/s</dt>
+        <dd>Search for sudokus that contain step(s) according to <b>/sc</b>.
+        The sudokus are written to the console and to a file <b>&lt;step&gt;[_&lt;step&gt;...].txt</b>
+        or a file given by <b>/o</b>, followed by a '#' and the sudoku type.</dd>
+        <dt>/so &lt;file&gt;</dt>
+        <dd>Take file <b>&lt;file&gt;</b> created by <b>/s</b> and sort it according to sudoku type. Output is written
+        to <b>&lt;file&gt;.out.txt</b> or to a file given by <b>/o</b>. If <b>/sc</b> is given only sudokus that fit
+        the options of <b>/sc</b> are written.</dd>
+        <dt>/sc &lt;step&gt;[:0|1|2|3][+[e|g|l]n][,[-]&lt;step&gt;[:0|1|2|3][+[e|g|l]n]...]</dt>
+        <dd>Define sudoku properties for <b>/s</b> or <b>/so</b>. <b>&lt;step&gt;</b> is an internal name according to <b>/lt</b>
+        or <b>"all"</b> (all steps except singles), <b>"nssts"</b> (all steps except singles, h2, h3, h4, n2, n3, n4,
+        l2, l3, lc1, lc2, bf2, bf3, bf4, xy, sc, mc), or <b>"nssts1"</b> (<b>nssts</b> minus 2sk, sk, bug1, w, u1, xyz, rp).
+        <b>"-"</b> means that <b>&lt;step&gt;</b> may not be part of the solution (not allowed with first step).<br>
+        The first optional parameter determines where the step can be located within the sudoku:
+        <ul>
+            <li><b>0</b>: Arbitrary steps allowed before and after the step (<b>x &lt;step&gt; x</b> - default).</li>
+            <li><b>1</b>: Only SSTS allowed before and after the step (<b>ssts &lt;step&gt; ssts</b>).</li>
+            <li><b>2</b>: Only SSTS allowed before the step, only singles after the step (<b>ssts &lt;step&gt; s</b>).</li>
+            <li><b>3</b>: Only singles allowed before and after the step (<b>s &lt;step&gt; s</b>).</li>
+        </ul>
+        The second optional parameter determines how many candidates should be eliminated by <b>&lt;step&gt;</b>:
+        <ul>
+            <li><b>e</b>: number of eliminated candidates equals n</li>
+            <li><b>l</b>: number of eliminated candidates is less than n</li>
+            <li><b>g</b>: number of eliminated candidates is greater than n</li>
+        </ul>
+        </dd>
+        <dt>/sl &lt;level&gt;</dt>
+        <dd>Create only sudokus with difficulty level <b>&lt;level&gt;</b>. Valid values for <b>&lt;level&gt;</b> are:
+        <ul>
+            <li><b>0</b>: Easy</li>
+            <li><b>1</b>: Medium</li>
+            <li><b>2</b>: Hard</li>
+            <li><b>3</b>: Unfair</li>
+            <li><b>4</b>: Extreme</li>
+        </ul>
+        </dd>
+    </dl>
+    <h2>Miscellaneous options</h2>
+    <dl>
+        <dt>/o &lt;file&gt;</dt>
+        <dd>Write output to <b>&lt;file&gt;</b>. If <b>&lt;file&gt;</b> is <b>"stdout"</b> all output is written to the console.</dd>
+        <dt>/stdin</dt>
+        <dd>Read additional options from stdin. Can be combined with <b>/f</b> and any number of options given
+        directly at the command line.</dd>
+    </dl>
+    <h2>Brute force testing</h2>
+    <dl>
+        <dt>/bt &lt;file&gt;</dt>
+        <dd>Read sudokus from <b>&lt;file&gt;</b> and perform a brute force test: After any non single
+        step in all sudokus "Find all steps" for the steps specified by <b>/bts</b> is executed.
+        All steps found are checked against the correct solution, errors are displayed and written
+        to a file.</dd>
+        <dt>/bts &lt;step&gt;[,&lt;step&gt;...]</dt>
+        <dd>A list of steps for which the brute force test should be executed.</dd>
+    </dl>
+    <h2>Regression testing</h2>
+    <dl>
+        <dt>/test &lt;file&gt;</dt>
+        <dd>Run all test cases contained in <b>&lt;file&gt;</b></dd>
+        <dt>/testf &lt;file&gt;</dt>
+        <dd>Run all test cases contained in <b>&lt;file&gt;</b> except those that
+        take a really long time to check</dd>
+    </dl>
+    <p><b>SSTS</b> are the techniques supported by the "Simple Sudoku" program:</p>
+    <ul>
+        <li>Singles</li>
+        <li>Locked Candidates</li>
+        <li>Hidden/Naked Subsets (including Locked Subset)</li>
+        <li>X-Wing</li>
+        <li>Swordfish</li>
+        <li>Jellyfish</li>
+        <li>XY-Wing</li>
+        <li>Simple/Multi Colors</li>
+    </ul>
+    <hr>
+
+    <h1><a name="files"></a>Files used by HoDoKu</h1>
+    <p>HoDoKu creates two files in your temp directory by default (the location of the temp directory is platform dependent -
+    under Windows it is usually something like "%USERPROFILE%\AppData\Local\Temp", under Linux it is normally just "/tmp").
+    The first file is named "hodoku.hcfg". It holds your current configuration. The second file is called "hodoku.log" which
+    holds information about critical errors. Both files can be deleted, although deleting "hodoku.hcfg" will cause HoDoKu
+    to use the default configuration when it starts the next time.</p>
+    <hr>
+
+<div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

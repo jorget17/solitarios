@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: Solving Techniques - Hidden Subsets (Hidden Pair, Hidden Triple, Hidden Quadruple)</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="Solving Techniques for sudoku - Hidden Pair, Hidden Triple, Hidden Quadruple">
+    <meta name="keywords" content="sudoku,java,hodoku,hidden subset,hidden pair,hidden triple,hidden quadruple">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+<style type="text/css" media="all">
+<!--
+#menu ul li ul li.mTechHi a, #menu ul li ul li.mTechHi a:hover {
+    font-style: italic;
+    background-color:#fceabe;
+}
+-->
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+        <li><ul class="sub1">
+                <li class="mTechIntro"><a href="tech_intro.htm">Introduction</a></li>
+                <li class="mTechSi"><a href="tech_singles.htm">Singles</a></li>
+                <li class="mTechIn"><a href="tech_intersections.htm">Intersections</a></li>
+                <li class="mTechHi"><a href="tech_hidden.htm">Hidden Subsets</a></li>
+                <li class="mTechNa"><a href="tech_naked.htm">Naked Subsets</a></li>
+                <li class="mTechFi"><a href="tech_fishg.htm">Fish (general)</a></li>
+                <li class="mTechBa"><a href="tech_fishb.htm">Basic Fish</a></li>
+                <li class="mTechFS"><a href="tech_fishfs.htm">Finned/Sashimi Fish</a></li>
+                <li class="mTechCF"><a href="tech_fishc.htm">Complex Fish</a></li>
+                <li class="mTechSD"><a href="tech_sdp.htm">Single Digit Patterns</a></li>
+                <li class="mTechUn"><a href="tech_ur.htm">Uniqueness</a></li>
+                <li class="mTechWi"><a href="tech_wings.htm">Wings</a></li>
+                <li class="mTechMi"><a href="tech_misc.htm">Miscellaneous</a></li>
+                <li class="mTechCo"><a href="tech_col.htm">Coloring</a></li>
+                <li class="mTechCh"><a href="tech_chains.htm">Chains/Loops</a></li>
+                <li class="mTechAl"><a href="tech_als.htm">ALS</a></li>
+                <li class="mTechLa"><a href="tech_last.htm">Last Resort</a></li>
+    </ul></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>Hidden Subsets</h1>
+    <h2>Table of Contents</h2>
+    <ul class="toc">
+        <li><a href="#h2">Hidden Pair</a></li>
+        <li><a href="#h3">Hidden Triple</a></li>
+<!--        <li class="ni"><ul>
+            <li><a href="#display_mode_1">Sudoku only view (standard)</a></li>
+            <li><a href="#display_mode_2">Summary view</a></li>
+        </ul></li> -->
+        <li><a href="#h4">Hidden Quadruple</a></li>
+        <li><a href="#h234">How to find them</a></li>
+    </ul>
+    <hr>
+
+    <h1><a name="h2"></a>Hidden Pair</h1>
+    <p>All Hidden Subsets work the same way, the only thing that changes is the number
+    of cells and candidates affected by the move. Take Hidden Pair: If you can
+    find two cells within a house such as that two candidates appear nowhere
+    outside those cells in that house, those two candidates must be placed in the
+    two cells. All other candidates can therefore be eliminated.</p>
+    <a href='show_example.htm@file=h201&amp;tech=Hidden+Pair.htm'><img class='scr_l' src='../examples/h201.png' alt='Sudoku technique: Example for Hidden+Pair'></a>    <a href='show_example.htm@file=h202&amp;tech=Hidden+Pair.htm'><img class='scr_l' src='../examples/h202.png' alt='Sudoku technique: Example for Hidden+Pair'></a>    <p>Take a look at column 9 in the left example: The candidates 1 and 9 appear only
+    in cells r5c9 and r7c9 (often abbreviated as r57c9) in that column (they appear elsewhere in row 5,
+    row 7, block 6 and block 9, but that is not important here). One of those two cells has to be 1 and the other
+    9. We don't know yet which is which, but what we know is, that r5c9 can't possibly
+    be 6.</p>
+    <p>Hidden Pairs can be buried under lots of other candidates as shown in the right
+    example: r1c12 is a Hidden Pair for candidates 4 and 7 (in this case they are hidden
+    in row 1 and in block 1), but those cells house another 10 candidates, which can all be eliminated.</p>
+    <hr>
+
+    <h1><a name="h3"></a>Hidden Triple</h1>
+    <p>Hidden Triples work in the same way as Hidden Pairs only with three cells and three
+    candidates.</p>
+    <a href='show_example.htm@file=h301&amp;tech=Hidden+Triple.htm'><img class='scr_l' src='../examples/h301.png' alt='Sudoku technique: Example for Hidden+Triple'></a>    <a href='show_example.htm@file=h302&amp;tech=Hidden+Triple.htm'><img class='scr_l' src='../examples/h302.png' alt='Sudoku technique: Example for Hidden+Triple'></a>    <p>The left example shows a Hidden Triple in block 7: Candidates 2, 4, and 5 appear
+    only in cells r8c2, r9c2, and r9c3 in that block. 1 can be eliminated from
+    r9c2 and 6 from r9c3, which cracks the sudoku.</p>
+    <p>The example on the right is special, in that the Hidden Triple is the very
+    first step of the solution (no singles available in the initial state of the sudoku).
+    The triple is in column 6 (r468c6) with candidates 2, 5, and 6. After the
+    triple only singles are needed to solve the sudoku.</p>
+    <hr>
+
+    <h1><a name="h4"></a>Hidden Quadruple</h1>
+    <p>Hidden Quadruples (4 candidates in 4 cells) are relatively seldom. It is very
+    hard to spot them without using pencil marks.</p>
+    <a href='show_example.htm@file=h401&amp;tech=Hidden+Quadruple.htm'><img class='scr_l' src='../examples/h401.png' alt='Sudoku technique: Example for Hidden+Quadruple'></a>    <a href='show_example.htm@file=h402&amp;tech=Hidden+Quadruple.htm'><img class='scr_l' src='../examples/h402.png' alt='Sudoku technique: Example for Hidden+Quadruple'></a>    <p>The left example is again in a block (cells r7c56 and r8c56, all in block 8) using
+    the candiates 2, 4, 5, and 8. The right example is in column 9 (r1238c9) using
+    candidates 2, 4, 5, and 9.</p>
+    <hr>
+
+    <h1><a name="h234"></a>How to find them</h1>
+    <a href='show_example.htm@file=h203&amp;tech=Hidden+Pair.htm'><img class='scr_l' src='../examples/h203.png' alt='Sudoku technique: Example for Hidden+Pair'></a>    <p>Hidden Pairs can be found easily using pencil marks. Take a look at the sudoku: After
+    a few singles pencil marks were applied for candidates 4 and 8. The Hidden Pair
+    in r3c46 becomes immediately visible. No other candidate can go into one of those cells.</p>
+    <p>Finding larger Hidden Subsets requires a good short term memory. Many players prefer
+    using larger Naked Subsets over larger Hidden Subsets, once pencil marks have been
+    applied, but this is of course entirely a matter of taste.</p>
+    <hr class="clear">
+
+<div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

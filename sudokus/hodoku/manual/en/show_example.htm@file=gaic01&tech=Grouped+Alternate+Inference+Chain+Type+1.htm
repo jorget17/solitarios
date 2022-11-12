@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: Grouped Alternate Inference Chain Type 1 example</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="HoDoKu - Sudoku for addicts: Show Example">
+    <meta name="keywords" content="sudoku,java,hodoku,solving techniques,example">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>HoDoKu Solving Technique Index: Example for "Grouped Alternate Inference Chain Type 1"</h1>
+    <p><img src="../examples/gaic01.png" alt="Solving Technique Example"></p>
+    <h2>Original sudoku:</h2>
+    <p><code>..512.....7.....8..8....345............6...3.4.2.81..9.......28..9.4.6.....8..7.4
+</code></p>
+
+    <h2>Use the following line if you want to load the sudoku in HoDoKu:</h2>
+    <p><code>:0711:5:+3+4512+8+9..+97+6...+28+1+28+1...345.......+1.+1..6...3.4.2.81+5.9+7.+4...+128+8+19.4.6+5+3.+2+38+1.7+94::574 575 576 591:
+</code></p>
+
+    <h2>The following representation can be pasted in most Sudoku programs:</h2>
+    <pre>.--------------.----------------------.-------------.
+
+| 3   4     5  | 1       2     8      | 9   67  67  |
+
+| 9   7     6  | 345     35    345    | 2   8   1   |
+
+| 2   8     1  | 79      679   679    | 3   4   5   |
+
+:--------------+----------------------+-------------:
+
+| 56  3569  78 | 234579  3579  234579 | 48  1   267 |
+
+| 1   59    78 | 6       579   24579  | 48  3   27  |
+
+| 4   36    2  | 37      8     1      | 5   67  9   |
+
+:--------------+----------------------+-------------:
+
+| 7   56    4  | 359     3569  3569   | 1   2   8   |
+
+| 8   1     9  | 27      4     27     | 6   5   3   |
+
+| 56  2     3  | 8       1     56     | 7   9   4   |
+
+'--------------'----------------------'-------------'
+</pre>
+
+    <h2>Representation of the step:</h2>
+    <pre>.----------------.--------------------------.-------------.
+
+|  3    4     5  |  1        2       8      | 9   67  67  |
+
+|  9    7     6  |  345      35      345    | 2   8   1   |
+
+|  2    8     1  |  79      *679    *679    | 3   4   5   |
+
+:----------------+--------------------------+-------------:
+
+|  56   3569  78 |  234579  *3579    234579 | 48  1   267 |
+
+|  1    59    78 |  6       *579     24579  | 48  3   27  |
+
+|  4   *36    2  | *37       8       1      | 5   67  9   |
+
+:----------------+--------------------------+-------------:
+
+|  7   *56    4  |  3-59     3-569   3-569  | 1   2   8   |
+
+|  8    1     9  |  27       4       27     | 6   5   3   |
+
+| -56   2     3  |  8        1      *56     | 7   9   4   |
+
+'----------------'--------------------------'-------------'
+
+
+
+Grouped AIC 5- r7c2 -6- r6c2 -3- r6c4 -7- r45c5 =7= r3c5 =6= r3c6 -6- r9c6 -5 =&gt; r7c456,r9c1&lt;&gt;5
+
+
+
+
+
+
+</pre>
+  <div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

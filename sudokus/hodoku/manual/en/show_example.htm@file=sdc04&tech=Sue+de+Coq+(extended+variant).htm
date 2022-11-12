@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: Sue de Coq (extended variant) example</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="HoDoKu - Sudoku for addicts: Show Example">
+    <meta name="keywords" content="sudoku,java,hodoku,solving techniques,example">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>HoDoKu Solving Technique Index: Example for "Sue de Coq (extended variant)"</h1>
+    <p><img src="../examples/sdc04.png" alt="Solving Technique Example"></p>
+    <h2>Original sudoku:</h2>
+    <p><code>..4....9765.....2191...73.42.1.3....5.32.6...............6........1746..7...9..1.
+</code></p>
+
+    <h2>Use the following line if you want to load the sudoku in HoDoKu:</h2>
+    <p><code>:1101:35789:+3+24+8+6+1+59765+7+9+4+3+82191+8+5+273+642.1+43....5.32.6...+4..+7.....+1..6.....+8..1746..7..+39..1.::378 578 757 758 849 858 869 949 957 967 969:
+</code></p>
+
+    <h2>The following representation can be pasted in most Sudoku programs:</h2>
+    <pre>.--------------.-------------.---------------------.
+
+| 3  2     4   | 8  6    1   | 5     9      7      |
+
+| 6  5     7   | 9  4    3   | 8     2      1      |
+
+| 9  1     8   | 5  2    7   | 3     6      4      |
+
+:--------------+-------------+---------------------:
+
+| 2  6789  1   | 4  3    589 | 79    578    5689   |
+
+| 5  789   3   | 2  18   6   | 1479  478    89     |
+
+| 4  689   69  | 7  158  589 | 129   358    235689 |
+
+:--------------+-------------+---------------------:
+
+| 1  349   259 | 6  58   258 | 2479  34578  23589  |
+
+| 8  39    259 | 1  7    4   | 6     35     2359   |
+
+| 7  46    256 | 3  9    258 | 24    1      258    |
+
+'--------------'-------------'---------------------'
+</pre>
+
+    <h2>Representation of the step:</h2>
+    <pre>.--------------.-------------.-----------------------------.
+
+| 3  2     4   | 8  6    1   |  5        9        7        |
+
+| 6  5     7   | 9  4    3   |  8        2        1        |
+
+| 9  1     8   | 5  2    7   |  3        6        4        |
+
+:--------------+-------------+-----------------------------:
+
+| 2  6789  1   | 4  3    589 | B79      A578      56-8-9   |
+
+| 5  789   3   | 2  18   6   |  14-7-9   4-7-8   B89       |
+
+| 4  689   69  | 7  158  589 |  12-9    A358      2356-8-9 |
+
+:--------------+-------------+-----------------------------:
+
+| 1  349   259 | 6  58   258 |  2479    -34-578   23589    |
+
+| 8  39    259 | 1  7    4   |  6       C35       2359     |
+
+| 7  46    256 | 3  9    258 |  24       1        258      |
+
+'--------------'-------------'-----------------------------'
+
+
+
+Sue de Coq: r46c8 - {3578} (r8c8 - {35}, r4c7,r5c9 - {789}) =&gt; r7c8&lt;&gt;3, r7c8&lt;&gt;5, r5c78&lt;&gt;7, r46c9,r5c8&lt;&gt;8, r46c9,r56c7&lt;&gt;9
+
+
+
+
+
+
+</pre>
+  <div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

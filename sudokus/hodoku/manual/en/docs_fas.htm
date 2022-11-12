@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: User Manual (Chapter 5: Finding all possible steps)</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="User Manual for HoDoKu - Chapter 5: Finding all possible steps">
+    <meta name="keywords" content="sudoku,java,hodoku,german,command line,options,human style solving techniques,hint,fish,uniqueness,coloring,chains,als,wings,subsets">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+<style type="text/css" media="all">
+<!--
+#menu ul li ul li.mDocsFAS a, #menu ul li ul li.mDocsFAS a:hover {
+    font-style: italic;
+    background-color:#fceabe;
+}
+-->
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li><ul class="sub1">
+                <li class="mDocsIntro"><a href="docs_intro.htm">Introduction</a></li>
+                <li class="mDocsPlay"><a href="docs_play.htm">Playing the game</a></li>
+                <li class="mDocsSolv"><a href="docs_solv.htm">Solver</a></li>
+                <li class="mDocsCre"><a href="docs_cre.htm">Creator</a></li>
+                <li class="mDocsFAS"><a href="docs_fas.htm">Finding all Steps</a></li>
+                <li class="mDocsSol"><a href="docs_sol.htm">Solution paths</a></li>
+                <li class="mDocsRef"><a href="docs_ref.htm">Reference</a></li>
+    </ul></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>Chapter 5: Finding all possible steps</h1>
+    <h2>Table of Contents</h2>
+    <ul class="toc">
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#config">Configuration</a></li>
+        <li><a href="#ordering">Sorting options</a></li>
+            </ul>
+    <hr>
+
+    <h1><a name="intro"></a>Introduction</h1>
+    <p>The "All possible steps" view allows you to find and browse all steps
+    that are applicable at the current sudoku state. The panel is divided in three parts:</p>
+    <ul>
+        <li>Toolbar: Contains tool buttons for sorting options (see below) and for configuration
+        (quick link to "Edit|Preferences...|All possible steps")</li>
+        <li>Step area: A tree view with all available steps</li>
+        <li>Bottom area: Contains the buttons "Find all steps" (does exactly that)
+        and "Add to solution" (see <a href="docs_sol.htm#change">Changing solutions</a>).</li>
+    </ul>
+    <img class="scr_l" src="../img/scrfas1.png" alt="Screenshot: Find all steps panel">
+    <p>Clicking on a step highlights the step in the sudoku area, as always a textual
+    representation is shown in the hint area text box. When switching to and from
+    another view it is possible that a step is highlighted in the All possible steps
+    view but not in the sudoku area. Clicking the step again doesn't change that.
+    It is necessary to click a different step to refresh the highlighting in the sudoku area.</p>
+    <p>All steps except Forcing Chains/Nets and Kraken Fish are enabled by default.
+    Forcing Chains/Nets and Kraken Fish are disabled because they tend to produce
+    an enormous amount of steps when searched for in easy sudokus. For harder sudokus
+    where they are necessary they can be easily enabled.</p>
+    <p>Please note that the All possible steps view is not automatically synchronized
+    with the sudoku. When you press "Find all steps" the steps are correct for
+    the sudoku state displayed but nothing prevents you from making changes in the sudoku
+    and then coming back to the steps you calculated before and select them. Chances are good
+    however that they will be incorrect at that time.</p>
+    <p>To avoid confusion you should always recalculate the steps before using them.</p>
+    <hr class="clear">
+
+    <h1><a name="config"></a>Configuration</h1>
+    <p>The configuration dialog for the All possible steps view can be found under "Edit|Preferences|All possible steps".</p>
+    <img class="scr_l" src="../img/scrfas2.png" alt="Screenshot: Find all steps configuration">
+    <p>The tree view on the left side let's you choose which techniques should be
+    included in the search.</p>
+    <p>The tree view doesn't contain any fish steps (except Kraken Fish). To configure
+    the fish search the "Fish" panel on the right side has to be used.</p>
+    <ul class="nfloat">
+        <li><b>Search for Fish:</b> Enables or disables the fish search</li>
+        <li><b>Type:</b> Let's you choose which type of fish should be searched for (basic only, basic
+        and franken, or all types). Please note that the more complex types take much
+        longer to find.</li>
+        <li><b>Size from/to:</b> Let's you specify which fish sizes should be found. 3/3 for
+        example searches only for Swordfishes.</li>
+        <li><b>Max. fins:</b> The maximum number of fins for which the search should be done.
+        Setting this field to '0' is the only possible way to exclude Finned/Sashimi Fish.</li>
+        <li><b>Max. endo fins:</b> Like "Max. fins" but for endo fins (doesn't have any
+        influence on basic fish search). A large value for "Max. endo fins" will
+        very likely result in very slow searches.</li>
+    </ul>
+    <ul>
+        <li><b>Check templates: </b> Perform a template check before searching (for an explanation
+        see <a href="docs_solv.htm#options">Options for solver steps</a>).</li>
+        <li><b>Candidates:</b> Pressing the button on the right side opens a dialog that allows
+        to choose the candidates for which the fish search should be run.</li>
+    </ul>
+    <p>The "Kraken Fish" configuration panel has similar possibilities as the "Fish" panel. Enabling/Disabling
+    however has to be done in the tree view, a template check is not possible
+    because a Kraken Fish can lead to the elimination of a candidate that is not the fish digit.</p>
+    <p>The ALS panel holds options for ALS chains:</p>
+    <ul>
+        <li><b>Chain length: </b> The maximum number of ALS in an ALS chain. Larger numbers drastically
+        increase search time.</li>
+        <li><b>Forward only:</b> When set (default), no backlinks are possible in ALS Chains. Unchecking
+        this option reveals many more chains, but the search time can be extremely long.</li>
+    </ul>
+    <hr class="clear">
+
+    <h1><a name="ordering"></a>Step ordering</h1>
+    <p>With the buttons in the toolbar steps can be ordered differently. The buttons represent
+    characters, that define the ordering type:</p>
+    <ul>
+        <li><b>D</b>irect Singles: Steps are ordered by the number of direct singles they unlock
+        (see <a href="docs_solv.htm#progress">Progress measurement</a>)</li>
+        <li><b>S</b>ingles: Steps are ordered by the total number of singles they unlock
+        using progress steps (see <a href="docs_solv.htm#progress">Progress measurement</a>)</li>
+        <li><b>C</b>ells: Steps are ordered by eliminations (cells and candidates in cells). Steps
+        that eliminate more than one candidate are listed once for every candidate</li>
+        <li><b>E</b>liminations: Steps are ordered by the number of eliminations (descending)
+        they produce. Steps with the same number of eliminations will be sorted by type, if more
+        than one step exists with the same technique and the same eliminations they are shown
+        under the same heading</li>
+        <li><b>T</b>ype: Steps are ordered by step type</li>
+    </ul>
+    <hr>
+
+    
+<div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>

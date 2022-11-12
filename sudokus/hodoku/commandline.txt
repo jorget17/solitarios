@@ -35,6 +35,7 @@ l: Print library format
 c: Print pencilmark grid (default)
 s: Print pencilmark grid with step highlighted
 If /vp is not given /vg is ignored.
+
 /vst
 Print statistics (used steps, number of cells set or candidates eliminated). If /vp is set the statistic is printed for every sudoku.
 /vf <0|1|2>

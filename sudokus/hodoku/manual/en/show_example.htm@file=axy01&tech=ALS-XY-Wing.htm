@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>HoDoKu: ALS-XY-Wing example</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="description" content="HoDoKu - Sudoku for addicts: Show Example">
+    <meta name="keywords" content="sudoku,java,hodoku,solving techniques,example">
+    <meta name="author" content="Bernhard Hobiger">
+    <link rel="stylesheet" href="hodoku.css" type="text/css" media="all">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+<div id="wrapper">
+<div id="header"></div>
+<div id="menu">
+    <ul>
+        <li>Offline'd by 1to9only</li>
+        <li class="mHome"><a href="index.htm">Home</a></li>
+        <li class="mTech"><a href="techniques.htm">Solving techniques</a></li>
+            <li class="mDocs"><a href="docs.htm">User Manual</a></li>
+        <li class="mChange"><a href="changelog.htm">Changelog</a></li>
+        <li class="mLibs"><a href="libs.htm">Libraries</a></li>
+        <li class="mLinks"><a href="links.htm">Links</a></li>
+</ul>
+
+
+<div class="logos">
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="../img/gplv3-88x31.png" alt="GPLv3 logo"></a>
+</div>
+</div>
+<div id="content">
+    <h1>HoDoKu Solving Technique Index: Example for "ALS-XY-Wing"</h1>
+    <p><img src="../examples/axy01.png" alt="Solving Technique Example"></p>
+    <h2>Original sudoku:</h2>
+    <p><code>4.6....7......1.6.....8....23..........34.......8..95..9.........2.5761.5...2...4
+</code></p>
+
+    <h2>Use the following line if you want to load the sudoku in HoDoKu:</h2>
+    <p><code>:9002:3:4.6....7......1+46....+68+4...23.....+4....34.......8.+295+3.9.......+3.2.5761.5...2...4:812 914 721 722 723 924 829 133 733 143 743 144 944 849 852 153 753 859 171 773 873 175 893 996:377:
+</code></p>
+
+    <h2>The following representation can be pasted in most Sudoku programs:</h2>
+    <pre>.-------------------.----------------.-------------------.
+
+| 4      125   6    | 25   39    359 | 12358  7    12589 |
+
+| 89     258   3589 | 257  379   1   | 4      6    259   |
+
+| 179    1257  359  | 6    8     4   | 1235   239  1259  |
+
+:-------------------+----------------+-------------------:
+
+| 2      3     589  | 57   1679  569 | 178    4    167   |
+
+| 16789  1567  589  | 3    4     569 | 1278   28   1267  |
+
+| 167    1467  147  | 8    167   2   | 9      5    3     |
+
+:-------------------+----------------+-------------------:
+
+| 678    9     14   | 14   36    368 | 23578  238  2578  |
+
+| 3      48    2    | 49   5     7   | 6      1    89    |
+
+| 5      1678  17   | 19   2     368 | 378    389  4     |
+
+'-------------------'----------------'-------------------'
+</pre>
+
+    <h2>Representation of the step:</h2>
+    <pre>.---------------------.-------------------.---------------------.
+
+|  4      125    6    |  25    39     359 | 12358    7    12589 |
+
+|  89     258    3589 |  257   379    1   | 4        6    259   |
+
+|  179    1257   359  |  6     8      4   | 1235     239  1259  |
+
+:---------------------+-------------------+---------------------:
+
+|  2      3      589  |  57    1679   569 | 178      4    167   |
+
+|  16789  1567   589  |  3     4      569 | 1278    B28   1267  |
+
+|  167    1467   147  |  8     167    2   | 9        5    3     |
+
+:---------------------+-------------------+---------------------:
+
+| A678    9      14   |  14   A36    A368 | 2-3578  B238  2578  |
+
+|  3      48     2    |  49    5      7   | 6        1    89    |
+
+|  5      1678  C17   | C19    2      368 | 378     B389  4     |
+
+'---------------------'-------------------'---------------------'
+
+
+
+Almost Locked Set XY-Wing: A=r7c156 {3678}, B=r579c8 {2389}, C=r9c34 {179}, X,Y=7,9, Z=3 =&gt; r7c7&lt;&gt;3
+
+
+
+
+
+
+</pre>
+  <div id="impressum">
+    <p>Copyright &copy; 2008-12 by Bernhard Hobiger<br>
+    All material on this page is licensed under the <a href="https://www.gnu.org/licenses/fdl-1.3.html">GNU FDLv1.3</a>.</p>
+</div><!-- impressum -->
+
+</div><!-- content -->
+</div><!-- wrapper -->
+</body>
+</html>
