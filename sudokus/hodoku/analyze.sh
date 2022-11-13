@@ -1,1 +1,1 @@
-java -jar hodoku.jar /vp /vst /bs in.txt
+java -jar hodoku.jar /vp /vst /bs in.txt /o hodoku_out.txt

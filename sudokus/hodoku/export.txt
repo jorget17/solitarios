@@ -1,0 +1,1 @@
+sudoku#day#month#year#num#date#len#orig#dif#name#author#hodoku_lev#hodoku_val#techniques
