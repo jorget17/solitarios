@@ -1,4 +1,4 @@
-300290000500000900008300000000080010200700500007002064010000053060100720030600000#13#11#2022#EP#DIF #1 Medium (364)
+300290000500000900008300000000080010200700500007002064010000053060100720030600000#13-11-2022-EP-DIF #1 Medium (364)
     (0) (0/0): Hidden Single: r2c8=3
     (0) (0/0): Hidden Single: r4c9=7
     (0) (0/0): Hidden Single: r7c7=6
@@ -61,7 +61,7 @@
              9 -        9/       0: Hidden Single
             26 -       26/       0: Naked Single
              1 -        0/       1: Locked Candidates Type 1 (Pointing)
-010560030509000020200070080000200000030700000102050870800300004090000000300008006#13#11#2022#EP#EXP #2 Medium (644)
+010560030509000020200070080000200000030700000102050870800300004090000000300008006#13-11-2022-EP-EXP #2 Medium (644)
     (0) (0/0): Hidden Single: r1c6=2
     (0) (0/0): Hidden Single: r3c3=3
     (0) (0/0): Hidden Single: r1c3=8
@@ -132,7 +132,7 @@
              1 -        0/      12: Locked Triple
              2 -        0/       5: Locked Candidates Type 1 (Pointing)
              2 -        0/       4: Locked Candidates Type 2 (Claiming)
-050049300000000070000010600009000508003091000200085000040052000001600040600000020#13#11#2022#NYT#MD #3 Medium (518)
+050049300000000070000010600009000508003091000200085000040052000001600040600000020#13-11-2022-NYT-MD #3 Medium (518)
     (0) (0/0): Naked Single: r5c8=6
     (0) (0/0): Hidden Single: r5c1=5
     (0) (0/0): Hidden Single: r9c3=5
@@ -199,7 +199,7 @@
             21 -       21/       0: Naked Single
              1 -        0/      11: Locked Pair
              2 -        0/       2: Locked Candidates Type 1 (Pointing)
-028001040000030020010005800000004070900000634007300000000000000005087260001600007#13#11#2022#NYT#EXP #4 Medium (524)
+028001040000030020010005800000004070900000634007300000000000000005087260001600007#13-11-2022-NYT-EXP #4 Medium (524)
     (0) (0/0): Naked Single: r3c8=9
     (0) (0/0): Naked Single: r5c3=2
     (0) (0/0): Naked Single: r5c6=8
@@ -280,11 +280,11 @@ Statistics total:
            239 -      225/      53
 
 Timing:
-         239/       71.58us/       17.11ms: Full House
-         157/        2.64us/        0.41ms: Naked Single
-          61/        3.81us/        0.23ms: Hidden Single
-          14/       62.94us/        0.88ms: Locked Pair
-          11/       29.81us/        0.33ms: Locked Triple
-          10/       19.77us/        0.20ms: Locked Candidates Type 1 (Pointing)
-           3/       28.61us/        0.09ms: Locked Candidates Type 2 (Claiming)
+         239/       47.81us/       11.43ms: Full House
+         157/        2.55us/        0.40ms: Naked Single
+          61/        4.53us/        0.28ms: Hidden Single
+          14/       84.51us/        1.18ms: Locked Pair
+          11/       24.62us/        0.27ms: Locked Triple
+          10/       18.95us/        0.19ms: Locked Candidates Type 1 (Pointing)
+           3/       27.77us/        0.08ms: Locked Candidates Type 2 (Claiming)
 
