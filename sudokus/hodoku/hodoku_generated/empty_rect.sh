@@ -1,0 +1,1 @@
+java -jar hodoku.jar /s /sc er:1 /o empty_rect.txt

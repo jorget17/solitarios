@@ -1,0 +1,1 @@
+java -jar hodoku.jar /s /sc sk:1 /o sky.txt
