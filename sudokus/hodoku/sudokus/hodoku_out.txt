@@ -1,704 +1,1154 @@
-200040008007000400530000060000200700400060003008009000070080035009000810800030002#25-11-2022-TG-DIAB-06054 #1 Hard (1014)
-    (0) (0/0): Hidden Single: r3c3=4
-    (0) (0/0): Hidden Single: r6c1=7
-    (0) (0/0): Hidden Single: r1c7=3
-    (0) (0/0): Hidden Single: r2c2=8
-    (0) (0/0): Hidden Single: r8c1=3
-    (0) (0/0): Hidden Single: r4c3=3
-    (0) (0/0): Hidden Single: r6c4=3
-    (0) (0/0): Hidden Single: r2c6=3
-    (0) (0/0): Hidden Single: r4c6=4
-    (0) (0/0): Hidden Single: r7c4=4
-    (0) (0/0): Hidden Single: r4c8=8
-    (0) (0/0): Hidden Single: r7c7=9
-    (0) (0/0): Naked Single: r9c7=6
-    (0) (0/0): Hidden Single: r9c4=9
-   1/5 (8) (0/0): Locked Pair: 1,5 in r46c5 => r23c5,r5c46<>1, r28c5,r5c46<>5
-   5 (2) (0/0): Locked Candidates Type 1 (Pointing): 5 in b3 => r56c8<>5
-   1 (2) (0/0): Locked Candidates Type 1 (Pointing): 1 in b8 => r13c6<>1
-   7 (4) (0/0): X-Wing: 7 c59 r38 => r3c46,r8c46<>7
-   1/2 (2) (0/0): Naked Triple: 1,2,8 in r3c467 => r3c9<>1, r3c5<>2
-   9 (2) (0/0): X-Wing: 9 r15 c28 => r2c8,r4c2<>9
-   2 (2) (0/0): XY-Wing: 1/9/2 in r2c59,r3c7 => r2c8,r3c6<>2
-    (0) (0/0): Naked Single: r2c8=5
-    (0) (0/0): Naked Single: r3c6=8
-    (0) (0/0): Naked Single: r3c4=1
-    (0) (0/0): Naked Single: r5c6=7
-    (0) (0/0): Naked Single: r2c4=6
-    (0) (0/0): Naked Single: r3c7=2
-    (0) (0/0): Naked Single: r5c4=8
-    (0) (0/0): Naked Single: r1c6=5
-    (0) (0/0): Naked Single: r8c4=5
-    (0) (0/0): Full House: r1c4=7
-    (0) (0/0): Naked Single: r9c6=1
-    (0) (0/0): Naked Single: r1c8=9
-    (0) (0/0): Naked Single: r3c5=9
-    (0) (0/0): Full House: r3c9=7
-    (0) (0/0): Full House: r2c9=1
-    (0) (0/0): Full House: r2c5=2
-    (0) (0/0): Full House: r2c1=9
-    (0) (0/0): Naked Single: r9c3=5
+000005090053001000042007000010050483090000000000028017000000048004003050070010030#27-11-2022-EP-DIF-01246 #1 Medium (510)
+    (0) (0/0): Naked Single: r3c8=6
     (0) (0/0): Naked Single: r5c8=2
-    (0) (0/0): Naked Single: r8c9=4
-    (0) (0/0): Full House: r9c8=7
-    (0) (0/0): Full House: r9c2=4
-    (0) (0/0): Full House: r6c8=4
-    (0) (0/0): Naked Single: r8c5=7
-    (0) (0/0): Naked Single: r5c3=1
-    (0) (0/0): Naked Single: r6c9=6
-    (0) (0/0): Full House: r4c9=9
-    (0) (0/0): Naked Single: r1c3=6
-    (0) (0/0): Full House: r1c2=1
-    (0) (0/0): Full House: r7c3=2
-    (0) (0/0): Naked Single: r4c1=6
-    (0) (0/0): Full House: r7c1=1
-    (0) (0/0): Full House: r7c6=6
-    (0) (0/0): Full House: r8c2=6
-    (0) (0/0): Full House: r8c6=2
-    (0) (0/0): Naked Single: r5c7=5
-    (0) (0/0): Full House: r5c2=9
-    (0) (0/0): Full House: r6c7=1
-    (0) (0/0): Naked Single: r4c2=5
-    (0) (0/0): Full House: r4c5=1
-    (0) (0/0): Full House: r6c5=5
-    (0) (0/0): Full House: r6c2=2
+    (0) (0/0): Full House: r2c8=7
+    (0) (0/0): Hidden Single: r4c1=2
+    (0) (0/0): Hidden Single: r6c7=9
+    (0) (0/0): Hidden Single: r5c4=1
+   9 (3) (0/0): Locked Candidates Type 1 (Pointing): 9 in b1 => r789c1<>9
+   2 (3) (0/0): Locked Candidates Type 1 (Pointing): 2 in b2 => r789c4<>2
+   5 (2) (0/0): Locked Candidates Type 1 (Pointing): 5 in b6 => r5c13<>5
+   6 (4) (0/0): Locked Candidates Type 1 (Pointing): 6 in b6 => r5c1356<>6
+    (0) (0/0): Naked Single: r5c6=4
+    (0) (0/0): Hidden Single: r6c1=4
+    (0) (0/0): Hidden Single: r9c4=4
+    (0) (0/0): Hidden Single: r6c3=5
+    (0) (0/0): Hidden Single: r7c4=5
+    (0) (0/0): Hidden Single: r9c1=5
+    (0) (0/0): Hidden Single: r9c3=8
+    (0) (0/0): Naked Single: r5c3=7
+    (0) (0/0): Naked Single: r4c3=6
+    (0) (0/0): Naked Single: r5c5=3
+    (0) (0/0): Naked Single: r1c3=1
+    (0) (0/0): Full House: r7c3=9
+    (0) (0/0): Naked Single: r4c6=9
+    (0) (0/0): Full House: r4c4=7
+    (0) (0/0): Full House: r6c4=6
+    (0) (0/0): Full House: r6c2=3
+    (0) (0/0): Full House: r5c1=8
+    (0) (0/0): Naked Single: r3c1=9
+    (0) (0/0): Naked Single: r2c1=6
+    (0) (0/0): Naked Single: r3c5=8
+    (0) (0/0): Naked Single: r1c1=7
+    (0) (0/0): Full House: r1c2=8
+    (0) (0/0): Naked Single: r8c1=1
+    (0) (0/0): Full House: r7c1=3
+    (0) (0/0): Naked Single: r3c4=3
+    (0) (0/0): Naked Single: r1c4=2
+    (0) (0/0): Naked Single: r1c7=3
+    (0) (0/0): Naked Single: r1c9=4
+    (0) (0/0): Full House: r1c5=6
+    (0) (0/0): Naked Single: r2c4=9
+    (0) (0/0): Full House: r2c5=4
+    (0) (0/0): Full House: r8c4=8
+    (0) (0/0): Naked Single: r2c9=2
+    (0) (0/0): Full House: r2c7=8
+    (0) (0/0): Naked Single: r7c5=7
+    (0) (0/0): Full House: r8c5=9
+    (0) (0/0): Naked Single: r8c9=6
+    (0) (0/0): Naked Single: r5c9=5
+    (0) (0/0): Full House: r5c7=6
+    (0) (0/0): Naked Single: r8c2=2
+    (0) (0/0): Full House: r7c2=6
+    (0) (0/0): Full House: r8c7=7
+    (0) (0/0): Naked Single: r9c7=2
+    (0) (0/0): Naked Single: r9c9=9
+    (0) (0/0): Full House: r3c9=1
+    (0) (0/0): Full House: r7c7=1
+    (0) (0/0): Full House: r7c6=2
+    (0) (0/0): Full House: r9c6=6
+    (0) (0/0): Full House: r3c7=5
+    Statistics:
+            21 -       21/       0: Full House
+             9 -        9/       0: Hidden Single
+            25 -       25/       0: Naked Single
+             4 -        0/      12: Locked Candidates Type 1 (Pointing)
+600000002008005040007000100070900013060050007030004900000630020200009000000000891#27-11-2022-EP-EXP-01246 #2 Medium (564)
+    (0) (0/0): Naked Single: r5c8=8
+    (0) (0/0): Hidden Single: r9c3=6
+    (0) (0/0): Hidden Single: r3c9=8
+    (0) (0/0): Hidden Single: r9c1=3
+    (0) (0/0): Hidden Single: r2c9=9
+    (0) (0/0): Naked Single: r2c1=1
+    (0) (0/0): Naked Single: r2c2=2
+    (0) (0/0): Hidden Single: r1c3=3
+    (0) (0/0): Hidden Single: r7c1=7
+   5/7 (6) (0/0): Locked Pair: 5,7 in r1c78 => r1c2,r3c8<>5, r1c456,r2c7<>7
+    (0) (0/0): Hidden Single: r9c6=7
+   5/6 (5) (0/0): Locked Pair: 5,6 in r6c89 => r4c7,r6c13<>5, r4c7,r6c5<>6
+    (0) (0/0): Naked Single: r6c1=8
+   4/5 (9) (0/0): Locked Pair: 4,5 in r7c79 => r7c23,r8c79<>4, r7c23,r8c789<>5
+    (0) (0/0): Naked Single: r8c9=6
+    (0) (0/0): Naked Single: r6c9=5
+    (0) (0/0): Full House: r7c9=4
+    (0) (0/0): Naked Single: r6c8=6
+    (0) (0/0): Naked Single: r7c7=5
+    (0) (0/0): Naked Single: r3c8=3
+    (0) (0/0): Naked Single: r1c7=7
+    (0) (0/0): Naked Single: r2c7=6
+    (0) (0/0): Full House: r1c8=5
+    (0) (0/0): Full House: r8c8=7
+    (0) (0/0): Full House: r8c7=3
+    (0) (0/0): Naked Single: r2c5=7
+    (0) (0/0): Full House: r2c4=3
+    (0) (0/0): Hidden Single: r5c6=3
+    (0) (0/0): Hidden Single: r6c4=7
+   1 (2) (0/0): Locked Candidates Type 1 (Pointing): 1 in b4 => r78c3<>1
+    (0) (0/0): Naked Single: r7c3=9
+    (0) (0/0): Hidden Single: r5c1=9
+   2 (2) (0/0): Naked Pair: 1,2 in r5c4,r6c5 => r4c56<>2
+    (0) (0/0): Hidden Single: r3c6=2
+    (0) (0/0): Naked Single: r3c4=4
+    (0) (0/0): Naked Single: r3c1=5
+    (0) (0/0): Full House: r4c1=4
+    (0) (0/0): Naked Single: r3c2=9
+    (0) (0/0): Full House: r1c2=4
+    (0) (0/0): Full House: r3c5=6
+    (0) (0/0): Naked Single: r4c7=2
+    (0) (0/0): Full House: r5c7=4
+    (0) (0/0): Naked Single: r9c2=5
+    (0) (0/0): Naked Single: r4c5=8
+    (0) (0/0): Naked Single: r4c3=5
+    (0) (0/0): Full House: r4c6=6
+    (0) (0/0): Naked Single: r8c3=4
+    (0) (0/0): Naked Single: r9c4=2
+    (0) (0/0): Full House: r9c5=4
+    (0) (0/0): Naked Single: r8c5=1
+    (0) (0/0): Naked Single: r5c4=1
+    (0) (0/0): Full House: r6c5=2
+    (0) (0/0): Full House: r1c5=9
+    (0) (0/0): Full House: r5c3=2
+    (0) (0/0): Full House: r6c3=1
+    (0) (0/0): Naked Single: r7c6=8
+    (0) (0/0): Full House: r1c6=1
+    (0) (0/0): Full House: r1c4=8
+    (0) (0/0): Full House: r7c2=1
+    (0) (0/0): Full House: r8c2=8
+    (0) (0/0): Full House: r8c4=5
     Statistics:
             20 -       20/       0: Full House
-            13 -       13/       0: Hidden Single
-            23 -       23/       0: Naked Single
-             1 -        0/       2: Naked Triple
-             1 -        0/       8: Locked Pair
-             2 -        0/       4: Locked Candidates Type 1 (Pointing)
-             1 -        0/       2: XY-Wing
-             2 -        0/       6: X-Wing
-070000000800700310106004000000000637018020400705000002907000000000008040260510000#25-11-2022-NYT-MD-NA #2 Medium (480)
-    (0) (0/0): Naked Single: r4c1=4
-    (0) (0/0): Hidden Single: r5c6=7
-    (0) (0/0): Hidden Single: r6c7=1
-    (0) (0/0): Hidden Single: r5c1=6
-    (0) (0/0): Hidden Single: r7c2=8
-    (0) (0/0): Hidden Single: r8c3=1
-    (0) (0/0): Hidden Single: r9c3=4
-    (0) (0/0): Hidden Single: r8c5=7
+            11 -       11/       0: Hidden Single
+            25 -       25/       0: Naked Single
+             1 -        0/       2: Naked Pair
+             3 -        0/      20: Locked Pair
+             1 -        0/       2: Locked Candidates Type 1 (Pointing)
+600200019090008000000060050820400000004072500000000100008047000000000063001903700#27-11-2022-NYT-MD-NA #3 Medium (394)
     (0) (0/0): Hidden Single: r7c9=1
+    (0) (0/0): Hidden Single: r3c6=9
+    (0) (0/0): Hidden Single: r9c2=6
+    (0) (0/0): Hidden Single: r7c4=6
+    (0) (0/0): Hidden Single: r9c9=5
+    (0) (0/0): Hidden Single: r1c6=4
+    (0) (0/0): Hidden Single: r5c9=6
+    (0) (0/0): Naked Single: r4c9=7
+    (0) (0/0): Hidden Single: r2c7=6
+    (0) (0/0): Hidden Single: r2c8=7
+    (0) (0/0): Hidden Single: r3c4=7
+   3/9 (8) (0/0): Locked Pair: 3,9 in r4c78 => r4c35,r56c8<>3, r4c35,r56c8<>9
+    (0) (0/0): Naked Single: r5c8=8
+    (0) (0/0): Hidden Single: r6c5=9
+    (0) (0/0): Hidden Single: r5c1=9
+    (0) (0/0): Hidden Single: r4c8=3
+    (0) (0/0): Naked Single: r4c7=9
+    (0) (0/0): Naked Single: r7c7=2
+    (0) (0/0): Naked Single: r7c8=9
+    (0) (0/0): Naked Single: r9c8=4
+    (0) (0/0): Full House: r6c8=2
+    (0) (0/0): Full House: r8c7=8
+    (0) (0/0): Full House: r6c9=4
+    (0) (0/0): Naked Single: r9c1=2
+    (0) (0/0): Full House: r9c5=8
+    (0) (0/0): Naked Single: r1c7=3
+    (0) (0/0): Full House: r3c7=4
+    (0) (0/0): Naked Single: r2c9=2
+    (0) (0/0): Full House: r3c9=8
+    (0) (0/0): Naked Single: r1c5=5
+    (0) (0/0): Naked Single: r1c3=7
+    (0) (0/0): Full House: r1c2=8
+    (0) (0/0): Naked Single: r4c5=1
+    (0) (0/0): Naked Single: r2c5=3
+    (0) (0/0): Full House: r8c5=2
+    (0) (0/0): Full House: r2c4=1
+    (0) (0/0): Naked Single: r5c4=3
+    (0) (0/0): Full House: r5c2=1
+    (0) (0/0): Naked Single: r2c3=5
+    (0) (0/0): Full House: r2c1=4
+    (0) (0/0): Naked Single: r8c4=5
+    (0) (0/0): Full House: r6c4=8
+    (0) (0/0): Full House: r8c6=1
+    (0) (0/0): Naked Single: r3c2=3
+    (0) (0/0): Naked Single: r4c3=6
+    (0) (0/0): Full House: r4c6=5
+    (0) (0/0): Full House: r6c6=6
+    (0) (0/0): Naked Single: r8c3=9
+    (0) (0/0): Naked Single: r8c1=7
+    (0) (0/0): Full House: r8c2=4
+    (0) (0/0): Naked Single: r3c1=1
+    (0) (0/0): Full House: r3c3=2
+    (0) (0/0): Full House: r6c3=3
+    (0) (0/0): Naked Single: r7c2=5
+    (0) (0/0): Full House: r6c2=7
+    (0) (0/0): Full House: r6c1=5
+    (0) (0/0): Full House: r7c1=3
+    Statistics:
+            21 -       21/       0: Full House
+            13 -       13/       0: Hidden Single
+            22 -       22/       0: Naked Single
+             1 -        0/       8: Locked Pair
+006320050050004090400001700040600100830000200000052000000000089070405000000000000#27-11-2022-NYT-HRD-NA #4 Medium (772)
+    (0) (0/0): Hidden Single: r3c4=5
+    (0) (0/0): Hidden Single: r6c7=9
+    (0) (0/0): Hidden Single: r5c5=4
+   1/6/7 (10) (0/0): Locked Triple: 1,6,7 in r6c123 => r5c3,r6c4<>1, r6c89<>6, r4c13,r5c3,r6c489<>7
+    (0) (0/0): Naked Single: r6c4=8
+    (0) (0/0): Naked Single: r2c4=7
+    (0) (0/0): Hidden Single: r5c4=1
+    (0) (0/0): Naked Single: r7c4=2
+    (0) (0/0): Full House: r9c4=9
+    (0) (0/0): Hidden Single: r4c9=8
+    (0) (0/0): Hidden Single: r1c1=7
+    (0) (0/0): Hidden Single: r6c3=7
+    (0) (0/0): Hidden Single: r5c9=5
+    (0) (0/0): Naked Single: r5c3=9
+    (0) (0/0): Naked Single: r5c6=7
+    (0) (0/0): Full House: r5c8=6
+    (0) (0/0): Hidden Single: r9c9=7
+    (0) (0/0): Hidden Single: r8c1=9
+    (0) (0/0): Hidden Single: r4c8=7
+    (0) (0/0): Hidden Single: r7c5=7
+   6 (2) (0/0): Locked Candidates Type 1 (Pointing): 6 in b2 => r89c5<>6
+   1 (1) (0/0): Locked Candidates Type 1 (Pointing): 1 in b3 => r8c9<>1
+   1 (4) (0/0): Locked Candidates Type 2 (Claiming): 1 in r7 => r89c3,r9c12<>1
+   6 (2) (0/0): Locked Candidates Type 2 (Claiming): 6 in r8 => r79c7<>6
+   1/6 (2) (0/0): Naked Pair: 1,6 in r67c2 => r1c2<>1, r9c2<>6
+    (0) (0/0): Hidden Single: r1c9=1
+    (0) (0/0): Hidden Single: r1c7=4
+    (0) (0/0): Hidden Single: r6c9=4
+    (0) (0/0): Full House: r6c8=3
+    (0) (0/0): Naked Single: r3c8=2
+    (0) (0/0): Naked Single: r8c8=1
+    (0) (0/0): Full House: r9c8=4
+    (0) (0/0): Hidden Single: r7c3=4
+    (0) (0/0): Hidden Single: r2c7=8
+    (0) (0/0): Naked Single: r2c5=6
+    (0) (0/0): Naked Single: r2c9=3
+    (0) (0/0): Full House: r3c9=6
+    (0) (0/0): Full House: r8c9=2
+    (0) (0/0): Hidden Single: r9c2=2
+    (0) (0/0): Hidden Single: r9c5=1
+    (0) (0/0): Hidden Single: r2c3=1
+    (0) (0/0): Full House: r2c1=2
+    (0) (0/0): Naked Single: r4c1=5
+    (0) (0/0): Naked Single: r4c3=2
+    (0) (0/0): Hidden Single: r8c7=6
+    (0) (0/0): Hidden Single: r3c3=3
+    (0) (0/0): Naked Single: r8c3=8
+    (0) (0/0): Full House: r8c5=3
+    (0) (0/0): Full House: r9c3=5
+    (0) (0/0): Naked Single: r4c5=9
+    (0) (0/0): Full House: r3c5=8
+    (0) (0/0): Full House: r4c6=3
+    (0) (0/0): Full House: r1c6=9
+    (0) (0/0): Full House: r3c2=9
+    (0) (0/0): Full House: r1c2=8
+    (0) (0/0): Naked Single: r7c6=6
+    (0) (0/0): Full House: r9c6=8
+    (0) (0/0): Naked Single: r9c7=3
+    (0) (0/0): Full House: r7c7=5
+    (0) (0/0): Full House: r9c1=6
+    (0) (0/0): Naked Single: r7c2=1
+    (0) (0/0): Full House: r6c2=6
+    (0) (0/0): Full House: r6c1=1
+    (0) (0/0): Full House: r7c1=3
+    Statistics:
+            20 -       20/       0: Full House
+            22 -       22/       0: Hidden Single
+            16 -       16/       0: Naked Single
+             1 -        0/       2: Naked Pair
+             1 -        0/      10: Locked Triple
+             2 -        0/       3: Locked Candidates Type 1 (Pointing)
+             2 -        0/       6: Locked Candidates Type 2 (Claiming)
+000300860800050000000007905002040730000000000047000006001070500006290040000005078#28-11-2022-EP-DIF-01247 #5 Medium (604)
+    (0) (0/0): Hidden Single: r5c4=7
+    (0) (0/0): Hidden Single: r9c7=6
+    (0) (0/0): Hidden Single: r5c3=8
     (0) (0/0): Hidden Single: r6c8=8
-    (0) (0/0): Hidden Single: r5c4=3
-    (0) (0/0): Hidden Single: r6c2=3
-    (0) (0/0): Naked Single: r8c2=5
-    (0) (0/0): Full House: r8c1=3
-    (0) (0/0): Full House: r1c1=5
-    (0) (0/0): Hidden Single: r2c2=4
+    (0) (0/0): Hidden Single: r1c3=5
+    (0) (0/0): Hidden Single: r3c5=8
+    (0) (0/0): Hidden Single: r5c8=5
+    (0) (0/0): Hidden Single: r5c5=6
+    (0) (0/0): Hidden Single: r7c8=9
+    (0) (0/0): Hidden Single: r7c9=2
+   3 (2) (0/0): Locked Candidates Type 1 (Pointing): 3 in b3 => r2c23<>3
+   2 (1) (0/0): Locked Candidates Type 1 (Pointing): 2 in b6 => r2c7<>2
+   1 (1) (0/0): Locked Candidates Type 1 (Pointing): 1 in b9 => r8c6<>1
+   3 (3) (0/0): Locked Candidates Type 1 (Pointing): 3 in b9 => r8c126<>3
+    (0) (0/0): Naked Single: r8c6=8
+    (0) (0/0): Hidden Single: r4c4=8
+    (0) (0/0): Hidden Single: r7c2=8
+    (0) (0/0): Hidden Single: r6c4=5
+    (0) (0/0): Hidden Single: r2c4=9
+    (0) (0/0): Naked Single: r2c3=4
+    (0) (0/0): Naked Single: r3c3=3
+    (0) (0/0): Full House: r9c3=9
+    (0) (0/0): Hidden Single: r5c7=4
     (0) (0/0): Hidden Single: r1c9=4
-    (0) (0/0): Hidden Single: r1c3=3
-    (0) (0/0): Hidden Single: r3c5=3
-    (0) (0/0): Hidden Single: r9c9=3
-    (0) (0/0): Naked Single: r9c6=9
-    (0) (0/0): Naked Single: r6c6=6
-    (0) (0/0): Naked Single: r9c8=7
-    (0) (0/0): Full House: r9c7=8
-    (0) (0/0): Hidden Single: r7c6=3
-    (0) (0/0): Hidden Single: r3c9=8
-    (0) (0/0): Hidden Single: r3c7=7
-    (0) (0/0): Hidden Single: r3c8=5
-    (0) (0/0): Naked Single: r5c8=9
-    (0) (0/0): Full House: r5c9=5
-    (0) (0/0): Hidden Single: r7c7=5
-   2 (2) (0/0): Locked Candidates Type 1 (Pointing): 2 in b3 => r1c46<>2
+    (0) (0/0): Hidden Single: r3c4=4
+    (0) (0/0): Naked Single: r7c4=6
+    (0) (0/0): Full House: r9c4=1
+    (0) (0/0): Naked Single: r9c5=3
+    (0) (0/0): Full House: r7c6=4
+    (0) (0/0): Full House: r7c1=3
+    (0) (0/0): Naked Single: r9c2=2
+    (0) (0/0): Full House: r9c1=4
+    (0) (0/0): Hidden Single: r5c6=2
     (0) (0/0): Naked Single: r1c6=1
-    (0) (0/0): Naked Single: r4c6=5
-    (0) (0/0): Full House: r2c6=2
-    (0) (0/0): Naked Single: r2c3=9
-    (0) (0/0): Full House: r3c2=2
-    (0) (0/0): Full House: r3c4=9
-    (0) (0/0): Full House: r4c3=2
-    (0) (0/0): Full House: r4c2=9
-    (0) (0/0): Naked Single: r2c9=6
-    (0) (0/0): Full House: r2c5=5
-    (0) (0/0): Full House: r8c9=9
-    (0) (0/0): Naked Single: r6c4=4
-    (0) (0/0): Full House: r6c5=9
-    (0) (0/0): Naked Single: r4c5=8
-    (0) (0/0): Full House: r4c4=1
+    (0) (0/0): Naked Single: r6c5=1
+    (0) (0/0): Full House: r1c5=2
+    (0) (0/0): Full House: r2c6=6
+    (0) (0/0): Naked Single: r4c6=9
+    (0) (0/0): Full House: r6c6=3
+    (0) (0/0): Naked Single: r6c1=9
+    (0) (0/0): Full House: r6c7=2
+    (0) (0/0): Naked Single: r4c9=1
+    (0) (0/0): Full House: r5c9=9
+    (0) (0/0): Naked Single: r1c1=7
+    (0) (0/0): Full House: r1c2=9
+    (0) (0/0): Naked Single: r5c1=1
+    (0) (0/0): Full House: r5c2=3
+    (0) (0/0): Naked Single: r8c9=3
+    (0) (0/0): Full House: r2c9=7
+    (0) (0/0): Full House: r8c7=1
+    (0) (0/0): Full House: r2c7=3
+    (0) (0/0): Naked Single: r2c2=1
+    (0) (0/0): Full House: r2c8=2
+    (0) (0/0): Full House: r3c8=1
+    (0) (0/0): Naked Single: r8c1=5
+    (0) (0/0): Full House: r8c2=7
+    (0) (0/0): Naked Single: r3c2=6
+    (0) (0/0): Full House: r3c1=2
+    (0) (0/0): Full House: r4c1=6
+    (0) (0/0): Full House: r4c2=5
+    Statistics:
+            21 -       21/       0: Full House
+            18 -       18/       0: Hidden Single
+            17 -       17/       0: Naked Single
+             4 -        0/       7: Locked Candidates Type 1 (Pointing)
+000083006000100070020094003008000060100029050502000900010208007000006000034000100#28-11-2022-EP-EXP-01247 #6 Medium (520)
+    (0) (0/0): Hidden Single: r2c6=2
+    (0) (0/0): Hidden Single: r8c5=1
+    (0) (0/0): Hidden Single: r9c1=6
+    (0) (0/0): Naked Single: r7c1=9
+    (0) (0/0): Naked Single: r7c3=5
+    (0) (0/0): Naked Single: r8c3=7
+    (0) (0/0): Naked Single: r8c2=8
+    (0) (0/0): Full House: r8c1=2
+    (0) (0/0): Hidden Single: r7c7=6
+    (0) (0/0): Hidden Single: r4c2=9
+   5/7 (4) (0/0): Locked Pair: 5,7 in r9c56 => r89c4,r9c9<>5, r9c4<>7
+    (0) (0/0): Naked Single: r9c4=9
+   7 (3) (0/0): Locked Candidates Type 1 (Pointing): 7 in b2 => r456c4<>7
+   1 (1) (0/0): Locked Candidates Type 1 (Pointing): 1 in b3 => r6c8<>1
+   4/5 (3) (0/0): Naked Triple: 4,5,7 in r1c124 => r1c78<>4, r1c7<>5
+    (0) (0/0): Naked Single: r1c7=2
+    (0) (0/0): Hidden Single: r9c8=2
+    (0) (0/0): Naked Single: r9c9=8
+    (0) (0/0): Naked Single: r5c9=4
+    (0) (0/0): Naked Single: r6c9=1
+    (0) (0/0): Naked Single: r4c9=2
+    (0) (0/0): Naked Single: r6c6=7
+    (0) (0/0): Naked Single: r9c6=5
+    (0) (0/0): Full House: r4c6=1
+    (0) (0/0): Full House: r9c5=7
+    (0) (0/0): Hidden Single: r2c7=4
+    (0) (0/0): Hidden Single: r2c1=8
+    (0) (0/0): Naked Single: r3c1=7
+    (0) (0/0): Naked Single: r1c1=4
+    (0) (0/0): Full House: r4c1=3
+    (0) (0/0): Naked Single: r1c2=5
+    (0) (0/0): Naked Single: r4c7=7
+    (0) (0/0): Naked Single: r5c3=6
+    (0) (0/0): Naked Single: r1c4=7
+    (0) (0/0): Naked Single: r2c2=6
+    (0) (0/0): Naked Single: r3c3=1
+    (0) (0/0): Naked Single: r5c2=7
+    (0) (0/0): Full House: r6c2=4
+    (0) (0/0): Naked Single: r2c5=5
+    (0) (0/0): Full House: r3c4=6
+    (0) (0/0): Naked Single: r1c3=9
+    (0) (0/0): Full House: r1c8=1
+    (0) (0/0): Full House: r2c3=3
+    (0) (0/0): Full House: r2c9=9
+    (0) (0/0): Full House: r8c9=5
+    (0) (0/0): Naked Single: r3c8=8
+    (0) (0/0): Full House: r3c7=5
+    (0) (0/0): Naked Single: r4c5=4
+    (0) (0/0): Full House: r4c4=5
+    (0) (0/0): Naked Single: r8c7=3
+    (0) (0/0): Full House: r5c7=8
+    (0) (0/0): Full House: r6c8=3
+    (0) (0/0): Full House: r5c4=3
+    (0) (0/0): Naked Single: r7c5=3
+    (0) (0/0): Full House: r7c8=4
+    (0) (0/0): Full House: r8c4=4
+    (0) (0/0): Full House: r6c4=8
+    (0) (0/0): Full House: r6c5=6
+    (0) (0/0): Full House: r8c8=9
+    Statistics:
+            20 -       20/       0: Full House
+             8 -        8/       0: Hidden Single
+            27 -       27/       0: Naked Single
+             1 -        0/       3: Naked Triple
+             1 -        0/       4: Locked Pair
+             2 -        0/       4: Locked Candidates Type 1 (Pointing)
+000000009008300500003600000000060200400080107010020000100000002500010006290004050#28-11-2022-NYT-MD-NA #7 Medium (432)
+    (0) (0/0): Hidden Single: r1c3=1
+    (0) (0/0): Hidden Single: r9c3=6
+    (0) (0/0): Hidden Single: r7c6=6
+    (0) (0/0): Hidden Single: r9c9=1
+    (0) (0/0): Naked Single: r2c9=4
+    (0) (0/0): Naked Single: r3c9=8
+    (0) (0/0): Naked Single: r3c7=7
+    (0) (0/0): Naked Single: r3c1=9
+    (0) (0/0): Hidden Single: r4c4=1
+    (0) (0/0): Hidden Single: r5c3=2
+    (0) (0/0): Hidden Single: r4c8=4
+    (0) (0/0): Hidden Single: r6c4=4
+   6/7 (7) (0/0): Locked Pair: 6,7 in r12c1 => r12c2,r6c1<>6, r12c2,r46c1<>7
+    (0) (0/0): Naked Single: r2c2=2
+    (0) (0/0): Hidden Single: r5c2=6
+   4/7 (6) (0/0): Locked Pair: 4,7 in r78c3 => r78c2<>4, r46c3,r78c2<>7
+    (0) (0/0): Hidden Single: r6c6=7
+    (0) (0/0): Hidden Single: r4c2=7
+    (0) (0/0): Hidden Single: r4c1=8
+    (0) (0/0): Naked Single: r6c1=3
+    (0) (0/0): Naked Single: r6c9=5
+    (0) (0/0): Full House: r4c9=3
+    (0) (0/0): Naked Single: r6c3=9
+    (0) (0/0): Full House: r4c3=5
+    (0) (0/0): Full House: r4c6=9
+    (0) (0/0): Naked Single: r5c8=9
+    (0) (0/0): Naked Single: r2c6=1
+    (0) (0/0): Naked Single: r5c4=5
+    (0) (0/0): Full House: r5c6=3
+    (0) (0/0): Naked Single: r2c8=6
+    (0) (0/0): Naked Single: r1c7=3
+    (0) (0/0): Naked Single: r2c1=7
+    (0) (0/0): Full House: r1c1=6
+    (0) (0/0): Full House: r2c5=9
+    (0) (0/0): Naked Single: r6c8=8
+    (0) (0/0): Full House: r6c7=6
     (0) (0/0): Naked Single: r1c8=2
-    (0) (0/0): Full House: r1c7=9
-    (0) (0/0): Full House: r8c7=2
-    (0) (0/0): Full House: r7c8=6
-    (0) (0/0): Full House: r8c4=6
-    (0) (0/0): Naked Single: r1c5=6
-    (0) (0/0): Full House: r7c5=4
+    (0) (0/0): Full House: r3c8=1
+    (0) (0/0): Naked Single: r9c7=8
+    (0) (0/0): Naked Single: r9c4=7
+    (0) (0/0): Full House: r9c5=3
+    (0) (0/0): Naked Single: r1c4=8
+    (0) (0/0): Naked Single: r7c5=5
+    (0) (0/0): Naked Single: r1c6=5
+    (0) (0/0): Naked Single: r7c4=9
+    (0) (0/0): Full House: r8c4=2
+    (0) (0/0): Full House: r8c6=8
+    (0) (0/0): Full House: r3c6=2
+    (0) (0/0): Naked Single: r3c5=4
+    (0) (0/0): Full House: r1c5=7
+    (0) (0/0): Full House: r1c2=4
+    (0) (0/0): Full House: r3c2=5
+    (0) (0/0): Naked Single: r7c7=4
+    (0) (0/0): Full House: r8c7=9
+    (0) (0/0): Naked Single: r8c2=3
+    (0) (0/0): Full House: r7c2=8
+    (0) (0/0): Naked Single: r7c3=7
+    (0) (0/0): Full House: r7c8=3
+    (0) (0/0): Full House: r8c8=7
+    (0) (0/0): Full House: r8c3=4
+    Statistics:
+            20 -       20/       0: Full House
+            12 -       12/       0: Hidden Single
+            26 -       26/       0: Naked Single
+             2 -        0/      13: Locked Pair
+005000000020090004047300000306000790800900200000030860000000100700100002000056030#28-11-2022-NYT-HRD-NA #8 Medium (588)
+    (0) (0/0): Hidden Single: r5c8=4
+    (0) (0/0): Naked Single: r5c3=1
+    (0) (0/0): Naked Single: r4c2=5
+    (0) (0/0): Naked Single: r4c9=1
+    (0) (0/0): Naked Single: r5c2=7
+    (0) (0/0): Naked Single: r6c9=5
+    (0) (0/0): Full House: r5c9=3
+    (0) (0/0): Naked Single: r5c5=6
+    (0) (0/0): Full House: r5c6=5
+    (0) (0/0): Naked Single: r6c2=9
+    (0) (0/0): Hidden Single: r7c1=5
+    (0) (0/0): Hidden Single: r6c6=1
+    (0) (0/0): Hidden Single: r2c4=5
+    (0) (0/0): Hidden Single: r6c4=7
+    (0) (0/0): Hidden Single: r1c4=6
+    (0) (0/0): Hidden Single: r9c9=7
+    (0) (0/0): Naked Single: r7c8=8
+    (0) (0/0): Naked Single: r8c8=5
+    (0) (0/0): Hidden Single: r3c7=5
+   1/9 (3) (0/0): Locked Triple: 1,6,9 in r123c1 => r1c2,r9c1<>1, r9c1<>9
+    (0) (0/0): Hidden Single: r9c2=1
+   2/4/8 (6) (0/0): Naked Triple: 2,4,8 in r79c4,r8c5 => r7c56<>2, r7c56,r8c6<>4, r8c6<>8
+    (0) (0/0): Naked Single: r7c5=7
+   2 (1) (0/0): Locked Candidates Type 1 (Pointing): 2 in b8 => r4c4<>2
+   8/9 (3) (0/0): Naked Triple: 3,8,9 in r1c279 => r1c56<>8, r1c1<>9
+    (0) (0/0): Naked Single: r1c1=1
+    (0) (0/0): Naked Single: r2c1=6
+    (0) (0/0): Naked Single: r2c7=3
+    (0) (0/0): Naked Single: r3c1=9
+    (0) (0/0): Naked Single: r1c7=9
+    (0) (0/0): Naked Single: r2c3=8
+    (0) (0/0): Full House: r1c2=3
+    (0) (0/0): Naked Single: r1c9=8
+    (0) (0/0): Naked Single: r9c7=4
+    (0) (0/0): Full House: r8c7=6
+    (0) (0/0): Full House: r7c9=9
+    (0) (0/0): Full House: r3c9=6
+    (0) (0/0): Naked Single: r2c6=7
+    (0) (0/0): Full House: r2c8=1
+    (0) (0/0): Naked Single: r7c2=6
+    (0) (0/0): Full House: r8c2=8
+    (0) (0/0): Naked Single: r9c1=2
+    (0) (0/0): Full House: r6c1=4
+    (0) (0/0): Full House: r6c3=2
+    (0) (0/0): Naked Single: r7c6=3
+    (0) (0/0): Naked Single: r3c8=2
+    (0) (0/0): Full House: r1c8=7
+    (0) (0/0): Naked Single: r8c5=4
+    (0) (0/0): Naked Single: r9c3=9
+    (0) (0/0): Full House: r9c4=8
+    (0) (0/0): Naked Single: r7c3=4
     (0) (0/0): Full House: r7c4=2
-    (0) (0/0): Full House: r1c4=8
+    (0) (0/0): Full House: r8c6=9
+    (0) (0/0): Full House: r8c3=3
+    (0) (0/0): Full House: r4c4=4
+    (0) (0/0): Naked Single: r3c6=8
+    (0) (0/0): Full House: r3c5=1
+    (0) (0/0): Naked Single: r1c5=2
+    (0) (0/0): Full House: r1c6=4
+    (0) (0/0): Full House: r4c6=2
+    (0) (0/0): Full House: r4c5=8
+    Statistics:
+            20 -       20/       0: Full House
+             9 -        9/       0: Hidden Single
+            28 -       28/       0: Naked Single
+             2 -        0/       9: Naked Triple
+             1 -        0/       3: Locked Triple
+             1 -        0/       1: Locked Candidates Type 1 (Pointing)
+064000008000124000700000005020835000500000000007000061900000076000506000003007100#29-11-2022-EP-DIF-01248 #9 Medium (488)
+    (0) (0/0): Hidden Single: r6c7=5
+    (0) (0/0): Hidden Single: r2c7=6
+    (0) (0/0): Hidden Single: r1c5=5
+    (0) (0/0): Hidden Single: r9c8=5
+    (0) (0/0): Hidden Single: r9c1=6
+    (0) (0/0): Hidden Single: r8c2=7
+    (0) (0/0): Hidden Single: r2c9=7
+    (0) (0/0): Hidden Single: r5c5=7
+    (0) (0/0): Hidden Single: r1c4=7
+    (0) (0/0): Hidden Single: r4c3=6
+    (0) (0/0): Hidden Single: r4c7=7
+    (0) (0/0): Hidden Single: r5c6=1
+    (0) (0/0): Hidden Single: r3c5=6
+    (0) (0/0): Hidden Single: r5c4=6
+    (0) (0/0): Hidden Single: r4c1=1
+    (0) (0/0): Hidden Single: r3c6=8
+    (0) (0/0): Hidden Single: r1c8=1
+   4 (2) (0/0): Locked Candidates Type 1 (Pointing): 4 in b5 => r6c12<>4
+    (0) (0/0): Hidden Single: r8c1=4
+    (0) (0/0): Naked Single: r9c2=8
+    (0) (0/0): Hidden Single: r5c2=4
+    (0) (0/0): Hidden Single: r1c1=2
+    (0) (0/0): Hidden Single: r6c1=8
+    (0) (0/0): Full House: r2c1=3
+    (0) (0/0): Naked Single: r5c3=9
+    (0) (0/0): Full House: r6c2=3
+    (0) (0/0): Naked Single: r2c8=9
+    (0) (0/0): Naked Single: r3c3=1
+    (0) (0/0): Naked Single: r1c7=3
+    (0) (0/0): Full House: r1c6=9
+    (0) (0/0): Full House: r3c4=3
+    (0) (0/0): Naked Single: r2c2=5
+    (0) (0/0): Full House: r2c3=8
+    (0) (0/0): Full House: r3c2=9
+    (0) (0/0): Full House: r7c2=1
+    (0) (0/0): Naked Single: r4c8=4
+    (0) (0/0): Full House: r4c9=9
+    (0) (0/0): Naked Single: r8c3=2
+    (0) (0/0): Full House: r7c3=5
+    (0) (0/0): Naked Single: r6c6=2
+    (0) (0/0): Full House: r7c6=3
+    (0) (0/0): Naked Single: r3c8=2
+    (0) (0/0): Full House: r3c7=4
+    (0) (0/0): Naked Single: r8c9=3
+    (0) (0/0): Naked Single: r5c9=2
+    (0) (0/0): Full House: r9c9=4
+    (0) (0/0): Naked Single: r8c8=8
+    (0) (0/0): Full House: r5c8=3
+    (0) (0/0): Full House: r5c7=8
+    (0) (0/0): Naked Single: r9c5=9
+    (0) (0/0): Full House: r9c4=2
+    (0) (0/0): Naked Single: r7c7=2
+    (0) (0/0): Full House: r8c7=9
+    (0) (0/0): Full House: r8c5=1
+    (0) (0/0): Naked Single: r6c5=4
+    (0) (0/0): Full House: r6c4=9
+    (0) (0/0): Full House: r7c4=4
+    (0) (0/0): Full House: r7c5=8
     Statistics:
             20 -       20/       0: Full House
             21 -       21/       0: Hidden Single
-            14 -       14/       0: Naked Single
+            16 -       16/       0: Naked Single
              1 -        0/       2: Locked Candidates Type 1 (Pointing)
-200400000000070080070900006905001023000049060160000000720000091010305007000000000#25-11-2022-NYT-HRD-NA #3 Medium (334)
-    (0) (0/0): Naked Single: r8c8=4
-    (0) (0/0): Hidden Single: r5c7=1
-    (0) (0/0): Hidden Single: r7c7=5
-    (0) (0/0): Naked Single: r9c8=3
-    (0) (0/0): Hidden Single: r7c3=3
-    (0) (0/0): Hidden Single: r7c6=4
-   8 (5) (0/0): Locked Pair: 3,8 in r5c12 => r4c2,r5c349,r6c3<>8
-    (0) (0/0): Naked Single: r5c9=5
-    (0) (0/0): Naked Single: r4c2=4
-    (0) (0/0): Naked Single: r1c9=9
-    (0) (0/0): Naked Single: r6c8=7
-    (0) (0/0): Naked Single: r4c7=8
-    (0) (0/0): Naked Single: r6c3=2
-    (0) (0/0): Naked Single: r4c5=6
-    (0) (0/0): Full House: r4c4=7
-    (0) (0/0): Naked Single: r6c9=4
-    (0) (0/0): Full House: r6c7=9
-    (0) (0/0): Naked Single: r5c3=7
-    (0) (0/0): Naked Single: r7c5=8
-    (0) (0/0): Full House: r7c4=6
-    (0) (0/0): Naked Single: r5c4=2
-    (0) (0/0): Naked Single: r2c9=2
-    (0) (0/0): Full House: r9c9=8
-    (0) (0/0): Naked Single: r9c4=1
-    (0) (0/0): Naked Single: r2c4=5
-    (0) (0/0): Full House: r6c4=8
-    (0) (0/0): Naked Single: r6c6=3
-    (0) (0/0): Full House: r6c5=5
-    (0) (0/0): Naked Single: r2c6=6
-    (0) (0/0): Naked Single: r1c6=8
-    (0) (0/0): Naked Single: r3c6=2
-    (0) (0/0): Full House: r9c6=7
-    (0) (0/0): Hidden Single: r1c7=7
-    (0) (0/0): Hidden Single: r2c3=1
-    (0) (0/0): Naked Single: r1c3=6
-    (0) (0/0): Hidden Single: r5c2=8
-    (0) (0/0): Full House: r5c1=3
-    (0) (0/0): Naked Single: r2c1=4
-    (0) (0/0): Naked Single: r2c7=3
-    (0) (0/0): Full House: r2c2=9
-    (0) (0/0): Naked Single: r3c3=8
-    (0) (0/0): Naked Single: r3c7=4
-    (0) (0/0): Naked Single: r9c2=5
-    (0) (0/0): Full House: r1c2=3
-    (0) (0/0): Full House: r3c1=5
-    (0) (0/0): Naked Single: r8c3=9
-    (0) (0/0): Full House: r9c3=4
-    (0) (0/0): Naked Single: r9c1=6
-    (0) (0/0): Full House: r8c1=8
-    (0) (0/0): Naked Single: r1c5=1
-    (0) (0/0): Full House: r1c8=5
-    (0) (0/0): Full House: r3c8=1
-    (0) (0/0): Full House: r3c5=3
-    (0) (0/0): Naked Single: r8c5=2
-    (0) (0/0): Full House: r8c7=6
-    (0) (0/0): Full House: r9c7=2
-    (0) (0/0): Full House: r9c5=9
-    Statistics:
-            19 -       19/       0: Full House
-             7 -        7/       0: Hidden Single
-            30 -       30/       0: Naked Single
-             1 -        0/       5: Locked Pair
-090500840000007000700000530050000700000068405008730000080006010000040000000873000#25-11-2022-EP-DIF-01244 #4 Medium (688)
-    (0) (0/0): Hidden Single: r1c9=7
-    (0) (0/0): Hidden Single: r4c9=3
-    (0) (0/0): Hidden Single: r6c6=5
-    (0) (0/0): Hidden Single: r2c1=8
-    (0) (0/0): Hidden Single: r3c5=8
-    (0) (0/0): Hidden Single: r8c8=7
-    (0) (0/0): Hidden Single: r7c5=5
-    (0) (0/0): Hidden Single: r2c4=3
-    (0) (0/0): Hidden Single: r7c3=7
-    (0) (0/0): Hidden Single: r4c8=8
-    (0) (0/0): Hidden Single: r8c9=8
-    (0) (0/0): Hidden Single: r2c3=5
-    (0) (0/0): Hidden Single: r5c2=7
-    (0) (0/0): Hidden Single: r9c8=5
-    (0) (0/0): Hidden Single: r3c4=6
-    (0) (0/0): Hidden Single: r8c1=5
-    (0) (0/0): Hidden Single: r2c2=4
-    (0) (0/0): Hidden Single: r8c2=3
-    (0) (0/0): Hidden Single: r4c4=4
+009000304000002000300080610000400005036010002050076100700060501000800000090000480#29-11-2022-EP-EXP-01248 #10 Medium (510)
+    (0) (0/0): Naked Single: r1c5=5
+    (0) (0/0): Hidden Single: r1c8=2
+    (0) (0/0): Hidden Single: r4c8=6
+    (0) (0/0): Hidden Single: r8c7=2
+    (0) (0/0): Hidden Single: r2c8=5
+    (0) (0/0): Hidden Single: r3c3=5
+    (0) (0/0): Hidden Single: r3c2=2
     (0) (0/0): Hidden Single: r3c6=4
-    (0) (0/0): Hidden Single: r6c1=4
-    (0) (0/0): Hidden Single: r7c7=3
-    (0) (0/0): Hidden Single: r9c3=4
-    (0) (0/0): Hidden Single: r3c9=9
-    (0) (0/0): Hidden Single: r2c5=9
-    (0) (0/0): Hidden Single: r7c9=4
-   1 (2) (0/0): Locked Candidates Type 1 (Pointing): 1 in b2 => r1c13<>1
-   2 (2) (0/0): Locked Candidates Type 1 (Pointing): 2 in b2 => r1c13<>2
-   1 (1) (0/0): Locked Candidates Type 1 (Pointing): 1 in b6 => r6c2<>1
-   6 (1) (0/0): Locked Candidates Type 1 (Pointing): 6 in b6 => r6c2<>6
-    (0) (0/0): Naked Single: r6c2=2
-    (0) (0/0): Naked Single: r3c2=1
-    (0) (0/0): Full House: r3c3=2
-    (0) (0/0): Full House: r9c2=6
-    (0) (0/0): Naked Single: r9c9=2
-    (0) (0/0): Naked Single: r9c7=9
-    (0) (0/0): Full House: r8c7=6
-    (0) (0/0): Full House: r9c1=1
-    (0) (0/0): Naked Single: r6c7=1
-    (0) (0/0): Full House: r2c7=2
-    (0) (0/0): Naked Single: r8c3=9
-    (0) (0/0): Full House: r7c1=2
-    (0) (0/0): Full House: r7c4=9
-    (0) (0/0): Naked Single: r6c9=6
-    (0) (0/0): Full House: r2c9=1
-    (0) (0/0): Full House: r2c8=6
-    (0) (0/0): Full House: r6c8=9
-    (0) (0/0): Full House: r5c8=2
-    (0) (0/0): Naked Single: r5c4=1
-    (0) (0/0): Full House: r8c4=2
-    (0) (0/0): Full House: r8c6=1
-    (0) (0/0): Naked Single: r4c5=2
-    (0) (0/0): Full House: r1c5=1
-    (0) (0/0): Full House: r1c6=2
-    (0) (0/0): Full House: r4c6=9
-    (0) (0/0): Naked Single: r5c3=3
-    (0) (0/0): Full House: r5c1=9
-    (0) (0/0): Naked Single: r4c1=6
-    (0) (0/0): Full House: r1c1=3
-    (0) (0/0): Full House: r1c3=6
-    (0) (0/0): Full House: r4c3=1
-    Statistics:
-            20 -       20/       0: Full House
-            26 -       26/       0: Hidden Single
-            11 -       11/       0: Naked Single
-             4 -        0/       6: Locked Candidates Type 1 (Pointing)
-000017003305008600007040009050000300002800000000000402903100005710000000000063104#25-11-2022-EP-EXP-01244 #5 Medium (420)
-    (0) (0/0): Naked Single: r9c3=8
-    (0) (0/0): Naked Single: r9c2=2
-    (0) (0/0): Naked Single: r9c1=5
-    (0) (0/0): Hidden Single: r3c1=1
-    (0) (0/0): Hidden Single: r3c4=3
-    (0) (0/0): Hidden Single: r8c8=3
-    (0) (0/0): Hidden Single: r1c1=2
-   2/9 (4) (0/0): Locked Pair: 2,9 in r2c45 => r2c8,r3c6<>2, r1c4,r2c2<>9
-    (0) (0/0): Naked Single: r2c2=4
-    (0) (0/0): Naked Single: r7c2=6
-    (0) (0/0): Full House: r8c3=4
-    (0) (0/0): Naked Single: r3c2=8
-    (0) (0/0): Naked Single: r1c2=9
-    (0) (0/0): Full House: r1c3=6
-    (0) (0/0): Naked Single: r1c4=5
-    (0) (0/0): Naked Single: r1c7=8
-    (0) (0/0): Full House: r1c8=4
-    (0) (0/0): Naked Single: r3c6=6
-    (0) (0/0): Hidden Single: r7c6=4
-    (0) (0/0): Hidden Single: r8c9=6
-    (0) (0/0): Hidden Single: r4c4=4
-    (0) (0/0): Hidden Single: r5c1=4
-    (0) (0/0): Hidden Single: r8c5=8
-    (0) (0/0): Hidden Single: r4c9=8
-    (0) (0/0): Naked Single: r4c1=6
-    (0) (0/0): Full House: r6c1=8
-    (0) (0/0): Hidden Single: r7c8=8
-    (0) (0/0): Hidden Single: r6c4=6
-    (0) (0/0): Hidden Single: r5c8=6
-    (0) (0/0): Hidden Single: r8c6=5
-    (0) (0/0): Hidden Single: r3c8=2
-    (0) (0/0): Full House: r3c7=5
-    (0) (0/0): Hidden Single: r9c4=7
-    (0) (0/0): Full House: r9c8=9
-    (0) (0/0): Naked Single: r7c5=2
-    (0) (0/0): Full House: r7c7=7
-    (0) (0/0): Full House: r8c7=2
-    (0) (0/0): Full House: r8c4=9
-    (0) (0/0): Full House: r5c7=9
-    (0) (0/0): Full House: r2c4=2
-    (0) (0/0): Full House: r2c5=9
-    (0) (0/0): Naked Single: r5c6=1
-    (0) (0/0): Naked Single: r4c5=7
-    (0) (0/0): Naked Single: r5c9=7
-    (0) (0/0): Full House: r2c9=1
-    (0) (0/0): Full House: r2c8=7
-    (0) (0/0): Naked Single: r6c6=9
-    (0) (0/0): Full House: r4c6=2
-    (0) (0/0): Naked Single: r4c8=1
-    (0) (0/0): Full House: r4c3=9
-    (0) (0/0): Full House: r6c3=1
-    (0) (0/0): Full House: r6c8=5
-    (0) (0/0): Naked Single: r5c2=3
-    (0) (0/0): Full House: r5c5=5
-    (0) (0/0): Full House: r6c5=3
-    (0) (0/0): Full House: r6c2=7
-    Statistics:
-            21 -       21/       0: Full House
-            16 -       16/       0: Hidden Single
-            18 -       18/       0: Naked Single
-             1 -        0/       4: Locked Pair
-004000100008902500700000029000403205060000010103508000840000002000805700009000000#26-11-2022-TG-TGH-06055 #6 Hard (1080)
+    (0) (0/0): Hidden Single: r8c5=4
+   8 (3) (0/0): Locked Candidates Type 1 (Pointing): 8 in b3 => r2c123<>8
+   7 (1) (0/0): Locked Candidates Type 1 (Pointing): 7 in b4 => r4c7<>7
+   3 (1) (0/0): Locked Candidates Type 1 (Pointing): 3 in b6 => r6c4<>3
+   3/9 (3) (0/0): Naked Pair: 3,9 in r7c68 => r7c34<>3, r7c4<>9
+    (0) (0/0): Naked Single: r7c4=2
+    (0) (0/0): Naked Single: r6c4=9
+    (0) (0/0): Naked Single: r9c5=3
+    (0) (0/0): Naked Single: r3c4=7
+    (0) (0/0): Full House: r3c9=9
+    (0) (0/0): Naked Single: r5c4=5
+    (0) (0/0): Naked Single: r2c5=9
+    (0) (0/0): Full House: r4c5=2
+    (0) (0/0): Naked Single: r7c6=9
+    (0) (0/0): Naked Single: r1c6=1
+    (0) (0/0): Naked Single: r5c6=8
+    (0) (0/0): Full House: r4c6=3
+    (0) (0/0): Naked Single: r9c4=1
+    (0) (0/0): Naked Single: r7c8=3
+    (0) (0/0): Naked Single: r1c4=6
+    (0) (0/0): Full House: r2c4=3
+    (0) (0/0): Naked Single: r9c3=2
+    (0) (0/0): Naked Single: r6c8=4
+    (0) (0/0): Naked Single: r1c1=8
+    (0) (0/0): Full House: r1c2=7
+    (0) (0/0): Naked Single: r6c3=8
+    (0) (0/0): Naked Single: r6c1=2
+    (0) (0/0): Full House: r6c9=3
+    (0) (0/0): Naked Single: r4c2=1
+    (0) (0/0): Naked Single: r7c3=4
+    (0) (0/0): Full House: r7c2=8
     (0) (0/0): Naked Single: r4c1=9
     (0) (0/0): Naked Single: r4c3=7
-    (0) (0/0): Naked Single: r4c2=8
-    (0) (0/0): Naked Single: r6c2=2
-    (0) (0/0): Naked Single: r4c8=6
-    (0) (0/0): Full House: r4c5=1
-    (0) (0/0): Naked Single: r5c3=5
+    (0) (0/0): Full House: r4c7=8
     (0) (0/0): Full House: r5c1=4
-    (0) (0/0): Hidden Single: r1c2=9
-    (0) (0/0): Hidden Single: r9c2=7
-    (0) (0/0): Hidden Single: r1c1=2
-    (0) (0/0): Hidden Single: r8c3=2
-    (0) (0/0): Hidden Single: r6c5=6
-    (0) (0/0): Hidden Single: r2c2=1
-    (0) (0/0): Naked Single: r3c3=6
-    (0) (0/0): Full House: r7c3=1
-    (0) (0/0): Naked Single: r8c2=3
-    (0) (0/0): Full House: r3c2=5
-    (0) (0/0): Full House: r2c1=3
-    (0) (0/0): Naked Single: r8c1=6
-    (0) (0/0): Full House: r9c1=5
-    (0) (0/0): Hidden Single: r7c8=5
-    (0) (0/0): Hidden Single: r1c5=5
-    (0) (0/0): Hidden Single: r8c9=1
-    (0) (0/0): Hidden Single: r2c9=6
-    (0) (0/0): Hidden Single: r3c5=8
-   3 (2) (0/0): Locked Candidates Type 1 (Pointing): 3 in b2 => r79c4<>3
-   7 (1) (0/0): Locked Candidates Type 1 (Pointing): 7 in b5 => r5c9<>7
-   9 (1) (0/0): Locked Candidates Type 1 (Pointing): 9 in b5 => r5c7<>9
-   6 (1) (0/0): Naked Triple: 6,7,9 in r157c6 => r9c6<>6
-   4/7 (2) (0/0): Naked Triple: 4,7,9 in r268c8 => r9c8<>4, r1c8<>7
-   4 (2) (0/0): X-Wing: 4 r28 c58 => r6c8,r9c5<>4
-   3 (1) (0/0): W-Wing: 3/8 in r5c9,r9c8 connected by 8 in r1c89 => r9c9<>3
-   9 (2) (0/0): W-Wing: 9/4 in r6c7,r8c8 connected by 4 in r69c9 => r6c8,r7c7<>9
-    (0) (0/0): Naked Single: r6c8=7
-    (0) (0/0): Naked Single: r2c8=4
+    (0) (0/0): Naked Single: r8c2=6
+    (0) (0/0): Full House: r2c2=4
+    (0) (0/0): Naked Single: r2c3=1
+    (0) (0/0): Full House: r2c1=6
+    (0) (0/0): Full House: r8c3=3
+    (0) (0/0): Naked Single: r2c7=7
+    (0) (0/0): Full House: r2c9=8
+    (0) (0/0): Full House: r5c7=9
+    (0) (0/0): Full House: r5c8=7
+    (0) (0/0): Full House: r8c8=9
+    (0) (0/0): Naked Single: r8c9=7
+    (0) (0/0): Full House: r9c9=6
+    (0) (0/0): Naked Single: r9c1=5
+    (0) (0/0): Full House: r8c1=1
+    (0) (0/0): Full House: r8c6=5
+    (0) (0/0): Full House: r9c6=7
+    Statistics:
+            20 -       20/       0: Full House
+             8 -        8/       0: Hidden Single
+            27 -       27/       0: Naked Single
+             1 -        0/       3: Naked Pair
+             3 -        0/       5: Locked Candidates Type 1 (Pointing)
+000000900085700004000200030210030050000008420000070000070040000491000300000006500#29-11-2022-NYT-MD-NA #11 Medium (512)
+    (0) (0/0): Hidden Single: r2c7=2
+    (0) (0/0): Hidden Single: r6c6=2
+    (0) (0/0): Hidden Single: r9c8=4
+    (0) (0/0): Hidden Single: r8c6=7
+    (0) (0/0): Hidden Single: r7c1=5
+    (0) (0/0): Hidden Single: r9c9=7
+    (0) (0/0): Hidden Single: r1c8=7
+    (0) (0/0): Hidden Single: r7c3=6
+    (0) (0/0): Hidden Single: r4c7=7
+    (0) (0/0): Hidden Single: r7c9=2
+    (0) (0/0): Hidden Single: r8c5=2
+    (0) (0/0): Hidden Single: r7c8=9
+    (0) (0/0): Hidden Single: r8c4=5
+    (0) (0/0): Hidden Single: r7c7=1
+    (0) (0/0): Naked Single: r7c6=3
+    (0) (0/0): Full House: r7c4=8
+    (0) (0/0): Hidden Single: r6c2=5
+    (0) (0/0): Hidden Single: r5c5=5
+    (0) (0/0): Hidden Single: r2c1=3
+    (0) (0/0): Naked Single: r9c1=8
+    (0) (0/0): Hidden Single: r1c4=3
+   9 (2) (0/0): Locked Candidates Type 1 (Pointing): 9 in b1 => r3c56<>9
+   4 (1) (0/0): Locked Candidates Type 1 (Pointing): 4 in b2 => r4c6<>4
+    (0) (0/0): Naked Single: r4c6=9
+    (0) (0/0): Naked Single: r2c6=1
+    (0) (0/0): Naked Single: r2c8=6
+    (0) (0/0): Full House: r2c5=9
+    (0) (0/0): Naked Single: r3c7=8
+    (0) (0/0): Full House: r6c7=6
+    (0) (0/0): Naked Single: r8c8=8
+    (0) (0/0): Full House: r6c8=1
+    (0) (0/0): Full House: r8c9=6
+    (0) (0/0): Naked Single: r9c5=1
+    (0) (0/0): Full House: r9c4=9
+    (0) (0/0): Naked Single: r3c5=6
+    (0) (0/0): Full House: r1c5=8
+    (0) (0/0): Naked Single: r4c9=8
+    (0) (0/0): Naked Single: r6c1=9
+    (0) (0/0): Naked Single: r6c4=4
+    (0) (0/0): Naked Single: r3c2=4
+    (0) (0/0): Naked Single: r4c3=4
+    (0) (0/0): Full House: r4c4=6
+    (0) (0/0): Full House: r5c4=1
+    (0) (0/0): Naked Single: r6c9=3
+    (0) (0/0): Full House: r5c9=9
+    (0) (0/0): Full House: r6c3=8
+    (0) (0/0): Naked Single: r1c3=2
+    (0) (0/0): Naked Single: r3c6=5
+    (0) (0/0): Full House: r1c6=4
+    (0) (0/0): Naked Single: r1c2=6
+    (0) (0/0): Naked Single: r9c3=3
+    (0) (0/0): Full House: r9c2=2
+    (0) (0/0): Full House: r5c2=3
+    (0) (0/0): Naked Single: r3c9=1
+    (0) (0/0): Full House: r1c9=5
+    (0) (0/0): Full House: r1c1=1
+    (0) (0/0): Naked Single: r5c3=7
+    (0) (0/0): Full House: r3c3=9
+    (0) (0/0): Full House: r3c1=7
+    (0) (0/0): Full House: r5c1=6
+    Statistics:
+            19 -       19/       0: Full House
+            18 -       18/       0: Hidden Single
+            21 -       21/       0: Naked Single
+             2 -        0/       3: Locked Candidates Type 1 (Pointing)
+430020500000500094900000000700000041804000900020003057090165000000040000007000000#29-11-2022-NYT-HRD-NA #12 Medium (718)
+    (0) (0/0): Hidden Single: r4c3=3
+    (0) (0/0): Hidden Single: r7c7=4
+    (0) (0/0): Hidden Single: r6c4=4
+    (0) (0/0): Hidden Single: r9c2=4
+    (0) (0/0): Hidden Single: r3c6=4
+    (0) (0/0): Hidden Single: r6c3=9
+    (0) (0/0): Hidden Single: r7c8=7
+   5 (2) (0/0): Locked Candidates Type 1 (Pointing): 5 in b4 => r38c2<>5
+    (0) (0/0): Hidden Single: r3c3=5
+   2 (1) (0/0): Locked Candidates Type 1 (Pointing): 2 in b1 => r2c7<>2
+   8 (4) (0/0): Locked Candidates Type 1 (Pointing): 8 in b6 => r2389c7<>8
+   7 (4) (0/0): Locked Candidates Type 2 (Claiming): 7 in r1 => r2c56,r3c45<>7
+    (0) (0/0): Hidden Single: r5c5=7
+    (0) (0/0): Hidden Single: r5c2=5
+    (0) (0/0): Naked Single: r4c2=6
+    (0) (0/0): Full House: r6c1=1
+    (0) (0/0): Naked Single: r6c5=8
+    (0) (0/0): Full House: r6c7=6
+    (0) (0/0): Hidden Single: r4c5=5
+    (0) (0/0): Hidden Single: r5c6=1
+    (0) (0/0): Hidden Single: r4c7=8
+    (0) (0/0): Hidden Single: r9c5=9
+    (0) (0/0): Hidden Single: r5c4=6
+    (0) (0/0): Hidden Single: r8c9=9
+    (0) (0/0): Hidden Single: r8c1=5
+    (0) (0/0): Hidden Single: r9c9=5
+   1 (2) (0/0): Locked Candidates Type 1 (Pointing): 1 in b7 => r8c78<>1
+   3 (1) (0/0): Locked Candidates Type 1 (Pointing): 3 in b8 => r3c4<>3
+    (0) (0/0): Naked Single: r3c4=8
+    (0) (0/0): Naked Single: r2c6=6
+    (0) (0/0): Naked Single: r2c1=2
+    (0) (0/0): Naked Single: r7c1=3
+    (0) (0/0): Full House: r9c1=6
+    (0) (0/0): Hidden Single: r1c3=6
+    (0) (0/0): Naked Single: r1c9=8
+    (0) (0/0): Naked Single: r1c8=1
+    (0) (0/0): Naked Single: r7c9=2
+    (0) (0/0): Full House: r7c3=8
+    (0) (0/0): Naked Single: r5c9=3
+    (0) (0/0): Full House: r3c9=6
+    (0) (0/0): Full House: r5c8=2
+    (0) (0/0): Naked Single: r8c7=3
+    (0) (0/0): Naked Single: r2c3=1
+    (0) (0/0): Full House: r8c3=2
+    (0) (0/0): Full House: r8c2=1
+    (0) (0/0): Naked Single: r3c8=3
+    (0) (0/0): Naked Single: r2c7=7
+    (0) (0/0): Full House: r3c7=2
+    (0) (0/0): Full House: r9c7=1
+    (0) (0/0): Naked Single: r9c8=8
+    (0) (0/0): Full House: r8c8=6
+    (0) (0/0): Naked Single: r2c5=3
+    (0) (0/0): Full House: r3c5=1
+    (0) (0/0): Full House: r3c2=7
+    (0) (0/0): Full House: r2c2=8
+    (0) (0/0): Naked Single: r8c4=7
+    (0) (0/0): Full House: r8c6=8
+    (0) (0/0): Naked Single: r9c6=2
+    (0) (0/0): Full House: r9c4=3
+    (0) (0/0): Naked Single: r1c4=9
+    (0) (0/0): Full House: r1c6=7
+    (0) (0/0): Full House: r4c6=9
+    (0) (0/0): Full House: r4c4=2
+    Statistics:
+            19 -       19/       0: Full House
+            19 -       19/       0: Hidden Single
+            19 -       19/       0: Naked Single
+             5 -        0/      10: Locked Candidates Type 1 (Pointing)
+             1 -        0/       4: Locked Candidates Type 2 (Claiming)
+300010402000503100000000000420081600000020700008340000000000000006407000809000003#30-11-2022-TG-TGH-06059 #13 Medium (532)
+    (0) (0/0): Hidden Single: r3c6=4
+    (0) (0/0): Hidden Single: r4c4=7
+    (0) (0/0): Hidden Single: r3c7=3
+    (0) (0/0): Hidden Single: r3c4=2
+   8 (2) (0/0): Locked Candidates Type 1 (Pointing): 8 in b2 => r1c28<>8
+   5 (2) (0/0): Locked Candidates Type 1 (Pointing): 5 in b5 => r79c6<>5
+   8 (3) (0/0): Locked Candidates Type 1 (Pointing): 8 in b8 => r7c789<>8
+    (0) (0/0): Hidden Single: r8c7=8
+   9 (5) (0/0): Locked Candidates Type 2 (Claiming): 9 in r4 => r5c89,r6c789<>9
+    (0) (0/0): Hidden Single: r7c7=9
+    (0) (0/0): Hidden Single: r8c5=9
+    (0) (0/0): Hidden Single: r8c2=3
+    (0) (0/0): Hidden Single: r7c5=3
+    (0) (0/0): Hidden Single: r9c5=5
+    (0) (0/0): Naked Single: r9c7=2
+    (0) (0/0): Full House: r6c7=5
+    (0) (0/0): Naked Single: r9c6=6
+    (0) (0/0): Naked Single: r4c9=9
+    (0) (0/0): Naked Single: r6c9=1
+    (0) (0/0): Naked Single: r6c6=9
+    (0) (0/0): Naked Single: r9c4=1
+    (0) (0/0): Naked Single: r4c8=3
+    (0) (0/0): Full House: r4c3=5
+    (0) (0/0): Naked Single: r6c8=2
+    (0) (0/0): Naked Single: r8c9=5
+    (0) (0/0): Naked Single: r1c6=8
+    (0) (0/0): Naked Single: r5c4=6
+    (0) (0/0): Full House: r5c6=5
+    (0) (0/0): Full House: r7c6=2
+    (0) (0/0): Full House: r7c4=8
+    (0) (0/0): Full House: r1c4=9
+    (0) (0/0): Naked Single: r1c3=7
+    (0) (0/0): Naked Single: r8c8=1
+    (0) (0/0): Full House: r8c1=2
+    (0) (0/0): Naked Single: r3c3=1
+    (0) (0/0): Naked Single: r5c3=3
+    (0) (0/0): Naked Single: r7c3=4
+    (0) (0/0): Full House: r2c3=2
+    (0) (0/0): Naked Single: r9c2=7
+    (0) (0/0): Full House: r9c8=4
+    (0) (0/0): Naked Single: r6c2=6
+    (0) (0/0): Full House: r6c1=7
+    (0) (0/0): Naked Single: r5c8=8
+    (0) (0/0): Full House: r5c9=4
+    (0) (0/0): Naked Single: r1c2=5
+    (0) (0/0): Full House: r1c8=6
+    (0) (0/0): Naked Single: r7c2=1
+    (0) (0/0): Full House: r7c1=5
+    (0) (0/0): Naked Single: r7c8=7
+    (0) (0/0): Full House: r7c9=6
+    (0) (0/0): Naked Single: r5c2=9
+    (0) (0/0): Full House: r5c1=1
+    (0) (0/0): Naked Single: r2c8=9
+    (0) (0/0): Full House: r3c8=5
+    (0) (0/0): Naked Single: r3c2=8
+    (0) (0/0): Full House: r2c2=4
+    (0) (0/0): Naked Single: r2c1=6
+    (0) (0/0): Full House: r3c1=9
+    (0) (0/0): Naked Single: r3c9=7
+    (0) (0/0): Full House: r2c9=8
     (0) (0/0): Full House: r2c5=7
-    (0) (0/0): Naked Single: r6c9=4
-    (0) (0/0): Full House: r6c7=9
-    (0) (0/0): Naked Single: r3c7=3
-    (0) (0/0): Naked Single: r8c8=9
-    (0) (0/0): Full House: r8c5=4
+    (0) (0/0): Full House: r3c5=6
+    Statistics:
+            21 -       21/       0: Full House
+            10 -       10/       0: Hidden Single
+            27 -       27/       0: Naked Single
+             3 -        0/       7: Locked Candidates Type 1 (Pointing)
+             1 -        0/       5: Locked Candidates Type 2 (Claiming)
+701098200000070008020000050053000040600080000002050800090000000030600000400007900#30-11-2022-EP-DIF-01249 #14 Medium (522)
+    (0) (0/0): Hidden Single: r1c4=5
+    (0) (0/0): Hidden Single: r4c1=8
+    (0) (0/0): Hidden Single: r9c2=8
+    (0) (0/0): Hidden Single: r8c6=9
+    (0) (0/0): Hidden Single: r3c3=8
+    (0) (0/0): Hidden Single: r8c8=8
+    (0) (0/0): Hidden Single: r7c4=8
+    (0) (0/0): Hidden Single: r7c6=5
+   4/6 (4) (0/0): Locked Pair: 4,6 in r12c2 => r2c3,r56c2<>4, r2c3<>6
+    (0) (0/0): Hidden Single: r5c3=4
+    (0) (0/0): Hidden Single: r2c3=9
+    (0) (0/0): Naked Single: r3c1=3
+    (0) (0/0): Naked Single: r2c1=5
+    (0) (0/0): Hidden Single: r6c1=9
+    (0) (0/0): Hidden Single: r3c9=9
+    (0) (0/0): Hidden Single: r5c8=9
+    (0) (0/0): Hidden Single: r4c4=9
+    (0) (0/0): Hidden Single: r3c7=7
+    (0) (0/0): Hidden Single: r4c9=7
+    (0) (0/0): Hidden Single: r7c8=7
+    (0) (0/0): Naked Single: r7c3=6
+    (0) (0/0): Naked Single: r9c3=5
+    (0) (0/0): Full House: r8c3=7
+    (0) (0/0): Hidden Single: r5c9=2
+    (0) (0/0): Hidden Single: r9c8=2
+    (0) (0/0): Hidden Single: r5c7=5
+    (0) (0/0): Hidden Single: r8c9=5
+    (0) (0/0): Hidden Single: r2c4=2
+    (0) (0/0): Hidden Single: r9c9=6
+    (0) (0/0): Hidden Single: r4c6=2
+    (0) (0/0): Hidden Single: r2c6=3
+    (0) (0/0): Naked Single: r5c6=1
+    (0) (0/0): Naked Single: r4c5=6
+    (0) (0/0): Full House: r4c7=1
+    (0) (0/0): Naked Single: r5c2=7
+    (0) (0/0): Full House: r5c4=3
+    (0) (0/0): Full House: r6c2=1
+    (0) (0/0): Naked Single: r6c6=4
+    (0) (0/0): Full House: r3c6=6
+    (0) (0/0): Full House: r6c4=7
+    (0) (0/0): Naked Single: r6c9=3
+    (0) (0/0): Full House: r6c8=6
+    (0) (0/0): Naked Single: r8c7=4
+    (0) (0/0): Naked Single: r9c4=1
+    (0) (0/0): Full House: r3c4=4
+    (0) (0/0): Full House: r9c5=3
+    (0) (0/0): Full House: r3c5=1
+    (0) (0/0): Naked Single: r1c9=4
+    (0) (0/0): Full House: r7c9=1
+    (0) (0/0): Full House: r7c7=3
+    (0) (0/0): Full House: r2c7=6
+    (0) (0/0): Naked Single: r1c8=3
+    (0) (0/0): Full House: r2c8=1
+    (0) (0/0): Full House: r1c2=6
+    (0) (0/0): Full House: r2c2=4
+    (0) (0/0): Naked Single: r8c5=2
+    (0) (0/0): Full House: r7c5=4
+    (0) (0/0): Full House: r7c1=2
+    (0) (0/0): Full House: r8c1=1
+    Statistics:
+            19 -       19/       0: Full House
+            25 -       25/       0: Hidden Single
+            14 -       14/       0: Naked Single
+             1 -        0/       4: Locked Pair
+800300047006400000000070600000010086030000459200000001041000000000540300090000000#30-11-2022-EP-EXP-01249 #15 Medium (412)
+    (0) (0/0): Naked Single: r6c7=7
+    (0) (0/0): Naked Single: r4c7=2
+    (0) (0/0): Full House: r6c8=3
+    (0) (0/0): Hidden Single: r5c1=1
+    (0) (0/0): Hidden Single: r9c9=4
+    (0) (0/0): Hidden Single: r4c6=3
+    (0) (0/0): Hidden Single: r6c2=6
+    (0) (0/0): Hidden Single: r6c6=4
+    (0) (0/0): Hidden Single: r8c2=8
+    (0) (0/0): Naked Single: r8c9=2
+    (0) (0/0): Naked Single: r8c3=7
+    (0) (0/0): Naked Single: r5c3=8
+    (0) (0/0): Naked Single: r8c1=6
+    (0) (0/0): Hidden Single: r6c5=5
+    (0) (0/0): Naked Single: r6c3=9
+    (0) (0/0): Full House: r6c4=8
+    (0) (0/0): Hidden Single: r9c3=2
+    (0) (0/0): Naked Single: r1c3=5
+    (0) (0/0): Naked Single: r4c3=4
+    (0) (0/0): Full House: r3c3=3
+    (0) (0/0): Hidden Single: r4c4=9
+    (0) (0/0): Hidden Single: r4c2=5
+    (0) (0/0): Full House: r4c1=7
+    (0) (0/0): Naked Single: r2c1=9
+    (0) (0/0): Naked Single: r3c1=4
+    (0) (0/0): Hidden Single: r2c9=3
+    (0) (0/0): Hidden Single: r2c2=7
+   1/2 (4) (0/0): Naked Pair: 1,2 in r3c24 => r3c68<>1, r3c68<>2
+    (0) (0/0): Naked Single: r3c8=9
+    (0) (0/0): Naked Single: r1c7=1
+    (0) (0/0): Naked Single: r8c8=1
+    (0) (0/0): Full House: r8c6=9
+    (0) (0/0): Naked Single: r1c2=2
+    (0) (0/0): Full House: r3c2=1
+    (0) (0/0): Naked Single: r2c8=2
     (0) (0/0): Naked Single: r1c6=6
-    (0) (0/0): Naked Single: r9c9=8
+    (0) (0/0): Full House: r1c5=9
+    (0) (0/0): Naked Single: r3c4=2
+    (0) (0/0): Naked Single: r2c5=8
+    (0) (0/0): Naked Single: r2c7=5
+    (0) (0/0): Full House: r2c6=1
+    (0) (0/0): Full House: r3c6=5
+    (0) (0/0): Full House: r3c9=8
+    (0) (0/0): Full House: r7c9=5
+    (0) (0/0): Naked Single: r9c7=8
+    (0) (0/0): Full House: r7c7=9
+    (0) (0/0): Naked Single: r7c1=3
+    (0) (0/0): Full House: r9c1=5
+    (0) (0/0): Naked Single: r9c6=7
+    (0) (0/0): Naked Single: r5c6=2
+    (0) (0/0): Full House: r7c6=8
+    (0) (0/0): Naked Single: r7c4=6
+    (0) (0/0): Naked Single: r9c8=6
+    (0) (0/0): Full House: r7c8=7
+    (0) (0/0): Full House: r7c5=2
+    (0) (0/0): Naked Single: r5c5=6
+    (0) (0/0): Full House: r5c4=7
+    (0) (0/0): Full House: r9c4=1
+    (0) (0/0): Full House: r9c5=3
+    Statistics:
+            19 -       19/       0: Full House
+            12 -       12/       0: Hidden Single
+            27 -       27/       0: Naked Single
+             1 -        0/       4: Naked Pair
+930600400100000670000000900000063000040810056000402008050700010000580000470090000#30-11-2022-NYT-MD-NA #16 Medium (560)
+    (0) (0/0): Naked Single: r4c4=9
+    (0) (0/0): Naked Single: r5c6=7
+    (0) (0/0): Full House: r6c5=5
+    (0) (0/0): Hidden Single: r9c7=5
+    (0) (0/0): Hidden Single: r2c6=9
+    (0) (0/0): Hidden Single: r6c8=9
+    (0) (0/0): Hidden Single: r5c3=9
+    (0) (0/0): Hidden Single: r7c7=8
+    (0) (0/0): Hidden Single: r8c2=9
+    (0) (0/0): Hidden Single: r7c9=9
+    (0) (0/0): Hidden Single: r9c3=8
+    (0) (0/0): Hidden Single: r2c2=8
+    (0) (0/0): Hidden Single: r8c3=1
+    (0) (0/0): Hidden Single: r4c1=8
+    (0) (0/0): Hidden Single: r4c3=5
+    (0) (0/0): Hidden Single: r3c1=5
+    (0) (0/0): Hidden Single: r2c9=5
+    (0) (0/0): Hidden Single: r1c6=5
+    (0) (0/0): Hidden Single: r6c1=7
+    (0) (0/0): Hidden Single: r1c9=1
+    (0) (0/0): Hidden Single: r1c8=8
+    (0) (0/0): Hidden Single: r3c6=8
+    (0) (0/0): Hidden Single: r3c4=1
+    (0) (0/0): Hidden Single: r9c6=1
+    (0) (0/0): Hidden Single: r9c8=6
+   4 (1) (0/0): Locked Candidates Type 1 (Pointing): 4 in b2 => r7c5<>4
+    (0) (0/0): Hidden Single: r7c6=4
+    (0) (0/0): Full House: r8c6=6
+    (0) (0/0): Hidden Single: r7c1=6
+   2 (3) (0/0): Locked Candidates Type 1 (Pointing): 2 in b3 => r3c235<>2
+    (0) (0/0): Naked Single: r3c2=6
+    (0) (0/0): Naked Single: r6c2=1
+    (0) (0/0): Full House: r4c2=2
+    (0) (0/0): Naked Single: r6c7=3
+    (0) (0/0): Full House: r6c3=6
+    (0) (0/0): Full House: r5c1=3
+    (0) (0/0): Full House: r5c7=2
+    (0) (0/0): Full House: r8c1=2
+    (0) (0/0): Full House: r7c3=3
+    (0) (0/0): Full House: r7c5=2
+    (0) (0/0): Full House: r9c4=3
+    (0) (0/0): Full House: r2c4=2
+    (0) (0/0): Full House: r9c9=2
+    (0) (0/0): Naked Single: r4c8=4
+    (0) (0/0): Naked Single: r8c7=7
+    (0) (0/0): Full House: r4c7=1
+    (0) (0/0): Full House: r4c9=7
+    (0) (0/0): Naked Single: r1c5=7
+    (0) (0/0): Full House: r1c3=2
+    (0) (0/0): Naked Single: r2c3=4
+    (0) (0/0): Full House: r2c5=3
+    (0) (0/0): Full House: r3c3=7
+    (0) (0/0): Full House: r3c5=4
+    (0) (0/0): Naked Single: r3c9=3
+    (0) (0/0): Full House: r3c8=2
+    (0) (0/0): Full House: r8c8=3
+    (0) (0/0): Full House: r8c9=4
+    Statistics:
+            21 -       21/       0: Full House
+            24 -       24/       0: Hidden Single
+            10 -       10/       0: Naked Single
+             2 -        0/       4: Locked Candidates Type 1 (Pointing)
+000000000206405709005802000507080000031006090400700003000020000000670001013000020#30-11-2022-NYT-HRD-NA #17 Medium (430)
+    (0) (0/0): Naked Single: r5c1=8
+    (0) (0/0): Naked Single: r2c2=8
+    (0) (0/0): Naked Single: r8c1=9
+    (0) (0/0): Hidden Single: r5c9=7
+    (0) (0/0): Hidden Single: r1c6=7
+    (0) (0/0): Hidden Single: r7c8=7
+    (0) (0/0): Naked Single: r7c1=6
+    (0) (0/0): Naked Single: r9c1=7
+    (0) (0/0): Hidden Single: r3c2=7
+    (0) (0/0): Hidden Single: r3c5=9
+    (0) (0/0): Hidden Single: r1c5=6
+    (0) (0/0): Hidden Single: r2c5=3
+    (0) (0/0): Full House: r1c4=1
+    (0) (0/0): Full House: r2c8=1
+    (0) (0/0): Naked Single: r1c1=3
+    (0) (0/0): Full House: r3c1=1
+    (0) (0/0): Hidden Single: r6c5=1
+    (0) (0/0): Naked Single: r6c6=9
+    (0) (0/0): Naked Single: r6c3=2
+    (0) (0/0): Naked Single: r6c2=6
+    (0) (0/0): Full House: r4c2=9
+    (0) (0/0): Naked Single: r1c2=4
+    (0) (0/0): Full House: r1c3=9
+    (0) (0/0): Naked Single: r7c2=5
+    (0) (0/0): Full House: r8c2=2
+    (0) (0/0): Hidden Single: r7c6=1
+    (0) (0/0): Hidden Single: r4c7=1
+   5 (1) (0/0): Locked Candidates Type 1 (Pointing): 5 in b5 => r5c7<>5
+   5 (2) (0/0): Locked Candidates Type 1 (Pointing): 5 in b8 => r9c79<>5
+    (0) (0/0): Hidden Single: r1c9=5
     (0) (0/0): Naked Single: r1c8=8
-    (0) (0/0): Full House: r1c9=7
-    (0) (0/0): Full House: r1c4=3
-    (0) (0/0): Full House: r5c9=3
-    (0) (0/0): Full House: r5c7=8
-    (0) (0/0): Full House: r9c8=3
-    (0) (0/0): Naked Single: r3c4=1
-    (0) (0/0): Full House: r3c6=4
-    (0) (0/0): Naked Single: r7c7=6
-    (0) (0/0): Full House: r9c7=4
-    (0) (0/0): Naked Single: r9c6=1
-    (0) (0/0): Naked Single: r9c5=2
-    (0) (0/0): Full House: r9c4=6
-    (0) (0/0): Naked Single: r7c4=7
+    (0) (0/0): Full House: r1c7=2
+    (0) (0/0): Naked Single: r6c8=5
+    (0) (0/0): Full House: r6c7=8
+    (0) (0/0): Naked Single: r5c7=4
+    (0) (0/0): Naked Single: r4c8=6
+    (0) (0/0): Full House: r4c9=2
+    (0) (0/0): Naked Single: r5c5=5
     (0) (0/0): Full House: r5c4=2
-    (0) (0/0): Naked Single: r5c5=9
-    (0) (0/0): Full House: r5c6=7
-    (0) (0/0): Full House: r7c6=9
-    (0) (0/0): Full House: r7c5=3
+    (0) (0/0): Full House: r9c5=4
+    (0) (0/0): Naked Single: r4c4=3
+    (0) (0/0): Full House: r4c6=4
+    (0) (0/0): Naked Single: r9c6=8
+    (0) (0/0): Full House: r8c6=3
+    (0) (0/0): Naked Single: r7c4=9
+    (0) (0/0): Full House: r9c4=5
+    (0) (0/0): Naked Single: r9c9=6
+    (0) (0/0): Full House: r9c7=9
+    (0) (0/0): Naked Single: r8c7=5
+    (0) (0/0): Naked Single: r8c8=4
+    (0) (0/0): Full House: r3c8=3
+    (0) (0/0): Full House: r8c3=8
+    (0) (0/0): Full House: r7c3=4
+    (0) (0/0): Naked Single: r7c7=3
+    (0) (0/0): Full House: r7c9=8
+    (0) (0/0): Full House: r3c9=4
+    (0) (0/0): Full House: r3c7=6
     Statistics:
             21 -       21/       0: Full House
             11 -       11/       0: Hidden Single
             23 -       23/       0: Naked Single
-             2 -        0/       3: Naked Triple
-             3 -        0/       4: Locked Candidates Type 1 (Pointing)
-             2 -        0/       3: W-Wing
-             1 -        0/       2: X-Wing
-610000050085000402000000970000060300041000007900070040000041000106000000004308000#26-11-2022-NYT-MD-NA #7 Medium (538)
-    (0) (0/0): Naked Single: r1c7=8
-    (0) (0/0): Naked Single: r1c9=3
-    (0) (0/0): Hidden Single: r1c3=9
-    (0) (0/0): Naked Single: r1c5=2
-    (0) (0/0): Hidden Single: r6c2=6
-    (0) (0/0): Hidden Single: r8c9=4
-    (0) (0/0): Hidden Single: r3c1=4
-    (0) (0/0): Hidden Single: r7c4=6
-    (0) (0/0): Hidden Single: r2c1=7
-    (0) (0/0): Hidden Single: r8c8=8
-    (0) (0/0): Hidden Single: r8c2=3
-    (0) (0/0): Naked Single: r3c2=2
-    (0) (0/0): Full House: r3c3=3
-    (0) (0/0): Hidden Single: r7c8=3
-    (0) (0/0): Hidden Single: r5c1=3
-    (0) (0/0): Hidden Single: r6c6=3
-    (0) (0/0): Hidden Single: r2c5=3
-    (0) (0/0): Hidden Single: r3c5=1
-    (0) (0/0): Naked Single: r2c4=9
-    (0) (0/0): Naked Single: r3c9=6
-    (0) (0/0): Full House: r2c8=1
-    (0) (0/0): Full House: r2c6=6
-    (0) (0/0): Naked Single: r3c6=5
-    (0) (0/0): Full House: r3c4=8
-    (0) (0/0): Hidden Single: r5c5=8
-   5 (2) (0/0): Locked Candidates Type 1 (Pointing): 5 in b4 => r4c49<>5
-   5 (1) (0/0): Locked Candidates Type 1 (Pointing): 5 in b5 => r8c4<>5
-   9 (1) (0/0): Locked Candidates Type 1 (Pointing): 9 in b5 => r8c6<>9
-    (0) (0/0): Hidden Single: r8c5=9
-    (0) (0/0): Full House: r9c5=5
-    (0) (0/0): Naked Single: r9c1=2
-    (0) (0/0): Hidden Single: r8c7=5
-    (0) (0/0): Naked Single: r7c9=9
-    (0) (0/0): Naked Single: r9c8=6
-    (0) (0/0): Naked Single: r9c9=1
-    (0) (0/0): Naked Single: r4c9=8
-    (0) (0/0): Full House: r6c9=5
-    (0) (0/0): Naked Single: r9c7=7
-    (0) (0/0): Full House: r7c7=2
-    (0) (0/0): Full House: r9c2=9
-    (0) (0/0): Naked Single: r4c1=5
-    (0) (0/0): Full House: r7c1=8
-    (0) (0/0): Naked Single: r5c7=6
-    (0) (0/0): Full House: r6c7=1
-    (0) (0/0): Naked Single: r4c2=7
-    (0) (0/0): Full House: r7c2=5
-    (0) (0/0): Full House: r7c3=7
-    (0) (0/0): Naked Single: r6c4=2
-    (0) (0/0): Full House: r6c3=8
-    (0) (0/0): Full House: r4c3=2
-    (0) (0/0): Naked Single: r5c4=5
-    (0) (0/0): Naked Single: r5c6=9
-    (0) (0/0): Full House: r5c8=2
-    (0) (0/0): Full House: r4c8=9
-    (0) (0/0): Naked Single: r8c4=7
-    (0) (0/0): Full House: r8c6=2
-    (0) (0/0): Naked Single: r4c6=4
-    (0) (0/0): Full House: r1c6=7
-    (0) (0/0): Full House: r1c4=4
-    (0) (0/0): Full House: r4c4=1
-    Statistics:
-            20 -       20/       0: Full House
-            16 -       16/       0: Hidden Single
-            21 -       21/       0: Naked Single
-             3 -        0/       4: Locked Candidates Type 1 (Pointing)
-609032100200000000510000030001005026000008700004009001000800004000000067300060500#26-11-2022-NYT-HRD-NA #8 Medium (354)
-    (0) (0/0): Naked Single: r5c1=9
-    (0) (0/0): Hidden Single: r5c9=3
-    (0) (0/0): Naked Single: r6c7=8
-    (0) (0/0): Naked Single: r6c1=7
-    (0) (0/0): Naked Single: r6c8=5
-    (0) (0/0): Naked Single: r4c1=8
-    (0) (0/0): Naked Single: r6c5=2
-    (0) (0/0): Naked Single: r7c1=1
-    (0) (0/0): Full House: r8c1=4
-    (0) (0/0): Naked Single: r5c8=4
-    (0) (0/0): Full House: r4c7=9
-    (0) (0/0): Naked Single: r4c2=3
-    (0) (0/0): Naked Single: r7c8=9
-    (0) (0/0): Naked Single: r5c5=1
-    (0) (0/0): Naked Single: r6c2=6
-    (0) (0/0): Full House: r6c4=3
-    (0) (0/0): Naked Single: r5c4=6
-    (0) (0/0): Hidden Single: r2c3=3
-    (0) (0/0): Hidden Single: r9c8=1
-    (0) (0/0): Hidden Single: r7c3=6
-    (0) (0/0): Hidden Single: r9c9=8
-    (0) (0/0): Naked Single: r1c9=5
-    (0) (0/0): Naked Single: r2c9=9
-    (0) (0/0): Full House: r3c9=2
-   4/7 (6) (0/0): Naked Pair: 4,7 in r14c4 => r239c4<>4, r239c4<>7
-    (0) (0/0): Naked Single: r3c4=9
-    (0) (0/0): Naked Single: r9c4=2
-    (0) (0/0): Naked Single: r9c3=7
-    (0) (0/0): Naked Single: r3c3=8
-    (0) (0/0): Naked Single: r9c2=9
-    (0) (0/0): Full House: r9c6=4
-    (0) (0/0): Hidden Single: r8c5=9
-    (0) (0/0): Hidden Single: r1c8=8
-    (0) (0/0): Full House: r2c8=7
-    (0) (0/0): Naked Single: r2c2=4
-    (0) (0/0): Full House: r1c2=7
-    (0) (0/0): Full House: r1c4=4
-    (0) (0/0): Naked Single: r2c7=6
-    (0) (0/0): Full House: r3c7=4
-    (0) (0/0): Naked Single: r3c5=7
-    (0) (0/0): Full House: r3c6=6
-    (0) (0/0): Naked Single: r4c4=7
-    (0) (0/0): Full House: r4c5=4
-    (0) (0/0): Naked Single: r2c6=1
-    (0) (0/0): Naked Single: r7c5=5
-    (0) (0/0): Full House: r2c5=8
-    (0) (0/0): Full House: r2c4=5
-    (0) (0/0): Full House: r8c4=1
-    (0) (0/0): Naked Single: r8c6=3
-    (0) (0/0): Full House: r7c6=7
-    (0) (0/0): Naked Single: r7c2=2
-    (0) (0/0): Full House: r7c7=3
-    (0) (0/0): Full House: r8c7=2
-    (0) (0/0): Naked Single: r5c2=5
-    (0) (0/0): Full House: r5c3=2
-    (0) (0/0): Full House: r8c3=5
-    (0) (0/0): Full House: r8c2=8
-    Statistics:
-            20 -       20/       0: Full House
-             7 -        7/       0: Hidden Single
-            29 -       29/       0: Naked Single
-             1 -        0/       6: Naked Pair
-018050400000000700004062008000005203000000000900084050060097020100300000050000007#26-11-2022-EP-DIF-01245 #9 Medium (478)
-    (0) (0/0): Naked Single: r7c3=3
-    (0) (0/0): Hidden Single: r7c4=5
-    (0) (0/0): Hidden Single: r6c2=3
-   1/6 (12) (0/0): Locked Pair: 1,6 in r6c79 => r45c8,r5c79,r6c34<>1, r45c8,r5c79,r6c34<>6
-   7 (3) (0/0): Locked Candidates Type 1 (Pointing): 7 in b2 => r456c4<>7
-    (0) (0/0): Naked Single: r6c4=2
-    (0) (0/0): Naked Single: r6c3=7
-    (0) (0/0): Hidden Single: r8c2=7
-    (0) (0/0): Naked Single: r3c2=9
-    (0) (0/0): Naked Single: r2c2=2
-    (0) (0/0): Hidden Single: r1c9=2
-   2 (2) (0/0): Locked Pair: 2,9 in r89c3 => r5c3,r9c1<>2
-    (0) (0/0): Hidden Single: r5c1=2
-    (0) (0/0): Hidden Single: r5c3=5
-    (0) (0/0): Naked Single: r2c3=6
-    (0) (0/0): Naked Single: r4c3=1
-    (0) (0/0): Naked Single: r4c5=7
-    (0) (0/0): Hidden Single: r1c8=6
-    (0) (0/0): Hidden Single: r4c1=6
-    (0) (0/0): Naked Single: r4c4=9
-    (0) (0/0): Naked Single: r1c4=7
-    (0) (0/0): Naked Single: r1c1=3
-    (0) (0/0): Full House: r1c6=9
-    (0) (0/0): Naked Single: r3c4=1
-    (0) (0/0): Naked Single: r2c1=5
-    (0) (0/0): Full House: r3c1=7
-    (0) (0/0): Naked Single: r3c8=3
-    (0) (0/0): Full House: r3c7=5
-    (0) (0/0): Naked Single: r5c4=6
-    (0) (0/0): Hidden Single: r5c8=7
-    (0) (0/0): Hidden Single: r8c9=5
-    (0) (0/0): Hidden Single: r9c7=3
-    (0) (0/0): Hidden Single: r6c9=6
-    (0) (0/0): Full House: r6c7=1
-    (0) (0/0): Naked Single: r7c7=8
-    (0) (0/0): Naked Single: r5c7=9
-    (0) (0/0): Full House: r8c7=6
-    (0) (0/0): Naked Single: r7c1=4
-    (0) (0/0): Full House: r7c9=1
-    (0) (0/0): Full House: r9c1=8
-    (0) (0/0): Naked Single: r5c9=4
-    (0) (0/0): Full House: r2c9=9
-    (0) (0/0): Full House: r4c8=8
-    (0) (0/0): Full House: r2c8=1
-    (0) (0/0): Full House: r4c2=4
-    (0) (0/0): Full House: r5c2=8
-    (0) (0/0): Naked Single: r8c6=8
-    (0) (0/0): Naked Single: r9c4=4
-    (0) (0/0): Full House: r2c4=8
-    (0) (0/0): Naked Single: r2c6=3
-    (0) (0/0): Full House: r2c5=4
-    (0) (0/0): Naked Single: r8c5=2
-    (0) (0/0): Naked Single: r9c8=9
-    (0) (0/0): Full House: r8c8=4
-    (0) (0/0): Full House: r8c3=9
-    (0) (0/0): Full House: r9c3=2
-    (0) (0/0): Naked Single: r5c6=1
-    (0) (0/0): Full House: r5c5=3
-    (0) (0/0): Full House: r9c5=1
-    (0) (0/0): Full House: r9c6=6
-    Statistics:
-            20 -       20/       0: Full House
-            12 -       12/       0: Hidden Single
-            25 -       25/       0: Naked Single
-             2 -        0/      14: Locked Pair
-             1 -        0/       3: Locked Candidates Type 1 (Pointing)
-009800000006007130000050200000100400100005703000249000000000001000906040802000000#26-11-2022-EP-EXP-01245 #10 Medium (412)
-    (0) (0/0): Naked Single: r5c4=6
-    (0) (0/0): Naked Single: r2c4=4
-    (0) (0/0): Naked Single: r5c5=8
-    (0) (0/0): Naked Single: r3c4=3
-    (0) (0/0): Naked Single: r4c6=3
-    (0) (0/0): Full House: r4c5=7
-    (0) (0/0): Naked Single: r5c3=4
-    (0) (0/0): Naked Single: r3c6=1
-    (0) (0/0): Naked Single: r1c6=2
-    (0) (0/0): Naked Single: r9c6=4
-    (0) (0/0): Full House: r7c6=8
-    (0) (0/0): Naked Single: r1c5=6
-    (0) (0/0): Full House: r2c5=9
-    (0) (0/0): Naked Single: r1c7=5
-    (0) (0/0): Naked Single: r1c8=7
-    (0) (0/0): Naked Single: r2c9=8
-    (0) (0/0): Naked Single: r1c9=4
-    (0) (0/0): Naked Single: r1c1=3
-    (0) (0/0): Full House: r1c2=1
-    (0) (0/0): Hidden Single: r6c8=1
-    (0) (0/0): Hidden Single: r8c3=1
-    (0) (0/0): Hidden Single: r8c7=8
-    (0) (0/0): Naked Single: r6c7=6
-    (0) (0/0): Naked Single: r6c9=5
-    (0) (0/0): Naked Single: r6c1=7
-    (0) (0/0): Naked Single: r3c1=4
-    (0) (0/0): Naked Single: r8c1=5
-    (0) (0/0): Naked Single: r2c1=2
-    (0) (0/0): Full House: r2c2=5
-    (0) (0/0): Hidden Single: r9c5=1
-    (0) (0/0): Hidden Single: r4c8=8
-    (0) (0/0): Naked Single: r4c3=5
-    (0) (0/0): Hidden Single: r7c2=4
-   9 (3) (0/0): Locked Candidates Type 2 (Claiming): 9 in c7 => r79c8,r9c9<>9
-   3/7 (2) (0/0): Naked Pair: 3,7 in r7c3,r8c2 => r9c2<>3, r9c2<>7
-    (0) (0/0): Hidden Single: r9c7=3
-    (0) (0/0): Full House: r7c7=9
-    (0) (0/0): Naked Single: r7c1=6
-    (0) (0/0): Full House: r4c1=9
-    (0) (0/0): Naked Single: r9c2=9
-    (0) (0/0): Naked Single: r4c9=2
-    (0) (0/0): Full House: r4c2=6
-    (0) (0/0): Full House: r5c8=9
-    (0) (0/0): Full House: r5c2=2
-    (0) (0/0): Naked Single: r8c9=7
-    (0) (0/0): Naked Single: r3c8=6
-    (0) (0/0): Full House: r3c9=9
-    (0) (0/0): Full House: r9c9=6
-    (0) (0/0): Naked Single: r8c2=3
-    (0) (0/0): Full House: r7c3=7
-    (0) (0/0): Full House: r8c5=2
-    (0) (0/0): Full House: r7c5=3
-    (0) (0/0): Naked Single: r9c8=5
-    (0) (0/0): Full House: r7c8=2
-    (0) (0/0): Full House: r7c4=5
-    (0) (0/0): Full House: r9c4=7
-    (0) (0/0): Naked Single: r6c2=8
-    (0) (0/0): Full House: r3c2=7
-    (0) (0/0): Full House: r3c3=8
-    (0) (0/0): Full House: r6c3=3
-    Statistics:
-            21 -       21/       0: Full House
-             7 -        7/       0: Hidden Single
-            30 -       30/       0: Naked Single
-             1 -        0/       2: Naked Pair
-             1 -        0/       3: Locked Candidates Type 2 (Claiming)
+             2 -        0/       3: Locked Candidates Type 1 (Pointing)
 
 Statistics total:
-           202 -      202/       0: Full House
-           136 -      136/       0: Hidden Single
-           224 -      224/       0: Naked Single
-             2 -        0/       8: Naked Pair
-             3 -        0/       5: Naked Triple
-             5 -        0/      31: Locked Pair
-            14 -        0/      23: Locked Candidates Type 1 (Pointing)
-             1 -        0/       3: Locked Candidates Type 2 (Claiming)
-             1 -        0/       2: XY-Wing
-             2 -        0/       3: W-Wing
-             3 -        0/       8: X-Wing
+           342 -      342/       0: Full House
+           250 -      250/       0: Hidden Single
+           370 -      370/       0: Naked Single
+             4 -        0/      11: Naked Pair
+             3 -        0/      12: Naked Triple
+             8 -        0/      49: Locked Pair
+             2 -        0/      13: Locked Triple
+            32 -        0/      63: Locked Candidates Type 1 (Pointing)
+             4 -        0/      15: Locked Candidates Type 2 (Claiming)
       ---------------------------------------------------
-           593 -      562/      83
+          1015 -      962/     163
 
 Timing:
-         593/       34.48us/       20.44ms: Full House
-         391/        1.88us/        0.73ms: Naked Single
-         167/        2.26us/        0.38ms: Hidden Single
-          31/       36.09us/        1.12ms: Locked Pair
-          26/       14.81us/        0.39ms: Locked Triple
-          26/       22.42us/        0.58ms: Locked Candidates Type 1 (Pointing)
-          12/       47.46us/        0.57ms: Locked Candidates Type 2 (Claiming)
-          11/       32.20us/        0.35ms: Naked Pair
-           9/       40.22us/        0.36ms: Naked Triple
-           6/       56.77us/        0.34ms: Hidden Pair
-           6/       75.51us/        0.45ms: Hidden Triple
-           6/       47.42us/        0.28ms: Naked Quadruple
-           6/       62.48us/        0.37ms: Hidden Quadruple
-           6/      152.92us/        0.92ms: X-Wing
-           3/      485.26us/        1.46ms: Swordfish
-           3/      263.22us/        0.79ms: Jellyfish
-           3/      194.90us/        0.58ms: Remote Pair
-           3/        3.81us/        0.01ms: Bivalue Universal Grave + 1
-           3/       31.36us/        0.09ms: Skyscraper
-           3/       48.09us/        0.14ms: 2-String Kite
-           3/      344.69us/        1.03ms: Turbot Fish
-           3/       84.93us/        0.25ms: Empty Rectangle
-           3/       92.83us/        0.28ms: W-Wing
-           1/       41.20us/        0.04ms: XY-Wing
+        1015/       15.56us/       15.79ms: Full House
+         673/        1.73us/        1.17ms: Naked Single
+         303/        2.60us/        0.79ms: Hidden Single
+          53/       45.40us/        2.41ms: Locked Pair
+          45/       25.18us/        1.13ms: Locked Triple
+          43/       36.89us/        1.59ms: Locked Candidates Type 1 (Pointing)
+          11/       56.76us/        0.62ms: Locked Candidates Type 2 (Claiming)
+           7/       44.03us/        0.31ms: Naked Pair
+           3/       43.72us/        0.13ms: Naked Triple
 
