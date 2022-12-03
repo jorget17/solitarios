@@ -89,6 +89,9 @@ with open('./one_line.txt', 'r') as input_text, open('export.csv', 'w') as expor
             
         export_csv.write(f'{sudoku}|{day}|{month}|{year}|{origin}|{dif}|{num}|{hodoku_level}|{hodoku_value}|{techniques}\n')
 
+print('--------')
+print('FINISHED')
+print('--------')
 
 # In[ ]:
 
