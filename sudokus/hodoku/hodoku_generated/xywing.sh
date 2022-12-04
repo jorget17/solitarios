@@ -1,0 +1,1 @@
+java -jar hodoku.jar /s /sc xy:1 /o xywing.txt
