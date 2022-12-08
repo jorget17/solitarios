@@ -1,1 +1,0 @@
-java -jar hodoku.jar /s /sc h3,bf2:2 /o h3xwing.txt

@@ -54,6 +54,9 @@ with open('./hodoku_generated_out.txt', 'r') as r:
     #13 sustituye los # por -
     one_line = one_line.replace('#', '-')
 
+    #14 sustituye los . por 0
+    one_line = one_line.replace('.', '0')
+
 with open("./hg_one_line.txt", "w") as w:
     w.write(one_line)
 
