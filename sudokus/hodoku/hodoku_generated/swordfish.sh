@@ -1,1 +1,1 @@
-java -jar hodoku.jar /s /sc bf3:1 /o swordfish.txt
+java -jar hodoku.jar /s /sc bf3:1 /o hg.txt

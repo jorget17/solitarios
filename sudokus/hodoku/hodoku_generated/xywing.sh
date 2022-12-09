@@ -1,1 +1,1 @@
-java -jar hodoku.jar /s /sc xy:1 /o xywing.txt
+java -jar hodoku.jar /s /sc xy:1 /o hg.txt
