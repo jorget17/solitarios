@@ -1,0 +1,1 @@
+java -jar hodoku.jar /s /sl 1 /o hg.txt
