@@ -1,0 +1,1 @@
+.article-page.section-juegos .sub-header-container,.article-page.section-juegos .header-menu-container{display:none}footer .breadcrumb li{padding-left:0}footer .breadcrumb li:before{content:none}.super-header-full-container{display:none}a:hover{text-decoration:none}.section-juegos footer{background-color:#001c4c}#quality-games a:hover{text-decoration:none;color:inherit}
