@@ -4,6 +4,8 @@
 
 from pysollib.customgame import CustomGame, registerCustomGame
 
+# Six Off - Invented by El Cartero Solitario
+
 class MyCustomGame(CustomGame):
     WIZARD_VERSION = 1
     SETTINGS = {
@@ -20,6 +22,8 @@ class MyCustomGame(CustomGame):
             }
 
 registerCustomGame(MyCustomGame)
+
+# Five Off - Invented by El Cartero Solitario
 
 class MyCustomGame(CustomGame):
     WIZARD_VERSION = 1
@@ -38,6 +42,8 @@ class MyCustomGame(CustomGame):
 
 registerCustomGame(MyCustomGame)
 
+# Free Seven - Invented by El Cartero Solitario
+
 class MyCustomGame(CustomGame):
     WIZARD_VERSION = 1
     SETTINGS = {
@@ -52,6 +58,8 @@ class MyCustomGame(CustomGame):
             }
 
 registerCustomGame(MyCustomGame)
+
+# Warm Bath - Invented by El Cartero Solitario
 
 class MyCustomGame(CustomGame):
     WIZARD_VERSION = 1
@@ -68,6 +76,8 @@ class MyCustomGame(CustomGame):
 
 registerCustomGame(MyCustomGame)
 
+# Hot Bath - Invented by El Cartero Solitario
+
 class MyCustomGame(CustomGame):
     WIZARD_VERSION = 1
     SETTINGS = {
@@ -82,6 +92,8 @@ class MyCustomGame(CustomGame):
         }
 
 registerCustomGame(MyCustomGame)
+
+# Base FreeCell - Invented by El Cartero Solitario
 
 class MyCustomGame(CustomGame):
     WIZARD_VERSION = 1
@@ -99,9 +111,12 @@ class MyCustomGame(CustomGame):
 
 registerCustomGame(MyCustomGame)
 
+# Blind FreeCell - Invented by El Cartero Solitario
+
 class MyCustomGame(CustomGame):
     WIZARD_VERSION = 1
     SETTINGS = {
+        'preset': 'FreeCell',
         'name': 'Blind FreeCell',
         'rows_max_move': 'Top card',
         'rows_super_move': 1,
@@ -110,5 +125,86 @@ class MyCustomGame(CustomGame):
         'deal_face_up': 5,
         'gameid': 200007,
         }
+
+registerCustomGame(MyCustomGame)
+
+# Fourty Thieves And Two Free Cells - Invented by El Cartero Solitario
+
+class MyCustomGame(CustomGame):
+    WIZARD_VERSION = 1
+    SETTINGS = {
+        'preset': 'FreeCell',
+        'name': 'Fourty Thieves And Two Free Cells',
+        'skill_level': 'Mostly skill',
+        'decks': 'Two',
+        'talon': 'Deal to waste',
+        'rows_num': 10,
+        'rows_type': 'Same suit',
+        'rows_max_move': 'Top card',
+        'rows_super_move': 1,
+        'reserves_num': 2,
+        'deal_face_up': 4,
+        'deal_max_cards': 40,
+        'gameid': 200008,
+            }
+
+registerCustomGame(MyCustomGame)
+
+# Fourty Thieves And A Free Cell - Invented by El Cartero Solitario
+
+class MyCustomGame(CustomGame):
+    WIZARD_VERSION = 1
+    SETTINGS = {
+        'preset': 'FreeCell',
+        'name': 'Fourty Thieves And A Free Cell',
+        'skill_level': 'Mostly skill',
+        'decks': 'Two',
+        'talon': 'Deal to waste',
+        'rows_num': 10,
+        'rows_type': 'Same suit',
+        'rows_max_move': 'Top card',
+        'rows_super_move': 1,
+        'reserves_num': 1,
+        'deal_face_up': 4,
+        'deal_max_cards': 40,
+        'gameid': 200009,
+            }
+
+registerCustomGame(MyCustomGame)
+
+# Empty Streets - Invented by El Cartero Solitario
+
+class MyCustomGame(CustomGame):
+    WIZARD_VERSION = 1
+    SETTINGS = {
+        'name': 'Empty Streets',
+        'found_equal': 0,
+        'rows_num': 10,
+        'rows_type': 'Any suit but the same',
+        'rows_max_move': 'Top card',
+        'rows_wrap': 1,
+        'rows_super_move': 1,
+        'reserves_num': 0,
+        'reserves_max_accept': 0,
+        'gameid': 200010,
+        }
+
+registerCustomGame(MyCustomGame)
+
+# Four by Ten - Invented by Thomas Warfield in Pretty Good Solitaire
+
+class MyCustomGame(CustomGame):
+    WIZARD_VERSION = 1
+    SETTINGS = {
+        'preset': 'FreeCell',
+        'name': 'Four by Ten',
+        'skill_level': 'Mostly skill',
+        'rows_num': 4,
+        'rows_max_move': 'Top card',
+        'rows_super_move': 1,
+        'reserves_num': 10,
+        'deal_face_up': 13,
+        'gameid': 200011,
+            }
 
 registerCustomGame(MyCustomGame)
